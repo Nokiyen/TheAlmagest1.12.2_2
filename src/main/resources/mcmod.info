@@ -1,0 +1,16 @@
+[
+{
+  "modid": "Almagest",
+  "name": "The Almagest",
+  "description": "Looking for the disappearing constellatoins...",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://tsoft-web.com/nokiyen/",
+  "updateUrl": "",
+  "authorList": ["Nokiyen"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

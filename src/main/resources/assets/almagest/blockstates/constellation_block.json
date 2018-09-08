@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"complete=true,ecliptical=false": { "model": "almagest:constellation_0" },
+		"complete=true,ecliptical=true": { "model": "almagest:constellation_1" },
+		"complete=false,ecliptical=false": { "model": "almagest:constellation_0" },
+		"complete=false,ecliptical=true": { "model": "almagest:constellation_1" }
+	}
+}

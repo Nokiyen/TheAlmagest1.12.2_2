@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "almagest:bookrest" },
+        "facing=south": { "model": "almagest:bookrest", "y": 180 },
+        "facing=west":  { "model": "almagest:bookrest", "y": 270 },
+        "facing=east":  { "model": "almagest:bookrest", "y": 90 }
+    }
+}

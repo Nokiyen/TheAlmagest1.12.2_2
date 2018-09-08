@@ -1,0 +1,908 @@
+﻿##############################
+#
+# The Almagest
+# lang file.
+# created by Nokiyen.
+#
+###############################
+
+#----------------------
+# creative tab.
+#----------------------
+itemGroup.Almagest=The Almagest
+
+
+#----------------------
+# version notify.
+#----------------------
+almagest.version.notify=[The Almagest] 新しいバージョン "%s" がご利用できます!
+
+
+#----------------------
+# block (constellation).
+#----------------------
+tile.constellation_block.01.name=アンドロメダ
+tile.constellation_block.02.name=ポンプ
+tile.constellation_block.03.name=ふうちょう
+tile.constellation_block.04.name=わし
+tile.constellation_block.04.incomplete.name=欠けたわし
+tile.constellation_block.05.name=みずがめ
+tile.constellation_block.06.name=さいだん
+tile.constellation_block.07.name=おひつじ
+tile.constellation_block.08.name=ぎょしゃ
+tile.constellation_block.08.incomplete.name=欠けたぎょしゃ
+tile.constellation_block.09.name=うしかい
+tile.constellation_block.09.incomplete.name=欠けたうしかい
+tile.constellation_block.10.name=ちょうこくぐ
+tile.constellation_block.11.name=きりん
+tile.constellation_block.12.name=やぎ
+tile.constellation_block.13.name=りゅうこつ
+tile.constellation_block.13.incomplete.name=欠けたりゅうこつ
+tile.constellation_block.14.name=カシオペヤ
+tile.constellation_block.15.name=ケンタウルス
+tile.constellation_block.15.incomplete.name=欠けたケンタウルス
+tile.constellation_block.16.name=ケフェウス
+tile.constellation_block.17.name=くじら
+tile.constellation_block.17.incomplete.name=欠けたくじら
+tile.constellation_block.18.name=カメレオン
+tile.constellation_block.19.name=コンパス
+tile.constellation_block.20.name=おおいぬ
+tile.constellation_block.20.incomplete.name=欠けたおおいぬ
+tile.constellation_block.21.name=こいぬ
+tile.constellation_block.21.incomplete.name=欠けたこいぬ
+tile.constellation_block.22.name=かに
+tile.constellation_block.23.name=はと
+tile.constellation_block.24.name=かみのけ
+tile.constellation_block.25.name=みなみのかんむり
+tile.constellation_block.26.name=かんむり
+tile.constellation_block.27.name=コップ
+tile.constellation_block.28.name=みなみじゅうじ
+tile.constellation_block.28.incomplete.name=欠けたみなみじゅうじ
+tile.constellation_block.29.name=からす
+tile.constellation_block.30.name=りょうけん
+tile.constellation_block.31.name=はくちょう
+tile.constellation_block.31.incomplete.name=欠けたはくちょう
+tile.constellation_block.32.name=いるか
+tile.constellation_block.33.name=かじき
+tile.constellation_block.34.name=りゅう
+tile.constellation_block.35.name=こうま
+tile.constellation_block.36.name=エリダヌス
+tile.constellation_block.36.incomplete.name=欠けたエリダヌス
+tile.constellation_block.37.name=ろ
+tile.constellation_block.38.name=ふたご
+tile.constellation_block.38.incomplete.name=欠けたふたご
+tile.constellation_block.39.name=つる
+tile.constellation_block.40.name=ヘルクレス
+tile.constellation_block.41.name=とけい
+tile.constellation_block.42.name=うみへび
+tile.constellation_block.43.name=みずへび
+tile.constellation_block.44.name=インディアン
+tile.constellation_block.45.name=とかげ
+tile.constellation_block.46.name=しし
+tile.constellation_block.46.incomplete.name=欠けたしし
+tile.constellation_block.47.name=うさぎ
+tile.constellation_block.48.name=てんびん
+tile.constellation_block.49.name=こじし
+tile.constellation_block.50.name=おおかみ
+tile.constellation_block.51.name=やまねこ
+tile.constellation_block.52.name=こと
+tile.constellation_block.52.incomplete.name=欠けたこと
+tile.constellation_block.53.name=テーブルさん
+tile.constellation_block.54.name=けんびきょう
+tile.constellation_block.55.name=いっかくじゅう
+tile.constellation_block.56.name=はえ
+tile.constellation_block.57.name=じょうぎ
+tile.constellation_block.58.name=はちぶんぎ
+tile.constellation_block.59.name=へびつかい
+tile.constellation_block.60.name=オリオン
+tile.constellation_block.60.incomplete.name=欠けたオリオン
+tile.constellation_block.61.name=くじゃく
+tile.constellation_block.62.name=ペガスス
+tile.constellation_block.63.name=ペルセウス
+tile.constellation_block.64.name=ほうおう
+tile.constellation_block.65.name=がか
+tile.constellation_block.66.name=みなみのうお
+tile.constellation_block.66.incomplete.name=欠けたみなみのうお
+tile.constellation_block.67.name=うお
+tile.constellation_block.68.name=とも
+tile.constellation_block.69.name=らしんばん
+tile.constellation_block.70.name=レチクル
+tile.constellation_block.71.name=ちょうこくしつ
+tile.constellation_block.72.name=さそり
+tile.constellation_block.72.incomplete.name=欠けたさそり
+tile.constellation_block.73.name=たて
+tile.constellation_block.74.name=へび
+tile.constellation_block.75.name=ろくぶんぎ
+tile.constellation_block.76.name=や
+tile.constellation_block.77.name=いて
+tile.constellation_block.78.name=おうし
+tile.constellation_block.78.incomplete.name=欠けたおうし
+tile.constellation_block.79.name=ぼうえんきょう
+tile.constellation_block.80.name=みなみのさんかく
+tile.constellation_block.81.name=さんかく
+tile.constellation_block.82.name=きょしちょう
+tile.constellation_block.83.name=おおぐま
+tile.constellation_block.84.name=こぐま
+tile.constellation_block.84.incomplete.name=欠けたこぐま
+tile.constellation_block.85.name=ほ
+tile.constellation_block.86.name=おとめ
+tile.constellation_block.86.incomplete.name=欠けたおとめ
+tile.constellation_block.87.name=とびうお
+tile.constellation_block.88.name=こぎつね
+
+
+#----------------------
+# block (others).
+#----------------------
+tile.atlas_star.0.name=ほし
+tile.atlas_star.1.name=ほし
+tile.atlas_star.2.name=ほし
+tile.atlas_star.3.name=ほし
+tile.atlas_star.4.name=ほし
+tile.atlas_star.5.name=ほし
+tile.atlas_star.6.name=ほし
+tile.atlas_star.7.name=ほし
+tile.bookrest.name=書見台
+tile.tansu.name=たんす
+tile.star_compass.name=ほしの羅針盤
+
+
+#----------------------
+# item (star).
+#----------------------
+item.missing_star.0.name=消えた星
+item.missing_star.97649.name=消えた星 -アルタイル-
+item.missing_star.24608.name=消えた星 -カペラ-
+item.missing_star.69673.name=消えた星 -アルクトゥルス-
+item.missing_star.32349.name=消えた星 -シリウス-
+item.missing_star.37279.name=消えた星 -プロキオン-
+item.missing_star.30438.name=消えた星 -カノープス-
+item.missing_star.71683.name=消えた星 -リギル ケント-
+item.missing_star.68702.name=消えた星 -ハダル-
+item.missing_star.60718.name=消えた星 -アクルックス-
+item.missing_star.62434.name=消えた星 -ベクルックス-
+item.missing_star.102098.name=消えた星 -デネブ-
+item.missing_star.7588.name=消えた星 -アケルナル-
+item.missing_star.37826.name=消えた星 -ポルックス-
+item.missing_star.49669.name=消えた星 -レグルス-
+item.missing_star.91262.name=消えた星 -ベガ-
+item.missing_star.27989.name=消えた星 -ベテルギウス-
+item.missing_star.24436.name=消えた星 -リゲル-
+item.missing_star.113368.name=消えた星 -フォーマルハウト-
+item.missing_star.80763.name=消えた星 -アンタレス-
+item.missing_star.21421.name=消えた星 -アルデバラン-
+item.missing_star.65474.name=消えた星 -スピカ-
+item.missing_star.10826.name=消えた星 -ミラ-
+item.missing_star.11767.name=消えた星 -ポラリス-
+
+
+#----------------------
+# item (others).
+#----------------------
+item.planisphere.name=星座盤
+item.stardust.name=ほしのちり
+item.almagest.name=『アルマゲスト』
+item.memo.name=メモ
+item.cocktail.0.name=赤のカクテル
+item.cocktail.1.name=緑のカクテル
+item.cocktail.2.name=青のカクテル
+item.cocktail_rainbow.name=虹のカクテル
+item.oil.name=なにかのあぶら
+item.pure_water.name=きれいなみず
+item.polish.name=研磨剤
+
+#temopral
+item.honey.name=Honey
+item.tsuchinoko_skin.name=Tsuchinoko Skin
+item.flying_fish.name=Flying Fish
+item.phoenix_feather.name=Feather of Phoenix
+item.rainbow_feather.name=Rainbow Feather
+item.white_feather.name=White Feather
+item.black_feather.name=Block Feather
+item.origami_crane=Origami Crane
+
+
+#----------------------
+# game data.
+#----------------------
+almagest.gamedata.category.block=ほしのブロック
+almagest.gamedata.category.item=ほしのアイテム
+almagest.gamedata.category.list=ふつうのブロック&アイテム
+almagest.gamedata.category.recipe=追加レシピ
+almagest.gamedata.category.mob=ほしのいきもの
+almagest.gamedata.category.ability=ほしのちから
+almagest.gamedata.category.const=星座
+almagest.gamedata.category.memo=メモ
+almagest.gamedata.category.help=ヘルプ
+almagest.gamedata.category.search=検索
+
+
+#----------------------
+# gui (ingame help).
+#----------------------
+almagest.gui.almagest.button.top=Top
+almagest.gui.almagest.component=組成
+almagest.gui.almagest.recipe=レシピ
+almagest.gui.almagest.effect=効果
+almagest.gui.almagest.magnitude=ほしの記憶
+almagest.gui.almagest.mira=ミラのひとこと
+almagest.gui.almagest.list.ability_label=ほしのちから
+almagest.gui.almagest.list.no_ability=なし
+
+almagest.gui.almagest.recipe.nocraft=クラフトできません
+
+
+#----------------------
+# gui (ingame help, block and items).
+#----------------------
+#---Star
+almagest.gui.almagest.almagest:tile.atlas_star.0.effect=ただのブロックです。星を構成したりしています。星の光の「スペクトル」に対応する8色のほしがあります。
+almagest.gui.almagest.almagest:tile.atlas_star.0.magnitude=なし
+almagest.gui.almagest.almagest:tile.atlas_star.0.mira=青く光る星が一番熱いんです。なんだか不思議です。
+#---Bookrest
+almagest.gui.almagest.almagest:tile.bookrest.recipe.0=星の輝き : 10
+almagest.gui.almagest.almagest:tile.bookrest.recipe.1=木材
+almagest.gui.almagest.almagest:tile.bookrest.recipe.2=木材
+almagest.gui.almagest.almagest:tile.bookrest.recipe.3=
+almagest.gui.almagest.almagest:tile.bookrest.recipe.4=
+almagest.gui.almagest.almagest:tile.bookrest.effect=重要なブロックです。設置して書見台に対して右クリックすることで、GUIが開き、「ほしのちから」や「ほしのきおく」、「星座線」を引き継ぎながらクラフトできます。普通のクラフトテーブルとしても使えます。ヘルプも参照してください。
+almagest.gui.almagest.almagest:tile.bookrest.magnitude=等級５ : 「星の輝き」 + １０<br>等級３ : 火や爆発で消滅しません。
+almagest.gui.almagest.almagest:tile.bookrest.mira=本の代わりに、星を読むための台です。自由に夜空に描きましょう。
+#---StarCompass
+almagest.gui.almagest.almagest:tile.star_compass.effect=重要なブロックです。手に持つか設置すると、一番近い星座の場所を針が指し示します。ただし、使用すると耐久値を消費し、なくなると壊れてしまいます。また、ネザーでは通常使えません。(注：耐久値、等級未実装)
+almagest.gui.almagest.almagest:tile.star_compass.magnitude=等級４ : 耐久値消費減少<br>等級２ : ネザーで使用可<br>等級１ : 耐久値消費なし
+almagest.gui.almagest.almagest:tile.star_compass.mira=北極星の代わりに星座を指し示す羅針盤です。どうやって動いているんでしょう。
+
+#---Planisphere
+almagest.gui.almagest.almagest:item.planisphere.effect=手にもって右クリックで、『星座盤』世界へ移動します。『星座盤』世界で右クリックすると、元の場所へ戻ります。
+almagest.gui.almagest.almagest:item.planisphere.magnitude=等級６ : 「星の輝き」 + １０<br>等級３ : 火や爆発で消滅しません。
+almagest.gui.almagest.almagest:item.planisphere.mira=これがあれば、いつでもどこでも星座が探せますよ！  え？  えっと北は……。
+#---Almagest
+almagest.gui.almagest.almagest:item.almagest.effect="The Almagest"に関する図鑑です。追加ブロックやアイテム、モブ、星座、ヘルプなどなどの情報を閲覧できます。右クリックでGUIを開きます。<br>クラフトすることはできません。<br>
+ミラからいつでも入手できます。
+almagest.gui.almagest.almagest:item.almagest.magnitude=なし
+almagest.gui.almagest.almagest:item.almagest.mira=たっくさんのことが、この一冊に書いてあります。誰が書いたのでしょう？
+#---Stardust
+almagest.gui.almagest.almagest:item.stardust.effect=ただのアイテムです。星が粉々になったもので、鉱石から生成することができます。
+almagest.gui.almagest.almagest:item.stardust.magnitude=なし
+almagest.gui.almagest.almagest:item.stardust.mira=星は遠いし大きいですけど、こうして小さくなれば、手のひらに載せることができますね。
+#---Memo
+almagest.gui.almagest.almagest:item.memo.effect=何かが書いてあるメモ書きです。失われた星やこの世界について、役に立つことやそうでもないことが書いてあります。<br>チェストなどからたまに入手することができるほか、誰かと話したこともメモとして記録されます。集めたメモは、『アルマゲスト』から確認できます。
+almagest.gui.almagest.almagest:item.memo.magnitude=なし
+almagest.gui.almagest.almagest:item.memo.mira=気になったことはいつでもメモしないと。あ、落書きじゃないですよ。
+#---Red Cocktail
+almagest.gui.almagest.almagest:item.cocktail.0.effect=ほしのちからを使って、素材から成分を抽出したものです。赤のカクテルには鉱石の成分が溶け込んでいます。種々のクラフトに使うことができます。
+almagest.gui.almagest.almagest:item.cocktail.0.magnitude=等級５ : 「道具」＋ １０<br>等級４ : 「燃料 ２０」付与
+almagest.gui.almagest.almagest:item.cocktail.0.mira=真っ赤なカクテルです。これを飲むと元気が出そう！
+#---Green Cocktail
+almagest.gui.almagest.almagest:item.cocktail.1.effect=ほしのちからを使って、素材から成分を抽出したものです。緑のカクテルには植物の成分が溶け込んでいます。種々のクラフトに使うことができます。
+almagest.gui.almagest.almagest:item.cocktail.1.magnitude=等級５ : 「道具」＋ １０<br>等級４ : 「木材 ２０」付与
+almagest.gui.almagest.almagest:item.cocktail.1.mira=鮮やかな緑のカクテルです。ちょっとなめただけでとても苦いです。
+#---Blue Cocktail
+almagest.gui.almagest.almagest:item.cocktail.2.effect=ほしのちからを使って、素材から成分を抽出したものです。青のカクテルには液体の成分が溶け込んでいます。種々のクラフトに使うことができます。
+almagest.gui.almagest.almagest:item.cocktail.2.magnitude=等級５ : 「道具」＋ １０<br>等級４ : 「装飾 ２０」付与
+almagest.gui.almagest.almagest:item.cocktail.2.mira=真っ青なカクテルです。透明な液体が、どうして青くなるんでしょう。
+#---Rainbow Cocktail
+almagest.gui.almagest.almagest:item.cocktail_rainbow.effect=ほしのちからを使って、素材から成分を抽出したものです。虹のカクテルには彩り豊かな星の成分が溶け込んでいます。種々のクラフトに使うことができます。
+almagest.gui.almagest.almagest:item.cocktail_rainbow.magnitude=等級４ : 「道具」＋ ２０<br>等級３ : 「爆発 ４０」付与
+almagest.gui.almagest.almagest:item.cocktail_rainbow.mira=虹色にきらめくカクテルです。時間が経つにつれて、いろんな色に変わっていくんです。
+#---Pure Water
+almagest.gui.almagest.almagest:item.pure_water.effect=液体を蒸発させ、純粋な水分を取り出したものです。種々のクラフトに使うことができます。
+almagest.gui.almagest.almagest:item.pure_water.magnitude=等級３ : 「液体」＋ １０
+almagest.gui.almagest.almagest:item.pure_water.mira=とってもきれいなお水なのに、味はあんまりおいしくない……。
+#---Oil
+almagest.gui.almagest.almagest:item.oil.recipe.0=動物 or 魔物 : 20
+almagest.gui.almagest.almagest:item.oil.recipe.1=カクテル
+almagest.gui.almagest.almagest:item.oil.recipe.2=
+almagest.gui.almagest.almagest:item.oil.recipe.3=
+almagest.gui.almagest.almagest:item.oil.recipe.4=
+almagest.gui.almagest.almagest:item.oil.effect=動物や魔物の素材から取り出した油です。種々のクラフトに使うことができます。
+almagest.gui.almagest.almagest:item.oil.magnitude=等級５ : 「食物 １０」付与<br>等級４ : 「燃料」＋ １０
+almagest.gui.almagest.almagest:item.oil.mira=ゾンビの油でゾンビのお肉を焼いたりしたら、いい感じになるでしょうか。
+#---Polish
+almagest.gui.almagest.almagest:item.polish.recipe.0=金属 : 20
+almagest.gui.almagest.almagest:item.polish.recipe.1=カクテル
+almagest.gui.almagest.almagest:item.polish.recipe.2=
+almagest.gui.almagest.almagest:item.polish.recipe.3=
+almagest.gui.almagest.almagest:item.polish.recipe.4=
+almagest.gui.almagest.almagest:item.polish.effect=金属などを磨くために使うものです。種々のクラフトに使うことができます。
+almagest.gui.almagest.almagest:item.polish.magnitude=等級４ : 「鉱石 ２０」付与
+almagest.gui.almagest.almagest:item.polish.mira=ちょっと使えばぴっかぴかです。ただ、磨くだけでどんどん時間が過ぎていきます。
+
+almagest.gui.almagest.almagest:item.flying_fish.effect=
+almagest.gui.almagest.almagest:item.flying_fish.magnitude=なし
+almagest.gui.almagest.almagest:item.flying_fish.mira=たっくさんのことが、この一冊に書いてあります。誰が書いたのでしょう？
+
+
+#----------------------
+#gui (ingame help, constellation).
+#----------------------
+almagest.gui.constellation.01.name=アンドロメダ
+almagest.gui.constellation.01.explanation.left=学名 : Andromeda 略符 : And<br>主な星 : 
+almagest.gui.constellation.01.explanation.right=  no info now.
+almagest.gui.constellation.02.name=ポンプ
+almagest.gui.constellation.02.explanation.left=学名 : Antlia 略符 : Ant<br>主な星 : 
+almagest.gui.constellation.02.explanation.right=  no info now.
+almagest.gui.constellation.03.name=ふうちょう
+almagest.gui.constellation.03.explanation.left=学名 : Apus 略符 : Aps<br>主な星 : 特になし
+almagest.gui.constellation.03.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。4等星以下の星しかなく、目立つ星座ではありません。<br><br>  ふうちょうはニューギニアなどの熱帯に生息する「極楽超」のことで、当時のヨーロッパに輸出されていたとか。『ウラノメトリア』ではフウチョウ / Apusとミツバチ / Apisが勘違いされて「インドのミツバチ座」として紹介されています。
+almagest.gui.constellation.05.name=みずがめ
+almagest.gui.constellation.05.explanation.left=学名 : Aquarius 略符 : Aqr<br>主な星 : 
+almagest.gui.constellation.05.explanation.right=  no info now.
+almagest.gui.constellation.04.name=わし
+almagest.gui.constellation.04.explanation.left=学名 : Aquila 略符 : Aql<br>主な星 : 
+almagest.gui.constellation.04.explanation.right=  no info now.
+almagest.gui.constellation.06.name=さいだん
+almagest.gui.constellation.06.explanation.left=学名 : Ara 略符 : Ara<br>主な星 : 
+almagest.gui.constellation.06.explanation.right=  no info now.
+almagest.gui.constellation.07.name=おひつじ
+almagest.gui.constellation.07.explanation.left=学名 : Aries 略符 : Ari<br>主な星 : 
+almagest.gui.constellation.07.explanation.right=  no info now.
+almagest.gui.constellation.08.name=ぎょしゃ
+almagest.gui.constellation.08.explanation.left=学名 : Auriga 略符 : Aur<br>主な星 : 
+almagest.gui.constellation.08.explanation.right=  no info now.
+almagest.gui.constellation.09.name=うしかい
+almagest.gui.constellation.09.explanation.left=学名 : Bootes 略符 : Boo<br>主な星 : 
+almagest.gui.constellation.09.explanation.right=  no info now.
+almagest.gui.constellation.10.name=ちょうこくぐ
+almagest.gui.constellation.10.explanation.left=学名 : Caelum 略符 : Cae<br>主な星 : 
+almagest.gui.constellation.10.explanation.right=  no info now.
+almagest.gui.constellation.11.name=きりん
+almagest.gui.constellation.11.explanation.left=学名 : Camelopardalis 略符 : Cam<br>主な星 : 
+almagest.gui.constellation.11.explanation.right=  no info now.
+almagest.gui.constellation.22.name=かに
+almagest.gui.constellation.22.explanation.left=学名 : Cancer 略符 : Cnc<br>主な星 : 
+almagest.gui.constellation.22.explanation.right=  no info now.
+almagest.gui.constellation.30.name=りょうけん
+almagest.gui.constellation.30.explanation.left=学名 : Canes Venatici 略符 : CVn<br>主な星 : 
+almagest.gui.constellation.30.explanation.right=  no info now.
+almagest.gui.constellation.20.name=おおいぬ
+almagest.gui.constellation.20.explanation.left=学名 : Canis Major 略符 : CMa<br>主な星 : 
+almagest.gui.constellation.20.explanation.right=  no info now.
+almagest.gui.constellation.21.name=こいぬ
+almagest.gui.constellation.21.explanation.left=学名 : Canis Minor 略符 : CMi<br>主な星 : 
+almagest.gui.constellation.21.explanation.right=  no info now.
+almagest.gui.constellation.12.name=やぎ
+almagest.gui.constellation.12.explanation.left=学名 : Capricornus 略符 : Cap<br>主な星 : 
+almagest.gui.constellation.12.explanation.right=  no info now.
+almagest.gui.constellation.13.name=りゅうこつ
+almagest.gui.constellation.13.explanation.left=学名 : Carina 略符 : Car<br>主な星 : 
+almagest.gui.constellation.13.explanation.right=  no info now.
+almagest.gui.constellation.14.name=カシオペヤ
+almagest.gui.constellation.14.explanation.left=学名 : Cassiopeia 略符 : Cas<br>主な星 : 
+almagest.gui.constellation.14.explanation.right=  no info now.
+almagest.gui.constellation.15.name=ケンタウルス
+almagest.gui.constellation.15.explanation.left=学名 : Centaurus 略符 : Cen<br>主な星 : 
+almagest.gui.constellation.15.explanation.right=  no info now.
+almagest.gui.constellation.16.name=ケフェウス
+almagest.gui.constellation.16.explanation.left=学名 : Cepheus 略符 : Cep<br>主な星 : 
+almagest.gui.constellation.16.explanation.right=  no info now.
+almagest.gui.constellation.17.name=くじら
+almagest.gui.constellation.17.explanation.left=学名 : Cetus 略符 : Cet<br>主な星 : 
+almagest.gui.constellation.17.explanation.right=  no info now.
+almagest.gui.constellation.18.name=カメレオン
+almagest.gui.constellation.18.explanation.left=学名 : Chamaeleon 略符 : Cha<br>主な星 : 
+almagest.gui.constellation.18.explanation.right=  no info now.
+almagest.gui.constellation.19.name=コンパス
+almagest.gui.constellation.19.explanation.left=学名 : Circinus 略符 : Cir<br>主な星 : 
+almagest.gui.constellation.19.explanation.right=  no info now.
+almagest.gui.constellation.23.name=はと
+almagest.gui.constellation.23.explanation.left=学名 : Columba 略符 : Col<br>主な星 : 
+almagest.gui.constellation.23.explanation.right=  no info now.
+almagest.gui.constellation.24.name=かみのけ
+almagest.gui.constellation.24.explanation.left=学名 : Coma Berenices 略符 : Com<br>主な星 : 
+almagest.gui.constellation.24.explanation.right=  no info now.
+almagest.gui.constellation.25.name=みなみのかんむり
+almagest.gui.constellation.25.explanation.left=学名 : Corona Australis 略符 : CrA<br>主な星 : 
+almagest.gui.constellation.25.explanation.right=  no info now.
+almagest.gui.constellation.26.name=かんむり
+almagest.gui.constellation.26.explanation.left=学名 : Corona Borealis 略符 : CrB<br>主な星 : 
+almagest.gui.constellation.26.explanation.right=  no info now.
+almagest.gui.constellation.29.name=からす
+almagest.gui.constellation.29.explanation.left=学名 : Corvus 略符 : Crv<br>主な星 : 
+almagest.gui.constellation.29.explanation.right=  no info now.
+almagest.gui.constellation.27.name=コップ
+almagest.gui.constellation.27.explanation.left=学名 : Crater 略符 : Crt<br>主な星 : 
+almagest.gui.constellation.27.explanation.right=  no info now.
+almagest.gui.constellation.28.name=みなみじゅうじ
+almagest.gui.constellation.28.explanation.left=学名 : Crux 略符 : Cru<br>主な星 : 
+almagest.gui.constellation.28.explanation.right=  no info now.
+almagest.gui.constellation.31.name=はくちょう
+almagest.gui.constellation.31.explanation.left=学名 : Cygnus 略符 : Cyg<br>主な星 : 
+almagest.gui.constellation.31.explanation.right=  no info now.
+almagest.gui.constellation.32.name=いるか
+almagest.gui.constellation.32.explanation.left=学名 : Delphinus 略符 : Del<br>主な星 : 
+almagest.gui.constellation.32.explanation.right=  no info now.
+almagest.gui.constellation.33.name=かじき
+almagest.gui.constellation.33.explanation.left=学名 : Dorado 略符 : Dor<br>主な星 : 特になし
+almagest.gui.constellation.33.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。β星が変光星である他、大マゼラン雲 / Large Magellanic Cloud やその中のタランチュラ星雲、超高速度星(銀河系の脱出速度を上回る！)のHE 0437-5439など、小さな範囲に興味深い天体を所属させています。<br><br>  Doradoは「シイラ」という魚のことですが、もともとはスペイン語で「金」という意味であり、その名の通り黄金色に輝く魚です。Doradoには「かじき」という意味もあるようですがあまり正確な意味ではないらしく、日本語でかじき座となっているのは、この星座がかつて「Xiphias / かじき座」と呼ばれていたのもあるのではないでしょうか。
+almagest.gui.constellation.34.name=りゅう
+almagest.gui.constellation.34.explanation.left=学名 : Draco 略符 : Dra<br>主な星 : 
+almagest.gui.constellation.34.explanation.right=  no info now.
+almagest.gui.constellation.35.name=こうま
+almagest.gui.constellation.35.explanation.left=学名 : Equuleus 略符 : Equ<br>主な星 : 
+almagest.gui.constellation.35.explanation.right=  no info now.
+almagest.gui.constellation.36.name=エリダヌス
+almagest.gui.constellation.36.explanation.left=学名 : Eridanus 略符 : Eri<br>主な星 : 
+almagest.gui.constellation.36.explanation.right=  no info now.
+almagest.gui.constellation.37.name=ろ
+almagest.gui.constellation.37.explanation.left=学名 : Fornax 略符 : For<br>主な星 : 
+almagest.gui.constellation.37.explanation.right=  no info now.
+almagest.gui.constellation.38.name=ふたご
+almagest.gui.constellation.38.explanation.left=学名 : Gemini 略符 : Gem<br>主な星 : 
+almagest.gui.constellation.38.explanation.right=  no info now.
+almagest.gui.constellation.39.name=つる
+almagest.gui.constellation.39.explanation.left=学名 : Grus 略符 : Gru<br>主な星 : 
+almagest.gui.constellation.39.explanation.right=  no info now.
+almagest.gui.constellation.40.name=ヘルクレス
+almagest.gui.constellation.40.explanation.left=学名 : Hercules 略符 : Her<br>主な星 : 
+almagest.gui.constellation.40.explanation.right=  no info now.
+almagest.gui.constellation.41.name=とけい
+almagest.gui.constellation.41.explanation.left=学名 : Horologium 略符 : Hor<br>主な星 : 
+almagest.gui.constellation.41.explanation.right=  no info now.
+almagest.gui.constellation.42.name=うみへび
+almagest.gui.constellation.42.explanation.left=学名 : Hydra 略符 : Hya<br>主な星 : 
+almagest.gui.constellation.42.explanation.right=  no info now.
+almagest.gui.constellation.43.name=みずへび
+almagest.gui.constellation.43.explanation.left=学名 : Hydrus 略符 : Hyi<br>主な星 : 特になし
+almagest.gui.constellation.43.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。特別有名な星はありませんが、みずへび座で一番明るい星であるβ星は、紀元前100~200年頃に南天に最も近い星(ほぼ南極星)だったそうです。<br><br>  学名のHydrusというのは、ギリシア神話に出てくる9つの頭を持つ怪物蛇、ヒュドラーの男性形で、うみへび座 / Hydraは女性形です。日本語でなぜみずへび座とされているのかはよくわかりませんが、みずへび座の発見者であるハウトマンが、自身の冒険中に発見した蛇にちなんで"The Water Snake"と名付けたのに由来しているかもしれません。
+almagest.gui.constellation.44.name=インディアン
+almagest.gui.constellation.44.explanation.left=学名 : Indus 略符 : Ind<br>主な星 : ペルシアン / α星 / 等級3.31
+almagest.gui.constellation.44.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。矢を持ったインディアンを表しており、右上のα星・ペルシアンが手に持った矢の矢羽にあたりますが、想像するのはなかなか難しいですね。矢の先(ペルシアンから右斜め下)にはくじゃく座があります。<br><br>  日本の文献ではアメリカン・インディアンを表しているという説明が多いですが、英語圏ではインド・東南アジア・あるいは南アフリカの先住民を指していると言われています。いずれにしても、大航海時代の数々の航海を思い起こさせる星座です。
+almagest.gui.constellation.45.name=とかげ
+almagest.gui.constellation.45.explanation.left=学名 : Lacerta 略符 : Lac<br>主な星 : 
+almagest.gui.constellation.45.explanation.right=  no info now.
+almagest.gui.constellation.46.name=しし
+almagest.gui.constellation.46.explanation.left=学名 : Leo 略符 : Leo<br>主な星 : 
+almagest.gui.constellation.46.explanation.right=  no info now.
+almagest.gui.constellation.49.name=こじし
+almagest.gui.constellation.49.explanation.left=学名 : Leo Minor 略符 : LMi<br>主な星 : 
+almagest.gui.constellation.49.explanation.right=  no info now.
+almagest.gui.constellation.47.name=うさぎ
+almagest.gui.constellation.47.explanation.left=学名 : Lepus 略符 : Lep<br>主な星 : 
+almagest.gui.constellation.47.explanation.right=  no info now.
+almagest.gui.constellation.48.name=てんびん
+almagest.gui.constellation.48.explanation.left=学名 : Libra 略符 : Lib<br>主な星 : 
+almagest.gui.constellation.48.explanation.right=  no info now.
+almagest.gui.constellation.50.name=おおかみ
+almagest.gui.constellation.50.explanation.left=学名 : Lupus 略符 : Lup<br>主な星 : 
+almagest.gui.constellation.50.explanation.right=  no info now.
+almagest.gui.constellation.51.name=やまねこ
+almagest.gui.constellation.51.explanation.left=学名 : Lynx 略符 : Lyn<br>主な星 : 
+almagest.gui.constellation.51.explanation.right=  no info now.
+almagest.gui.constellation.52.name=こと
+almagest.gui.constellation.52.explanation.left=学名 : Lyra 略符 : Lyr<br>主な星 : 
+almagest.gui.constellation.52.explanation.right=  no info now.
+almagest.gui.constellation.53.name=テーブルさん
+almagest.gui.constellation.53.explanation.left=学名 : Mensa 略符 : Men<br>主な星 : 
+almagest.gui.constellation.53.explanation.right=  no info now.
+almagest.gui.constellation.54.name=けんびきょう
+almagest.gui.constellation.54.explanation.left=学名 : Microscopium 略符 : Mic<br>主な星 : 
+almagest.gui.constellation.54.explanation.right=  no info now.
+almagest.gui.constellation.55.name=いっかくじゅう
+almagest.gui.constellation.55.explanation.left=学名 : Monoceros 略符 : Mon<br>主な星 : 
+almagest.gui.constellation.55.explanation.right=  no info now.
+almagest.gui.constellation.56.name=はえ
+almagest.gui.constellation.56.explanation.left=学名 : Musca 略符 : Mus<br>主な星 : 特になし
+almagest.gui.constellation.56.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。88の星座の中でもだいぶ小さい星座に入ります。昆虫を表している唯一の星座でもあります。<br><br>  この星座の名前については幾分変遷があり、発見者のケイセルとハウトマンは「はえ座」と名付けたものの、バイエルは「ミツバチ座 / Apis」として取り上げており、その後いろいろと混乱をもたらしながらも、18世紀にラカイユが「みなみのはえ座」としてから「はえ」と表すことに落ち着いたようです。「きたのはえ座」という以前存在した星座が現在の「おひつじ座」に統合されてからは、「みなみのはえ座」を単に「はえ座」と呼ぶようになりました。<br><br>  蜂にしろ蝿にしろ、カメレオン座の先端で食べられそうになっている、どこかコミカル星座です。
+almagest.gui.constellation.57.name=じょうぎ
+almagest.gui.constellation.57.explanation.left=学名 : Norma 略符 : Nor<br>主な星 : 
+almagest.gui.constellation.57.explanation.right=  no info now.
+almagest.gui.constellation.58.name=はちぶんぎ
+almagest.gui.constellation.58.explanation.left=学名 : Octans 略符 : Oct<br>主な星 : 
+almagest.gui.constellation.58.explanation.right=  no info now.
+almagest.gui.constellation.59.name=へびつかい
+almagest.gui.constellation.59.explanation.left=学名 : Ophiuchus 略符 : Oph<br>主な星 : 
+almagest.gui.constellation.59.explanation.right=  no info now.
+almagest.gui.constellation.60.name=オリオン
+almagest.gui.constellation.60.explanation.left=学名 : Orion 略符 : Ori<br>主な星 : 
+almagest.gui.constellation.60.explanation.right=  no info now.
+almagest.gui.constellation.61.name=くじゃく
+almagest.gui.constellation.61.explanation.left=学名 : Pavo 略符 : Pav<br>主な星 : 
+almagest.gui.constellation.61.explanation.right=  no info now.
+almagest.gui.constellation.62.name=ペガスス
+almagest.gui.constellation.62.explanation.left=学名 : Pegasus 略符 : Peg<br>主な星 : 
+almagest.gui.constellation.62.explanation.right=  no info now.
+almagest.gui.constellation.63.name=ペルセウス
+almagest.gui.constellation.63.explanation.left=学名 : Perseus 略符 : Per<br>主な星 : 
+almagest.gui.constellation.63.explanation.right=  no info now.
+almagest.gui.constellation.64.name=ほうおう
+almagest.gui.constellation.64.explanation.left=学名 : Phoenix 略符 : Phe<br>主な星 : 主な星 : アンカー / α星 / 等級2.38
+almagest.gui.constellation.64.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。<br><br>  ほうおう座は、プランキウスによって制定され、バイエルによって知られるようになった12の南天の新しい星座のうち、唯一神話に起源を持っています。なんでも、アラブ圏でもともとこの位置に不死鳥の姿を描いており、それにならって「Phoenix / 不死鳥」としたとか。最も明るい星であるα星のアンカーも、アラビア語で「フェニックス」という意味です。ただ、これはほうおう座にちなんで1800年ほどに名付けられたということです。<br>  不死鳥以外にも、アラブ圏では(不死鳥のおわす)船と見ており、α星には「船の明るい星」を意味するザウラクという名前が元々ありました。ただ、2016年の星名標準化で(なぜか)アンカーの方が採択されたようです。<br><br>  日本語名は鳳凰(ほうおう)になっていますが、不死鳥と鳳凰は割と別の鳥です。
+almagest.gui.constellation.65.name=がか
+almagest.gui.constellation.65.explanation.left=学名 : Pictor 略符 : Pic<br>主な星 : 
+almagest.gui.constellation.65.explanation.right=  no info now.
+almagest.gui.constellation.67.name=うお
+almagest.gui.constellation.67.explanation.left=学名 : Pisces 略符 : Psc<br>主な星 : 
+almagest.gui.constellation.67.explanation.right=  no info now.
+almagest.gui.constellation.66.name=みなみのうお
+almagest.gui.constellation.66.explanation.left=学名 : Piscis Austrinus 略符 : PsA<br>主な星 : 
+almagest.gui.constellation.66.explanation.right=  no info now.
+almagest.gui.constellation.68.name=とも
+almagest.gui.constellation.68.explanation.left=学名 : Puppis 略符 : Pup<br>主な星 : 
+almagest.gui.constellation.68.explanation.right=  no info now.
+almagest.gui.constellation.69.name=らしんばん
+almagest.gui.constellation.69.explanation.left=学名 : Pyxis 略符 : Pyx<br>主な星 : 
+almagest.gui.constellation.69.explanation.right=  no info now.
+almagest.gui.constellation.70.name=レチクル
+almagest.gui.constellation.70.explanation.left=学名 : Reticulum 略符 : Ret<br>主な星 : 
+almagest.gui.constellation.70.explanation.right=  no info now.
+almagest.gui.constellation.76.name=や
+almagest.gui.constellation.76.explanation.left=学名 : Sagitta 略符 : Sge<br>主な星 : 
+almagest.gui.constellation.76.explanation.right=  no info now.
+almagest.gui.constellation.77.name=いて
+almagest.gui.constellation.77.explanation.left=学名 : Sagittarius 略符 : Sgr<br>主な星 : 
+almagest.gui.constellation.77.explanation.right=  no info now.
+almagest.gui.constellation.72.name=さそり
+almagest.gui.constellation.72.explanation.left=学名 : Scorpius 略符 : Sco<br>主な星 : 
+almagest.gui.constellation.72.explanation.right=  no info now.
+almagest.gui.constellation.71.name=ちょうこくしつ
+almagest.gui.constellation.71.explanation.left=学名 : Sculptor 略符 : Scl<br>主な星 : 
+almagest.gui.constellation.71.explanation.right=  no info now.
+almagest.gui.constellation.73.name=たて
+almagest.gui.constellation.73.explanation.left=学名 : Scutum 略符 : Sct<br>主な星 : 
+almagest.gui.constellation.73.explanation.right=  no info now.
+almagest.gui.constellation.74.name=へび
+almagest.gui.constellation.74.explanation.left=学名 : Serpens 略符 : Ser<br>主な星 : ウヌク・アルハイ / α星 / 等級2.65
+almagest.gui.constellation.74.explanation.right=  トレミーの48星座のひとつです。東と西の2つに分かれている唯一の星座で、真ん中にはへびつかい座が存在します。かつてはこれらはひとつの大きな星座としてみられていました。名前を持つ星には、α星のウヌク・アルハイ(アラビア語で「蛇の首」)、Θ星のアリア(アラビア語で「蛇」)があります。球状星団であるM5は、10万以上もの星を含み約130億年の年齢を持つ、天の川銀河でもとても古い、そして美しい星団です。<br><br>  へび座は、へびつかい座が表す医の神、アスクレピオスがその手に持っている蛇を表しています。蛇は脱皮を繰り返すことから再生の象徴とされ、医療のシンボルにもたびたび使われているものです。ただ、医のシンボルとはいえ、なぜアスクレピオスが蛇を掴んでいる姿になったのか、その正確な理由はわからないそうです。
+almagest.gui.constellation.75.name=ろくぶんぎ
+almagest.gui.constellation.75.explanation.left=学名 : Sextans 略符 : Sex<br>主な星 : 
+almagest.gui.constellation.75.explanation.right=  no info now.
+almagest.gui.constellation.78.name=おうし
+almagest.gui.constellation.78.explanation.left=学名 : Taurus 略符 : Tau<br>主な星 : 
+almagest.gui.constellation.78.explanation.right=  no info now.
+almagest.gui.constellation.79.name=ぼうえんきょう
+almagest.gui.constellation.79.explanation.left=学名 : Telescopium 略符 : Tel<br>主な星 : 
+almagest.gui.constellation.79.explanation.right=  no info now.
+almagest.gui.constellation.81.name=さんかく
+almagest.gui.constellation.81.explanation.left=学名 : Triangulum 略符 : Tri<br>主な星 : 
+almagest.gui.constellation.81.explanation.right=  no info now.
+almagest.gui.constellation.80.name=みなみのさんかく
+almagest.gui.constellation.80.explanation.left=学名 : Triangulum Australe 略符 : TrA<br>主な星 : 
+almagest.gui.constellation.80.explanation.right=  no info now.
+almagest.gui.constellation.82.name=きょしちょう
+almagest.gui.constellation.82.explanation.left=学名 : Tucana 略符 : Tuc<br>主な星 : 特になし
+almagest.gui.constellation.82.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。特徴的な星は持っていませんが、小マゼラン雲 / Small Magellanic Cloud が位置していることで有名です。小マゼラン雲は、地球が存在する天の川銀河の周りを公転する伴銀河(銀河の周りを回る銀河！)のひとつで、およそ20光年の距離があると言われています。<br><br>  きょしちょうは南米に住むくちばしの大きな鳥のことで、大航海時代に西欧に持ち込まれていたようです。
+almagest.gui.constellation.83.name=おおぐま
+almagest.gui.constellation.83.explanation.left=学名 : Ursa Major 略符 : UMa<br>主な星 : 
+almagest.gui.constellation.83.explanation.right=  no info now.
+almagest.gui.constellation.84.name=こぐま
+almagest.gui.constellation.84.explanation.left=学名 : Ursa Minor 略符 : UMi<br>主な星 : 
+almagest.gui.constellation.84.explanation.right=  no info now.
+almagest.gui.constellation.85.name=ほ
+almagest.gui.constellation.85.explanation.left=学名 : Vela 略符 : Vel<br>主な星 : 
+almagest.gui.constellation.85.explanation.right=  no info now.
+almagest.gui.constellation.86.name=おとめ
+almagest.gui.constellation.86.explanation.left=学名 : Virgo 略符 : Vir<br>主な星 : 
+almagest.gui.constellation.86.explanation.right=  no info now.
+almagest.gui.constellation.87.name=とびうお
+almagest.gui.constellation.87.explanation.left=学名 : Volans 略符 : Vol<br>主な星 : 特になし
+almagest.gui.constellation.87.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。特筆すべき星のない星座ですが、Lindsay-Shapley Ringなどいくつかの銀河が所属しています。<br><br>  もともとはPiscis Volans / 「飛ぶ魚」と名付けられていましたが、現在では省略されたVolans / 「飛ぶ」が正式名となっています。これといった神話も話題もない星座ですが、周囲にはアルゴ船を構成する4星座、とびうおを狙っているかのようなかじき座があり、大航海時代の大海原を想起させる星座です。
+almagest.gui.constellation.88.name=こぎつね
+almagest.gui.constellation.88.explanation.left=学名 : Vulpecula 略符 : Vul<br>主な星 : 
+almagest.gui.constellation.88.explanation.right=  no info now.
+
+
+#----------------------
+#gui (ingame help, help).
+#----------------------
+almagest.gui.almagest.help.001=『The Almagest』について
+almagest.gui.almagest.help.001.exp=  『The Almagest』は、星座にまつわる要素を追加するモッドです。<br>  空から消えてしまった星々と星座たちを探す旅にでかけましょう。<br>  また、星々の力である「ほしのちから」が、世界中のブロックやアイテムに散り散りになっています。ほしのちからをうまく活用すると、様々に便利かもしれません。
+almagest.gui.almagest.help.002=星と星座について
+almagest.gui.almagest.help.002.exp=  「星座」はブロックとして、ワールドのどこかに落ちて(設置されて)いたり、モブを倒すことで入手できます。また、特定のアイテムからクラフトすることもできます(未実装)。星座を入手すると、夜空に対応する星が戻ります。<br>  アイテムの「星座盤」を手に持っていると、夜空に星座線を見ることができます。
+almagest.gui.almagest.help.003=星座盤世界とミラについて
+almagest.gui.almagest.help.003.exp=  ゲーム開始後に初めてベッドで寝るか、「星座盤」をクリックすることで「星座盤」世界に行くことができます。<br>  星座盤世界では、「ミラ」という人物が、なくなった星座を探しています。彼女に星座を渡すことで、様々なお礼がもらえるでしょう。
+almagest.gui.almagest.help.004=重要なアイテムについて(1)
+almagest.gui.almagest.help.004.exp=  「星座盤」 : 右クリックで星座盤世界に移動できます。「星の力 : １０」と「紙」でクラフトできます。<br>  『アルマゲスト』 : この本です。このモッドに関するすべての情報が載っています。新しいブロックやアイテム、星座などを得ると、情報が増えていきます。ミラからいつでももらうことができます。
+almagest.gui.almagest.help.005=重要なアイテムについて(2)
+almagest.gui.almagest.help.005.exp=  「書見台」 : 「ほしのちから」などのこのモッドの特別な性質を維持しながら、クラフトするのに必要です。<br><br>  「ほしの羅針盤」 : 一番近い位置にある星座の方向を指し示してくれます。
+almagest.gui.almagest.help.006=「組成」とクラフト(1)
+almagest.gui.almagest.help.006.exp=  すべてのブロック・アイテムには「組成」が定まっています。組成は全部で１６種類あります。<br>  鉱物、金属、宝石、植物、木材、動物、魔物、道具、機械、燃料、紙、液体、食物、爆発、装飾、星の輝き。<br>  アイテムごとに数値が定まっています。
+almagest.gui.almagest.help.007=「組成」とクラフト(2)
+almagest.gui.almagest.help.007.exp=  このモッドで追加されるレシピでは、特定のアイテムだけでなく、ある組成を持ったアイテムなら何でもクラフトに使うことができます。クラフトに使うアイテムで、要求される組成の数値を上回る必要があります。<br>  例えば「液体 : 40」を満たすのに、水バケツを２つ用いることができます。
+almagest.gui.almagest.help.008=「組成」とクラフト(3)
+almagest.gui.almagest.help.008.exp=  ひとつの組成の数値を満たすのに、いくつでもアイテムをクラフトに使用しても構いませんが、レシピごとに使用できる最大のスタック数が決まっています。<br>  例えば「レシピ(3)」となっているレシピでは、多くても３つのスロットにしかアイテムを入れられません。<br>  このモッドのレシピはすべて不定形です。
+almagest.gui.almagest.help.009=「ほしのちから」(1)
+almagest.gui.almagest.help.009.exp=  ワールドから得られるブロックやアイテムには、「ほしのちから」という特別な効果がついています。<br>  ほしのちからは「書見台」を使うことで、クラフト後のアイテムに引き継いでいくことができます。ほしのちからは、それぞれ特定のアイテムにしか効果を発揮しないので、うまく引き継いでいきましょう。
+almagest.gui.almagest.help.010=「ほしのちから」(2)
+almagest.gui.almagest.help.010.exp=  ほしのちからは、１アイテムごとに最大３つまで引き継ぐことができます。<br>  また、書見台で引き継ぐときに、下位の特性ふたつが一つの上位の特性に合成されることがあります。狙ったほしのちからを素材にして、積極的にクラフトしていきましょう。
+almagest.gui.almagest.help.011=「ほしのきおく」
+almagest.gui.almagest.help.011.exp=  ブロックやアイテムには「ほしのきおく」という数値があります。ほしのきおくが大きいほど、より明るい「等級」になり、アイテムによっては効果が増えることがあります。<br>  また、ほしのちからの効果も強化されます(未実装)。
+almagest.gui.almagest.help.012=「星座線」
+almagest.gui.almagest.help.012.exp=  ブロックやアイテムには、「星座線」という性質があります。星座線は上(T)、<br>右(R)、下(B)、左(L)の４種類があり、書見台でのクラフト時に表示されます。<br>  星座線でクラフトするアイテムをつなげるほど、ほしのちからを多く引き継ぐことができます(未実装)。
+
+
+#----------------------
+# ability.
+#----------------------
+almagest.gui.ability.effectable=効果のあるもの
+
+almagest.ability.effectable.weapon.name=武器
+almagest.ability.effectable.armor.name=防具
+almagest.ability.effectable.tool.name=道具
+almagest.ability.effectable.amulet.name=お守り
+almagest.ability.effectable.attack.name=攻撃
+almagest.ability.effectable.heal.name=回復
+almagest.ability.effectable.support.name=補助
+almagest.ability.effectable.block.name=ブロック
+
+almagest.ability.01.1.name=鍛えた力
+almagest.ability.01.2.name=割と鍛えた力
+almagest.ability.01.3.name=すごく鍛えた力
+almagest.ability.01.4.name=怒涛の力
+almagest.ability.02.1.name=鍛えた守り
+almagest.ability.02.2.name=割と鍛えた守り
+almagest.ability.02.3.name=すごく鍛えた守り
+almagest.ability.02.4.name=鉄壁の守り
+almagest.ability.03.1.name=鍛えた体力
+almagest.ability.03.2.name=割と鍛えた体力
+almagest.ability.03.3.name=すごく鍛えた体力
+almagest.ability.03.4.name=無尽の体力
+almagest.ability.04.1.name=攻守に秀でる
+almagest.ability.04.2.name=攻守両得
+almagest.ability.04.3.name=攻守万能
+almagest.ability.04.4.name=攻防一体
+almagest.ability.05.1.name=まあまあ切れる
+almagest.ability.05.2.name=けっこう切れる
+almagest.ability.05.3.name=すごく切れる
+almagest.ability.05.4.name=抜群に切れる
+almagest.ability.06.1.name=まあまあ頑丈
+almagest.ability.06.2.name=けっこう頑丈
+almagest.ability.06.3.name=すごく頑丈
+almagest.ability.06.4.name=素晴らしく頑丈
+almagest.ability.07.1.name=少し回復
+almagest.ability.07.2.name=まあまあ回復
+almagest.ability.07.3.name=結構回復
+almagest.ability.07.4.name=素晴らしく回復
+almagest.ability.08.1.name=状態異常ちょい回避
+almagest.ability.08.2.name=状態以上まあ回避
+almagest.ability.08.3.name=状態異常結構回避
+almagest.ability.08.4.name=状態異常ほぼ回避
+almagest.ability.09.1.name=毒付与
+almagest.ability.09.2.name=炎属性付与
+almagest.ability.09.3.name=雷属性付与
+almagest.ability.09.4.name=サボテン付与
+almagest.ability.09.5.name=魔法属性付与
+almagest.ability.09.6.name=ウィザー付与
+almagest.ability.09.7.name=ドラゴンブレス付与
+almagest.ability.11.1.name=忍び装束
+almagest.ability.12.1.name=移動速度ちょい上昇
+almagest.ability.12.2.name=移動速度まあ上昇
+almagest.ability.12.3.name=移動速度結構上昇
+almagest.ability.12.4.name=移動速度かなり上昇
+almagest.ability.13.1.name=採掘速度ちょい上昇
+almagest.ability.13.2.name=採掘速度まあ上昇
+almagest.ability.13.3.name=採掘速度結構上昇
+almagest.ability.13.4.name=採掘速度かなり上昇
+almagest.ability.14.1.name=経験値ちょい上昇
+almagest.ability.14.2.name=経験値まあ上昇
+almagest.ability.14.3.name=経験値結構上昇
+almagest.ability.14.4.name=経験値かなり上昇
+almagest.ability.15.1.name=運ちょい上昇
+almagest.ability.15.2.name=運まあ上昇
+almagest.ability.15.3.name=運結構上昇
+almagest.ability.15.4.name=運かなり上昇
+almagest.ability.16.1.name=素早く使用
+almagest.ability.16.2.name=高速に使用
+almagest.ability.16.3.name=マッハで使用
+almagest.ability.16.4.name=神速に使用
+almagest.ability.17.1.name=爆発する
+almagest.ability.18.1.name=組成ちょい上昇
+almagest.ability.18.2.name=組成まあ上昇
+almagest.ability.18.3.name=組成結構上昇
+almagest.ability.18.4.name=組成かなり上昇
+almagest.ability.19.1.name=記憶が増える
+almagest.ability.19.2.name=記憶が湧き出る
+almagest.ability.19.3.name=記憶が溢れる
+almagest.ability.20.1.name=良い当たり
+almagest.ability.20.2.name=なかなかの当たり
+almagest.ability.20.3.name=的確な当たり
+almagest.ability.20.4.name=正確無比な当たり
+
+almagest.ability.01.1.exp=装備者の攻撃力を+1します。
+almagest.ability.01.2.exp=装備者の攻撃力を+2します。
+almagest.ability.01.3.exp=装備者の攻撃力を+3します。
+almagest.ability.01.4.exp=装備者の攻撃力を+4します。
+almagest.ability.02.1.exp=装備者の防御力を+1します。
+almagest.ability.02.2.exp=装備者の防御力を+2します。
+almagest.ability.02.3.exp=装備者の防御力を+3します。
+almagest.ability.02.4.exp=装備者の防御力を+4します。
+almagest.ability.03.1.exp=装備者の体力を+1します。
+almagest.ability.03.2.exp=装備者の体力を+2します。
+almagest.ability.03.3.exp=装備者の体力を+3します。
+almagest.ability.03.4.exp=装備者の体力を+4します。
+almagest.ability.04.1.exp=装備者の攻撃力と防御力を+0.75します。
+almagest.ability.04.2.exp=装備者の攻撃力と防御力を+1.5します。
+almagest.ability.04.3.exp=装備者の攻撃力と防御力を+2.25します。
+almagest.ability.04.4.exp=装備者の攻撃力と防御力を+3します。
+almagest.ability.05.1.exp=武器の攻撃力を+1します。
+almagest.ability.05.2.exp=武器の攻撃力を+2します。
+almagest.ability.05.3.exp=武器の攻撃力を+4します。
+almagest.ability.05.4.exp=武器の攻撃力を+8します。
+almagest.ability.06.1.exp=防具の防御力を+1します。
+almagest.ability.06.2.exp=防具の防御力を+2します。
+almagest.ability.06.3.exp=防具の防御力を+3します。
+almagest.ability.06.4.exp=防具の防御力を+4します。
+almagest.ability.07.1.exp=回復アイテムの回復量を+2、満腹度を+0.1します。
+almagest.ability.07.2.exp=回復アイテムの回復量を+4、満腹度を+0.2します。
+almagest.ability.07.3.exp=回復アイテムの回復量を+8、満腹度を+0.3します。
+almagest.ability.07.4.exp=回復アイテムの回復量を+12、満腹度を+0.4します。
+almagest.ability.08.1.exp=悪影響を与える効果を50％の確率で回避します。
+almagest.ability.08.2.exp=悪影響を与える効果を60％の確率で回避します。
+almagest.ability.08.3.exp=悪影響を与える効果を70％の確率で回避します。
+almagest.ability.08.4.exp=悪影響を与える効果を99％の確率で回避します。
+almagest.ability.09.1.exp=攻撃した相手を毒状態にします。
+almagest.ability.09.2.exp=攻撃を炎ダメージにし、攻撃した相手を炎上状態にします。
+almagest.ability.09.3.exp=攻撃を落雷ダメージにし、攻撃した相手をスロウ状態にします。
+almagest.ability.09.4.exp=攻撃をサボテンダメージにします。
+almagest.ability.09.5.exp=攻撃を魔法ダメージにします。
+almagest.ability.09.6.exp=攻撃をウィザーダメージにし、攻撃した相手をウィザー状態にします。
+almagest.ability.09.7.exp=攻撃をドラゴンブレスダメージにし、攻撃した相手に負傷ポーション相当のダメージを与えます。
+almagest.ability.11.1.exp=透明化時に、防具を着ていても気づかれにくくなります。また、移動速度と武器や道具の使用速度が上昇します。
+almagest.ability.12.1.exp=装備者の移動速度をちょっと上げます。
+almagest.ability.12.2.exp=装備者の移動速度をまあまあ上げます。
+almagest.ability.12.3.exp=装備者の移動速度を結構上げます。
+almagest.ability.12.4.exp=装備者の移動速度をかなりあげます。
+almagest.ability.13.1.exp=武器や道具の使用速度が12.5％上昇します。
+almagest.ability.13.2.exp=武器や道具の使用速度が25％上昇します。
+almagest.ability.13.3.exp=武器や道具の使用速度が37.5％上昇します。
+almagest.ability.13.4.exp=武器や道具の使用速度が50％上昇します。
+almagest.ability.14.1.exp=獲得する経験値の量が10％増えます。
+almagest.ability.14.2.exp=獲得する経験値の量が30％増えます。
+almagest.ability.14.3.exp=獲得する経験値の量が50％増えます。
+almagest.ability.14.4.exp=獲得する経験値の量が100％増えます。
+almagest.ability.15.1.exp=装備者の運を+0.1します。
+almagest.ability.15.2.exp=装備者の運を+0.3します。
+almagest.ability.15.3.exp=装備者の運を+0.5します。
+almagest.ability.15.4.exp=装備者の運を+1します。
+almagest.ability.16.1.exp=アイテムの使用速度を-10％します。
+almagest.ability.16.2.exp=アイテムの使用速度を-20％します。
+almagest.ability.16.3.exp=アイテムの使用速度を-30％します。
+almagest.ability.16.4.exp=アイテムの使用速度を-50％します。
+almagest.ability.17.1.exp=爆発します。
+almagest.ability.18.1.exp=アイテムの各組成を+10します。
+almagest.ability.18.2.exp=アイテムの各組成を+20します。
+almagest.ability.18.3.exp=アイテムの各組成を+30します。
+almagest.ability.18.4.exp=アイテムの各組成を+40します。
+almagest.ability.19.1.exp=アイテムの星のきおくを+10％します。
+almagest.ability.19.2.exp=アイテムの星のきおくを+20％します。
+almagest.ability.19.3.exp=アイテムの星のきおくを+30％します。
+almagest.ability.20.1.exp=通常の攻撃が、20％の確率でクリティカルするようになります。
+almagest.ability.20.2.exp=通常の攻撃が、30％の確率でクリティカルするようになります。
+almagest.ability.20.3.exp=通常の攻撃が、50％の確率でクリティカルするようになります。
+almagest.ability.20.4.exp=通常の攻撃が、必ずクリティカルするようになります。
+
+
+#----------------------
+#gui (ingame help, Mob).
+#----------------------
+almagest.gui.almagest.mob.status.label=ステータス
+almagest.gui.almagest.mob.status.heart=体力
+almagest.gui.almagest.mob.status.attack=攻撃力
+almagest.gui.almagest.mob.status.defence=防御力
+almagest.gui.almagest.mob.drop.label=ドロップ
+almagest.gui.almagest.mob.place.label=出現する場所
+almagest.gui.almagest.mob.exp.label=解説
+
+#---Mira
+entity.Mira.name=ミラ
+almagest.gui.almagest.mob.almagest:almagest.entity.mira.drop.0=なし
+almagest.gui.almagest.mob.almagest:almagest.entity.mira.drop.1=
+almagest.gui.almagest.mob.almagest:almagest.entity.mira.drop.2=
+almagest.gui.almagest.mob.almagest:almagest.entity.mira.place=星座盤
+almagest.gui.almagest.mob.almagest:almagest.entity.mira.exp=「星座盤」の世界にいる人物です。失われた星と星座を探しているようで、プレイヤーに助けを求めてきます。<br>ミラに星座をあげることで様々な報酬がもらえるほか、ちょっとしたお話しもすることができます。
+almagest.gui.almagest.mob.almagest:almagest.entity.mira.mira=
+
+
+#----------------------
+# proprety.
+#----------------------
+almagest.property.mineral.name=鉱物
+almagest.property.metal.name=金属
+almagest.property.jewel.name=宝石
+almagest.property.plant.name=植物
+almagest.property.wood.name=木材
+almagest.property.animal.name=動物
+almagest.property.monster.name=魔物
+almagest.property.tool.name=道具
+almagest.property.machine.name=機械
+almagest.property.fuel.name=燃料
+almagest.property.paper.name=紙
+almagest.property.liqiud.name=液体
+almagest.property.food.name=食物
+almagest.property.explosive.name=爆発
+almagest.property.decorative.name=装飾
+almagest.property.star.name=星の輝き
+almagest.property.memory.name=ほしのきおく
+
+
+#----------------------
+# gui (tooltip).
+#----------------------
+almagest.gui.tootip.keyoff=+CTRL
+almagest.gui.tooltip.spacer=---------------
+almagest.gui.tooltip.attribute=%s : %s
+almagest.gui.tooltip.memory=ほしのきおく : %s (%s)
+almagest.gui.tooltip.line=星座線 : %s
+almagest.gui.tooltip.presented= ○
+
+
+#----------------------
+# gui (bookrest).
+#----------------------
+container.bookrest=Bookrest
+
+
+#----------------------
+# gui (mira).
+#----------------------
+almagest.gui.mira.constellation=星座をわたす
+almagest.gui.mira.constellation.message=どんな星座をくださるのですか！
+almagest.gui.mira.book=本をもらう
+almagest.gui.mira.book.message=好きなだけ持って行ってください。
+almagest.gui.mira.talk=お話する
+almagest.gui.mira.select.message=何かご用ですか？
+
+
+almagest.gui.mira.talk001.1.message.1=うーん、どうしましょう……。
+almagest.gui.mira.talk002.1.message.1=みんなどこかに行ってしまうなんて……。
+almagest.gui.mira.talk003.1.message.1=困りました、とっても困りました……。<br>ん？
+almagest.gui.mira.talk003.1.message.2=う、うわあ！？  びっくりした！？
+almagest.gui.mira.talk003.1.message.3=こんなところに人が……、いや、もしかして、あなた『クラフター』さんですか？
+almagest.gui.mira.talk003.2.message=なんというご縁でしょう！  お願いです、私たちを助けてください！
+almagest.gui.mira.talk003.2.choice.1=よくわからないけど助けてあげる
+almagest.gui.mira.talk003.2.choice.2=よくわからないから助けない
+almagest.gui.mira.talk003.3.message=ええ！？  そんな……。
+almagest.gui.mira.talk003.3.choice.1=よくわからないけど助けてあげる
+almagest.gui.mira.talk003.3.choice.2=よくわからないから助けない
+almagest.gui.mira.talk003.4.message.1=ああ、なんというお優しい方でしょう！  ありがとうございます！
+almagest.gui.mira.talk003.4.message.2=私はミラと言います。そしてここは星座盤の世界。
+almagest.gui.mira.talk003.4.message.3=この世界では、もともとあたり一面に星座たちが輝いていました。なのに、いつの間にか空は真っ暗、あたりは水浸し……。
+almagest.gui.mira.talk003.4.message.4=クラフターさんたちは、不思議な力を持っていると聞いたことがあります。
+almagest.gui.mira.talk003.5.message=そのお力で、どうかいなくなった星座たちを探してくださいませんか？
+almagest.gui.mira.talk003.5.choice.1=探してあげる
+almagest.gui.mira.talk003.5.choice.2=探してあげない
+almagest.gui.mira.talk003.6.message=ええ！？  私、もうだめだ……。
+almagest.gui.mira.talk003.6.choice.1=探してあげる
+almagest.gui.mira.talk003.6.choice.2=探してあげない
+almagest.gui.mira.talk003.7.message.1=わあ、ありがとうございます！！
+almagest.gui.mira.talk003.7.message.2=これから、よろしくお願いします！
+almagest.gui.mira.talk004.1.message=どうされましたか？
+almagest.gui.mira.talk004.1.choice.1=星座をわたす
+almagest.gui.mira.talk004.1.choice.2=図鑑をもらう
+almagest.gui.mira.talk004.1.choice.3=お話する
+almagest.gui.mira.talk004.2.message=好きなだけ持って行ってください！
+almagest.gui.mira.talk004.3.message=どんな星座をくださるのですか？
+almagest.gui.mira.talk004.4.message.1=えーと、星座ではない……、ですよね？
+almagest.gui.mira.talk004.8.message.1=この星座はすでにいただいていますね。
+almagest.gui.mira.talk004.5.message.1=わあ、ありがとうございます！
+almagest.gui.mira.talk004.6.message=お礼にこちらをさしあげます。
+almagest.gui.mira.random1.1.message.1=星座は全部で88個あったはずです。どんな星座だったのか思い出せないのですが……。
+almagest.gui.mira.random2.1.message.1=前は、こんなにお水もなかったんですよ？  一面に星が浮かんでいたのですが、沈んでしまっているみたいです。
+almagest.gui.mira.random3.1.message.1=ここって何にもないんですよね。外の世界は、面白いものがたくさんあるのですか？
+almagest.gui.mira.random4.1.message.1=図鑑を作るのって結構大変なんです。きれいに紙を切るのにコツがいるんですよ。
+
+
+
+
+
+almagest.gui.sample.1.message.1=スティーブさん、来てくれたの！<br>あなたのこと、ずっと待っていたのよ。
+almagest.gui.sample.2.message=どうして、連絡くれなかったの？
+almagest.gui.sample.2.choice.0=ちょっと仕事が忙しくてね。
+almagest.gui.sample.2.choice.1=君よりかわいい娘と会ってた。
+almagest.gui.sample.3.message.1=そう。お仕事、大変なのね……。
+almagest.gui.sample.4.message.1=……ところで、後ろの女の子はだあれ？
+
+#----------------------
+# talk (mira).
+#----------------------
+almagest.talk.mira.random.talk001.1=『1日1回の進捗も出せないmodderなんて、
+almagest.talk.mira.random.talk001.2=どうかしていると思いませんか？』
+almagest.talk.mira.random.talk001.3=あれ、私何言ってるんでしょう……。
+
+
+#----------------------
+# talk (tsuchinoko).
+#----------------------
+almagest.talk.tsuchinoko.random.talk001.1=んだてめえ。ナニ見てるんだよ。
+almagest.talk.tsuchinoko.random.talk002.1=見て分かるだろ！？  ツチノコだよ！！

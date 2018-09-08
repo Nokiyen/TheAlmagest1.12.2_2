@@ -1,0 +1,492 @@
+﻿##############################
+#
+# The Almagest
+# lang file.
+# created by Nokiyen.
+#
+###############################
+
+#----------------------
+# creative tab.
+#----------------------
+itemGroup.Almagest=The Almagest
+
+
+#----------------------
+# version notify.
+#----------------------
+almagest.version.notify=[The Almagest] New version "%s" is available now!
+
+
+#----------------------
+# block (constellation).
+#----------------------
+tile.constellation_block.1.name=Andromeda
+tile.constellation_block.2.name=Antlia
+tile.constellation_block.3.name=Apus
+tile.constellation_block.4.name=Aquila
+tile.constellation_block.4.incomplete.name=Incomplete Aquila
+tile.constellation_block.5.name=Aquarius
+tile.constellation_block.6.name=Ara
+tile.constellation_block.7.name=Aries
+tile.constellation_block.8.name=Auriga
+tile.constellation_block.8.incomplete.name=Incomplete Auriga
+tile.constellation_block.9.name=Bootes
+tile.constellation_block.9.incomplete.name=Incomplete Bootes
+tile.constellation_block.10.name=Caelum
+tile.constellation_block.11.name=Camelopardalis
+tile.constellation_block.12.name=Capricornus
+tile.constellation_block.13.name=Carina
+tile.constellation_block.13.incomplete.name=Incomplete Carina
+tile.constellation_block.14.name=Cassiopeia
+tile.constellation_block.15.name=Centaurus
+tile.constellation_block.15.incomplete.name=Incomplete Centaurus
+tile.constellation_block.16.name=Cepheus
+tile.constellation_block.17.name=Cetus
+tile.constellation_block.17.incomplete.name=Incomplete Cetus
+tile.constellation_block.18.name=Chamaeleon
+tile.constellation_block.19.name=Circinus
+tile.constellation_block.20.name=Canis Major
+tile.constellation_block.20.incomplete.name=Incomplete Canis Major
+tile.constellation_block.21.name=Canis Minor
+tile.constellation_block.21.incomplete.name=Incomplete Canis Minor
+tile.constellation_block.22.name=Cancer
+tile.constellation_block.23.name=Columba
+tile.constellation_block.24.name=Coma Berenices
+tile.constellation_block.25.name=Corona Australis
+tile.constellation_block.26.name=Corona Borealis
+tile.constellation_block.27.name=Crater
+tile.constellation_block.28.name=Crux
+tile.constellation_block.28.incomplete.name=Incomplete Crux
+tile.constellation_block.29.name=Corvus
+tile.constellation_block.30.name=Canes Venatici
+tile.constellation_block.31.name=Cygnus
+tile.constellation_block.31.incomplete.name=Incomplete Cygnus
+tile.constellation_block.32.name=Delphinus
+tile.constellation_block.33.name=Dorado
+tile.constellation_block.34.name=Draco
+tile.constellation_block.35.name=Equuleus
+tile.constellation_block.36.name=Eridanus
+tile.constellation_block.36.incomplete.name=Incomplete Eridanus
+tile.constellation_block.37.name=Fornax
+tile.constellation_block.38.name=Gemini
+tile.constellation_block.38.incomplete.name=Incomplete Gemini
+tile.constellation_block.39.name=Grus
+tile.constellation_block.40.name=Hercules
+tile.constellation_block.41.name=Horologium
+tile.constellation_block.42.name=Hydra
+tile.constellation_block.43.name=Hydrus
+tile.constellation_block.44.name=Indus
+tile.constellation_block.45.name=Lacerta
+tile.constellation_block.46.name=Leo
+tile.constellation_block.46.incomplete.name=Incomplete Leo
+tile.constellation_block.47.name=Lepus
+tile.constellation_block.48.name=Libra
+tile.constellation_block.49.name=Leo Minor
+tile.constellation_block.50.name=Lupus
+tile.constellation_block.51.name=Lynx
+tile.constellation_block.52.name=Lyra
+tile.constellation_block.52.incomplete.name=Incomplete Lyra
+tile.constellation_block.53.name=Mensa
+tile.constellation_block.54.name=Microscopium
+tile.constellation_block.55.name=Monoceros
+tile.constellation_block.56.name=Musca
+tile.constellation_block.57.name=Norma
+tile.constellation_block.58.name=Octans
+tile.constellation_block.59.name=Ophiuchus
+tile.constellation_block.60.name=Orion
+tile.constellation_block.60.incomplete.name=Incomplete Orion
+tile.constellation_block.61.name=Pavo
+tile.constellation_block.62.name=Pegasus
+tile.constellation_block.63.name=Perseus
+tile.constellation_block.64.name=Phoenix
+tile.constellation_block.65.name=Pictor
+tile.constellation_block.66.name=Piscis Austrinus
+tile.constellation_block.66.incomplete.name=Incomplete Piscis Austrinus
+tile.constellation_block.67.name=Pisces
+tile.constellation_block.68.name=Puppis
+tile.constellation_block.69.name=Pyxis
+tile.constellation_block.70.name=Reticulum
+tile.constellation_block.71.name=Sculptor
+tile.constellation_block.72.name=Scorpius
+tile.constellation_block.72.incomplete.name=Incomplete Scorpius
+tile.constellation_block.73.name=Scutum
+tile.constellation_block.74.name=Serpens
+tile.constellation_block.75.name=Sextans
+tile.constellation_block.76.name=Sagitta
+tile.constellation_block.77.name=Sagittarius
+tile.constellation_block.78.name=Taurus
+tile.constellation_block.78.incomplete.name=Incomplete Taurus
+tile.constellation_block.79.name=Telescopium
+tile.constellation_block.80.name=Triangulum Australe
+tile.constellation_block.81.name=Triangulum
+tile.constellation_block.82.name=Tucana
+tile.constellation_block.83.name=Ursa Major
+tile.constellation_block.84.name=Ursa Minor
+tile.constellation_block.84.incomplete.name=Incomplete Ursa Minor
+tile.constellation_block.85.name=Vela
+tile.constellation_block.86.name=Virgo
+tile.constellation_block.86.incomplete.name=Incomplete Virgo
+tile.constellation_block.87.name=Volans
+tile.constellation_block.88.name=Vulpecula
+
+
+#----------------------
+# block (others).
+#----------------------
+tile.atlas_star.name=Star
+
+
+#----------------------
+# item (star).
+#----------------------
+item.missing_star.0.name=Missing Star
+item.missing_star.97649.name=Missing Star -Altair-
+item.missing_star.24608.name=Missing Star -Capella-
+item.missing_star.69673.name=Missing Star -Arcturus-
+item.missing_star.32349.name=Missing Star -Sirius-
+item.missing_star.37279.name=Missing Star -Procyon-
+item.missing_star.30438.name=Missing Star -Canopus-
+item.missing_star.71683.name=Missing Star -Rigil Kent-
+item.missing_star.68702.name=Missing Star -Hadar-
+item.missing_star.60718.name=Missing Star -Acrux-
+item.missing_star.62434.name=Missing Star -Becrux-
+item.missing_star.102098.name=Missing Star -Deneb-
+item.missing_star.7588.name=Missing Star -Achernar-
+item.missing_star.37826.name=Missing Star -Pollux-
+item.missing_star.49669.name=Missing Star -Regulus-
+item.missing_star.91262.name=Missing Star -Vega-
+item.missing_star.27989.name=Missing Star -Betelgeuse-
+item.missing_star.24436.name=Missing Star -Rigel-
+item.missing_star.113368.name=Missing Star -Fomalhaut-
+item.missing_star.80763.name=Missing Star -Antares-
+item.missing_star.21421.name=Missing Star -Aldebaran-
+item.missing_star.65474.name=Missing Star -Spica-
+item.missing_star.10826.name=Missing Star -Mira-
+item.missing_star.11767.name=Missing Star -Polaris-
+
+
+#----------------------
+# item (others).
+#----------------------
+item.planisphere.name=Planisphere
+item.stardust.name=Stardust
+item.almagest.name=Almagest
+item.honey.name=Honey
+item.tsuchinoko_skin.name=Tsuchinoko Skin
+item.flying_fish.name=Flying Fish
+item.phoenix_feather.name=Feather of Phoenix
+item.rainbow_feather.name=Rainbow Feather
+item.white_feather.name=White Feather
+item.black_feather.name=Block Feather
+item.origami_crane=Origami Crane
+
+
+#----------------------
+# game data.
+#----------------------
+almagest.gamedata.category.block=Stary Block
+almagest.gamedata.category.item=Starty Item
+almagest.gamedata.category.list=Other Blocks & Items
+almagest.gamedata.category.mob=Stary Creatures
+almagest.gamedata.category.ability=Star Ability
+almagest.gamedata.category.const=Constellation
+almagest.gamedata.category.memo=Memo
+almagest.gamedata.category.help=Help
+almagest.gamedata.category.search=Search
+
+
+#----------------------
+# gui (ingame help).
+#----------------------
+almagest.gui.almagest.button.top=Top
+almagest.gui.almagest.component=組成
+almagest.gui.almagest.recipe=レシピ
+almagest.gui.almagest.effect=効果
+almagest.gui.almagest.magnitude=星の記憶
+almagest.gui.almagest.mira=ミラのひとこと
+
+
+#----------------------
+# gui (ingame help, block and items).
+#----------------------
+almagest.gui.almagest.component.almagest:planisphere.0=道具 : １０
+almagest.gui.almagest.component.almagest:planisphere.1=星の輝き : １０
+almagest.gui.almagest.component.almagest:planisphere.2=
+almagest.gui.almagest.component.almagest:planisphere.3=
+almagest.gui.almagest.component.almagest:planisphere.4=
+almagest.gui.almagest.recipe.almagest:planisphere.0=コンパス
+almagest.gui.almagest.recipe.almagest:planisphere.1=紙
+almagest.gui.almagest.recipe.almagest:planisphere.2=「星の輝き」 １０
+almagest.gui.almagest.recipe.almagest:planisphere.3=
+almagest.gui.almagest.recipe.almagest:planisphere.4=
+almagest.gui.almagest.effect.almagest:planisphere=手にもって右クリックで、『星座版』世界へ移動します。『星座版』世界で右クリックすると、元の場所へ戻ります。
+almagest.gui.almagest.magnitude.almagest:planisphere=等級６ : 「星の輝き」 + １０<br>等級３ : 火や爆発で消滅しません。
+almagest.gui.almagest.mira.almagest:planisphere=これがあれば、いつでもどこでも星座が探せますよ！  え？  えっと北は……。
+
+
+#----------------------
+#gui (ingame help, constellation).
+#----------------------
+almagest.gui.constellation.1.name=Andromeda
+almagest.gui.constellation.1.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.2.name=Antlia
+almagest.gui.constellation.2.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.3.name=Apus
+almagest.gui.constellation.3.explanation.left=学名 : Apus 略符 : Aps<br>主な星：特になし
+almagest.gui.constellation.3.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。4等星以下の星しかなく、目立つ星座ではありません。<br><br>  ふうちょうはニューギニアなどの熱帯に生息する「極楽鳥」のことで、当時のヨーロッパに輸出されていたとか。『ウラノメトリア』ではフウチョウ / Apusとミツバチ / Apisが勘違いされて「インドのミツバチ座」として紹介されています。
+almagest.gui.constellation.4.name=Aquila
+almagest.gui.constellation.4.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.5.name=Aquarius
+almagest.gui.constellation.5.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.6.name=Ara
+almagest.gui.constellation.6.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.7.name=Aries
+almagest.gui.constellation.7.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.8.name=Auriga
+almagest.gui.constellation.8.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.9.name=Bootes
+almagest.gui.constellation.9.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.10.name=Caelum
+almagest.gui.constellation.10.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.11.name=Camelopardalis
+almagest.gui.constellation.11.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.12.name=Capricornus
+almagest.gui.constellation.12.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.13.name=Carina
+almagest.gui.constellation.13.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.14.name=Cassiopeia
+almagest.gui.constellation.14.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.15.name=Centaurus
+almagest.gui.constellation.15.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.16.name=Cepheus
+almagest.gui.constellation.16.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.17.name=Cetus
+almagest.gui.constellation.17.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.18.name=Chamaeleon
+almagest.gui.constellation.18.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.19.name=Circinus
+almagest.gui.constellation.19.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.20.name=Canis Major
+almagest.gui.constellation.20.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.21.name=Canis Minor
+almagest.gui.constellation.21.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.22.name=Cancer
+almagest.gui.constellation.22.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.23.name=Columba
+almagest.gui.constellation.23.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.24.name=Coma Berenices
+almagest.gui.constellation.24.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.25.name=Corona Australis
+almagest.gui.constellation.25.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.26.name=Corona Borealis
+almagest.gui.constellation.26.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.27.name=Crater
+almagest.gui.constellation.27.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.28.name=Crux
+almagest.gui.constellation.28.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.29.name=Corvus
+almagest.gui.constellation.29.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.30.name=Canes Venatici
+almagest.gui.constellation.30.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.31.name=Cygnus
+almagest.gui.constellation.31.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.32.name=Delphinus
+almagest.gui.constellation.32.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.33.name=Dorado
+almagest.gui.constellation.33.explanation.left=学名 : Dodado 略符 : Dor<br>主な星 : 特になし
+almagest.gui.constellation.33.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。β星が変光星である他、大マゼラン雲 / Large Magellanic Cloud やその中のタランチュラ星雲、超高速度星(銀河系の脱出速度を上回る！)のHE 0437-5439など、小さな範囲に興味深い天体を所属させています。<br><br>  Doradoは「シイラ」という魚のことですが、もともとはスペイン語で「金」という意味であり、その名の通り黄金色に輝く魚です。Doradoには「かじき」という意味もあるようですがあまり正確な意味ではないらしく、日本語でかじき座となっているのは、この星座がかつて「Xiphias / かじき座」と呼ばれていたのもあるのではないでしょうか。
+almagest.gui.constellation.34.name=Draco
+almagest.gui.constellation.34.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.35.name=Equuleus
+almagest.gui.constellation.35.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.36.name=Eridanus
+almagest.gui.constellation.36.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.37.name=Fornax
+almagest.gui.constellation.37.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.38.name=Gemini
+almagest.gui.constellation.38.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.39.name=Grus
+almagest.gui.constellation.39.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.40.name=Hercules
+almagest.gui.constellation.40.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.41.name=Horologium
+almagest.gui.constellation.41.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.42.name=Hydra
+almagest.gui.constellation.42.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.43.name=Hydrus
+almagest.gui.constellation.43.explanation.left=学名 : Hydrus 略符 : Hyi<br>主な星 : 特になし
+almagest.gui.constellation.43.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。特別有名な星はありませんが、みずへび座で一番明るい星であるβ星は、紀元前100~200年頃に南天に最も近い星(ほぼ南極星)だったそうです。<br><br>  学名のHydrusというのは、ギリシア神話に出てくる9つの頭を持つ怪物蛇、ヒュドラーの男性形で、うみへび座 / Hydraは女性形です。日本語でなぜみずへび座とされているのかはよくわかりませんが、みずへび座の発見者であるハウトマンが、自身の冒険中に発見した蛇にちなんで"The Water Snake"と名付けたのに由来しているかもしれません。
+almagest.gui.constellation.44.name=Indus
+almagest.gui.constellation.44.explanation.left=学名 : Indus 略符 : Aps<br>主な星 : ペルシアン / α星 / 等級3.31
+almagest.gui.constellation.44.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。矢を持ったインディアンを表しており、右上のα星・ペルシアンが手に持った矢の矢羽にあたりますが、想像するのはなかなか難しいですね。矢の先(ペルシアンから右斜め下)にはくじゃく座があります。<br><br>  日本の文献ではアメリカン・インディアンを表しているという説明が多いですが、英語圏ではインド・東南アジア・あるいは南アフリカの先住民を指していると言われています。いずれにしても、大航海時代の数々の航海を思い起こさせる星座です。
+almagest.gui.constellation.45.name=Lacerta
+almagest.gui.constellation.45.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.46.name=Leo
+almagest.gui.constellation.46.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.47.name=Lepus
+almagest.gui.constellation.47.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.48.name=Libra
+almagest.gui.constellation.48.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.49.name=Leo Minor
+almagest.gui.constellation.49.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.50.name=Lupus
+almagest.gui.constellation.50.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.51.name=Lynx
+almagest.gui.constellation.51.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.52.name=Lyra
+almagest.gui.constellation.52.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.53.name=Mensa
+almagest.gui.constellation.53.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.54.name=Microscopium
+almagest.gui.constellation.54.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.55.name=Monoceros
+almagest.gui.constellation.55.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.56.name=Musca
+almagest.gui.constellation.56.explanation.left=学名 : Musca 略符 : Mus<br>主な星 : 特になし
+almagest.gui.constellation.56.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。88の星座の中でもだいぶ小さい星座に入ります。昆虫を表している唯一の星座でもあります。<br><br>  この星座の名前については幾分変遷があり、発見者のケイセルとハウトマンは「はえ座」と名付けたものの、バイエルは「ミツバチ座 / Apis」として取り上げており、その後いろいろと混乱をもたらしながらも、18世紀にラカイユが「みなみのはえ座」としてから「はえ」と表すことに落ち着いたようです。「きたのはえ座」という以前存在した星座が現在の「おひつじ座」に統合されてからは、「みなみのはえ座」を単に「はえ座」と呼ぶようになりました。<br><br>  蜂にしろ蝿にしろ、カメレオン座の先端で食べられそうになっている、どこかコミカル星座です。
+almagest.gui.constellation.57.name=Norma
+almagest.gui.constellation.57.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.58.name=Octans
+almagest.gui.constellation.58.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.59.name=Ophiuchus
+almagest.gui.constellation.59.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.60.name=Orion
+almagest.gui.constellation.60.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.61.name=Pavo
+almagest.gui.constellation.61.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.62.name=Pegasus
+almagest.gui.constellation.62.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.63.name=Perseus
+almagest.gui.constellation.63.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.64.name=Phoenix
+almagest.gui.constellation.64.explanation.left=学名 : Phoenix 略符 : Phe<br>主な星 : アンカー / α星 / 等級2.38
+almagest.gui.constellation.64.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。<br><br>  ほうおう座は、プランキウスによって制定され、バイエルによって知られるようになった12の南天の新しい星座のうち、唯一神話に起源を持っています。なんでも、アラブ圏でもともとこの位置に不死鳥の姿を描いており、それにならって「Phoenix / 不死鳥」としたとか。最も明るい星であるα星のアンカーも、アラビア語で「フェニックス」という意味です。ただ、これはほうおう座にちなんで1800年ほどに名付けられたということです。<br>  不死鳥以外にも、アラブ圏では(不死鳥のおわす)船と見ており、α星には「船の明るい星」を意味するザウラクという名前が元々ありました。ただ、2016年の星名標準化で(なぜか)アンカーの方が採択されたようです。<br><br>  日本語名は鳳凰(ほうおう)になっていますが、不死鳥と鳳凰は割と別の鳥です。
+almagest.gui.constellation.65.name=Pictor
+almagest.gui.constellation.65.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.66.name=Piscis Austrinus
+almagest.gui.constellation.66.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.67.name=Pisces
+almagest.gui.constellation.67.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.68.name=Puppis
+almagest.gui.constellation.68.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.69.name=Pyxis
+almagest.gui.constellation.69.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.70.name=Reticulum
+almagest.gui.constellation.70.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.71.name=Sculptor
+almagest.gui.constellation.71.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.72.name=Scorpius
+almagest.gui.constellation.72.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.73.name=Scutum
+almagest.gui.constellation.73.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.74.name=Serpens
+almagest.gui.constellation.74.explanation.left=学名 : Serpens 略符 : Ser<br>主な星 : ウヌク・アルハイ / α星 / 等級2.65
+almagest.gui.constellation.74.explanation.right=  トレミーの48星座のひとつです。東と西の2つに分かれている唯一の星座で、真ん中にはへびつかい座が存在します。かつてはこれらはひとつの大きな星座としてみられていました。名前を持つ星には、α星のウヌク・アルハイ(アラビア語で「蛇の首」)、Θ星のアリア(アラビア語で「蛇」)があります。球状星団であるM5は、10万以上もの星を含み約130億年の年齢を持つ、天の川銀河でもとても古い、そして美しい星団です。<br><br>  へび座は、へびつかい座が表す医の神、アスクレピオスがその手に持っている蛇を表しています。蛇は脱皮を繰り返すことから再生の象徴とされ、医療のシンボルにもたびたび使われているものです。ただ、医のシンボルとはいえ、なぜアスクレピオスが蛇を掴んでいる姿になったのか、その正確な理由はわからないそうです。
+almagest.gui.constellation.75.name=Sextans
+almagest.gui.constellation.75.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.76.name=Sagitta
+almagest.gui.constellation.76.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.77.name=Sagittarius
+almagest.gui.constellation.77.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.78.name=Taurus
+almagest.gui.constellation.78.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.79.name=Telescopium
+almagest.gui.constellation.79.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.80.name=Triangulum Australe
+almagest.gui.constellation.80.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.81.name=Triangulum
+almagest.gui.constellation.81.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.82.name=Tucana
+almagest.gui.constellation.82.explanation.left=学名 : Tucana 略符 : Tuc<br>主な星 : 特になし
+almagest.gui.constellation.82.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。特徴的な星は持っていませんが、小マゼラン雲 / Small Magellanic Cloud が位置していることで有名です。小マゼラン雲は、地球が存在する天の川銀河の周りを公転する伴銀河(銀河の周りを回る銀河！)のひとつで、およそ20光年の距離があると言われています。<br><br>  きょしちょうは南米に住むくちばしの大きな鳥のことで、大航海時代に西欧に持ち込まれていたようです。
+almagest.gui.constellation.83.name=Ursa Major
+almagest.gui.constellation.83.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.84.name=Ursa Minor
+almagest.gui.constellation.84.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.85.name=Vela
+almagest.gui.constellation.85.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.86.name=Virgo
+almagest.gui.constellation.86.explanation=test explanation.<br>test explanation.<br>test explanation.
+almagest.gui.constellation.87.name=Volans
+almagest.gui.constellation.87.explanation.left=学名 : Volans 略符 : Vol<br>主な星 : 特になし
+almagest.gui.constellation.87.explanation.right=  南天の星座のひとつです。ドイツの天文学者、ヨハン・バイエルの『ウラノメトリア』(1603)によって知られるようになった新しい星座です。特筆すべき星のない星座ですが、Lindsay-Shapley Ringなどいくつかの銀河が所属しています。<br><br>  もともとはPiscis Volans / 「飛ぶ魚」と名付けられていましたが、現在では省略されたVolans / 「飛ぶ」が正式名となっています。これといった神話も話題もない星座ですが、周囲にはアルゴ船を構成する4星座、とびうおを狙っているかのようなかじき座があり、大航海時代の大海原を想起させる星座です。
+almagest.gui.constellation.88.name=Vulpecula
+almagest.gui.constellation.88.explanation=test explanation.<br>test explanation.<br>test explanation.
+
+
+#----------------------
+# ability.
+#----------------------
+###almagest.ability.shining=Shining
+###almagest.ability.food_full_1=Get a bit full
+###almagest.ability.auto_explosion=Auto explosion
+almagest.ability.1.1.name=鍛えた力
+almagest.ability.1.2.name=割と鍛えた力
+almagest.ability.1.3.name=すごく鍛えた力
+almagest.ability.1.4.name=怒涛の力
+almagest.ability.2.1.name=鍛えた守り
+almagest.ability.2.2.name=割と鍛えた守り 
+almagest.ability.2.3.name=すごく鍛えた守り
+almagest.ability.2.4.name=鉄壁の守り
+almagest.ability.3.1.name=鍛えた体力
+almagest.ability.3.2.name=割と鍛えた体力
+almagest.ability.3.3.name=すごく鍛えた体力
+almagest.ability.3.4.name=無尽の体力
+almagest.ability.4.1.name=攻防ちょっと強化
+almagest.ability.4.2.name=攻防まあまあ強化
+almagest.ability.4.3.name=攻防すごく強化
+almagest.ability.4.4.name=攻防超強化
+almagest.ability.5.1.name=まあまあ切れる
+almagest.ability.5.2.name=けっこう切れる
+almagest.ability.5.3.name=すごく切れる
+almagest.ability.5.4.name=抜群に切れる
+almagest.ability.6.1.name=まあまあ頑丈
+almagest.ability.6.2.name=けっこう頑丈
+almagest.ability.6.3.name=すごく頑丈
+almagest.ability.6.4.name=すばらしく頑丈
+
+
+#----------------------
+# proprety.
+#----------------------
+###almagest.property.memory.name=星のきおく
+almagest.property.food.name=食物
+almagest.property.liqiud.name=液体
+almagest.property.plant.name=植物
+almagest.property.animal.name=動物
+almagest.property.star.name=星の輝き
+almagest.property.mineral.name=鉱物
+almagest.property.artifact.name=人工物
+
+
+#----------------------
+# gui (bookrest).
+#----------------------
+container.bookrest=Bookrest
+
+
+#----------------------
+# gui (mira).
+#----------------------
+almagest.gui.mira.constellation=星座をわたす
+almagest.gui.mira.constellation.message=どんな星座をくださるのですか！
+almagest.gui.mira.book=本をもらう
+almagest.gui.mira.book.message=好きなだけ持って行ってください。
+almagest.gui.mira.talk=お話する
+almagest.gui.mira.select.message=何かご用ですか？
+
+
+#----------------------
+# talk (mira).
+#----------------------
+almagest.talk.mira.random.talk001.1=『1日1回の進捗も出せないmodderなんて、
+almagest.talk.mira.random.talk001.2=どうかしていると思いませんか？』
+almagest.talk.mira.random.talk001.3=あれ、私何言ってるんでしょう……。
+
+
+#----------------------
+# talk (tsuchinoko).
+#----------------------
+almagest.talk.tsuchinoko.random.talk001.1=んだてめえ。ナニ見てるんだよ。
+almagest.talk.tsuchinoko.random.talk002.1=見て分かるだろ！？  ツチノコだよ！！

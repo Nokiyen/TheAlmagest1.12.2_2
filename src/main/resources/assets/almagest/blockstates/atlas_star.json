@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"metadata=0": { "model": "almagest:atlas_star_0" },
+		"metadata=1": { "model": "almagest:atlas_star_1" },
+		"metadata=2": { "model": "almagest:atlas_star_2" },
+		"metadata=3": { "model": "almagest:atlas_star_3" },
+		"metadata=4": { "model": "almagest:atlas_star_4" },
+		"metadata=5": { "model": "almagest:atlas_star_5" },
+		"metadata=6": { "model": "almagest:atlas_star_6" },
+		"metadata=7": { "model": "almagest:atlas_star_7" }
+	}
+}

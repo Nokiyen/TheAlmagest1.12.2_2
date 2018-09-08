@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+        "end": "almagest:blocks/tansu_top",
+        "side": "almagest:blocks/tansu_side"
+    }
+}

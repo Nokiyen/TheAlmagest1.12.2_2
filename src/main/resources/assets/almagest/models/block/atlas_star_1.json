@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "almagest:blocks/constellation_star_o"
+	}
+}

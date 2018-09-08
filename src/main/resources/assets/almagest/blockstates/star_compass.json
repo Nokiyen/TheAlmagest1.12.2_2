@@ -1,0 +1,5 @@
+{
+    "variants": {
+       "normal": { "model": "almagest:star_compass" }
+    }
+}
