@@ -71,7 +71,7 @@ public class GameDataBlock extends GameData {
 	@Override
 	public void readFromNbt(NBTTagCompound nbt) {
 		
-		this.recipeObtained = nbt.getBoolean(key_obtained);
+		this.recipeObtained = nbt.getBoolean(key_recipeObtained);
 		super.readFromNbt(nbt);
 		
 	}
@@ -81,6 +81,14 @@ public class GameDataBlock extends GameData {
 		
 		nbt.setBoolean(key_recipeObtained, this.recipeObtained);
 		return super.writeToNbt(nbt);
+		
+	}
+	
+	@Override
+	public void reset() {
+		
+		this.recipeObtained = false;
+		super.reset();
 		
 	}
 

@@ -102,5 +102,12 @@ public class AlmagestDataChunk implements IAlmagestData {
 		this.almagestData = data;
 		
 	}
+	
+	@Override
+	public void reset() {
+		
+		this.chunkMap.clear();
+		
+	}
 
 }

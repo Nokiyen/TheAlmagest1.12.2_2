@@ -33,7 +33,7 @@ public class EventSleep {
 		if(event.getEntityPlayer().world.provider.getDimension() == 0 && AlmagestCore.savedDataManager.getStoryData().getCurrentStory() == 0) {
 			posForPlani = event.getEntityPlayer().getPosition();
 			if(!event.getEntityPlayer().world.isRemote) {
-				HelperTeleport.teleportPlayer(AlmagestData.dimensionID, 0.5D, 90, 39.5D, (EntityPlayerMP)event.getEntityPlayer());
+				HelperTeleport.teleportPlayer(AlmagestData.dimensionID_planisphere, 0.5D, 90, 39.5D, (EntityPlayerMP)event.getEntityPlayer());
 			}
 		}
 		

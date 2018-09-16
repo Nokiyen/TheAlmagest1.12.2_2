@@ -18,6 +18,9 @@ import net.minecraftforge.fml.common.ModMetadata;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerAboutToStartEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
 
 /**********
@@ -44,7 +47,7 @@ public class AlmagestCore {
 	)
 	public static ProxyCommon proxy;
 	
-	public static boolean DEBUG = false;
+	public static boolean DEBUG = true;
 	public static Logger logger;
 	
 	public static SavedDataManager savedDataManager = new SavedDataManager();
@@ -96,6 +99,15 @@ public class AlmagestCore {
 		TempDataManager.tempRegister();
 		
 		proxy.registerFixers();
+			
+	}
+	
+	@EventHandler
+	public void serverAboutToStart(FMLServerAboutToStartEvent event) {
+		
+		AlmagestCore.log("server about to start.");
+//		savedDataManager.loadStorage(event);
+		savedDataManager.resetNbt();
 			
 	}
 	

@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -27,7 +28,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import noki.almagest.AlmagestCore;
 import noki.almagest.ability.StarPropertyCreator;
-import noki.almagest.attribute.BlockContainerWithAttribute;
+import noki.almagest.attribute.BlockWithAttribute;
 import noki.almagest.attribute.EStarAttribute;
 import noki.almagest.event.post.AttributeLevelEvent;
 import noki.almagest.item.ItemBlockStarCompass;
@@ -43,7 +44,7 @@ import noki.almagest.tile.TileStarCompass;
  *
  * @description
  */
-public class BlockStarCompass extends BlockContainerWithAttribute implements IWithRecipe, IWithItemBlock {
+public class BlockStarCompass extends BlockWithAttribute implements IWithRecipe, IWithItemBlock, ITileEntityProvider {
 	
 
 	//******************************//

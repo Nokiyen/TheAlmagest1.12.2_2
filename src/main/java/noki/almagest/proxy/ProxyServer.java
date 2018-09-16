@@ -7,6 +7,7 @@ import noki.almagest.packet.PacketSyncData;
 import noki.almagest.packet.PacketSyncStory;
 import noki.almagest.tile.TileConstellation;
 import noki.almagest.tile.TileStarCompass;
+import noki.almagest.tile.TileTent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
@@ -39,7 +40,8 @@ public class ProxyServer implements ProxyCommon {
 //		GameRegistry.registerTileEntity(TileConstellation.class, "TileConstellation");
 		GameRegistry.registerTileEntity(TileConstellation.class, new ResourceLocation("almagest", "tile_constellation"));
 		GameRegistry.registerTileEntity(TileStarCompass.class, new ResourceLocation("almagest", "tile_star_compass"));
-				
+		GameRegistry.registerTileEntity(TileTent.class, new ResourceLocation("almagest", "tile_tent"));
+		
 	}
 	
 	@Override

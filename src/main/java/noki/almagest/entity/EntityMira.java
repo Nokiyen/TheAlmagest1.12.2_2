@@ -36,6 +36,7 @@ public class EntityMira extends EntityCreature implements ITalkable, IEntityAlma
 	public EntityMira(World world) {
 		
 		super(world);
+		this.setEntityInvulnerable(true);
         
 	}
 	

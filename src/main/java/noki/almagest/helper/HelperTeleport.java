@@ -5,7 +5,7 @@ import net.minecraft.server.management.PlayerList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.WorldServer;
 import noki.almagest.AlmagestData;
-import noki.almagest.world.PlaniTeleporter;
+import noki.almagest.world.planisphere.PlaniTeleporter;
 
 
 /**********
@@ -36,7 +36,7 @@ public class HelperTeleport {
 	public static void teleportPlayer(int dimensionID, double posX, double posY, double posZ, EntityPlayerMP player) {
 		
 		PlayerList playerList = player.mcServer.getPlayerList();
-		WorldServer worldServer = player.mcServer.getWorld(AlmagestData.dimensionID);
+		WorldServer worldServer = player.mcServer.getWorld(AlmagestData.dimensionID_planisphere);
 		
 		// travel to dimension.
 //		player.forceSpawn = true;

@@ -126,6 +126,25 @@ public class TabAlmagest extends CreativeTabs {
 		addItem = StarAbilityCreator.addAbility2(addItem, 19, 1);
 		items.add(addItem);
 		
+		addItem = new ItemStack(Items.SIGN);
+		addItem = StarPropertyCreator.setMemory(addItem, 999);
+		items.add(addItem);
+		addItem = new ItemStack(Items.CAULDRON);
+		addItem = StarPropertyCreator.setMemory(addItem, 999);
+		items.add(addItem);
+		addItem = new ItemStack(Items.IRON_INGOT);
+		addItem = StarPropertyCreator.setMemory(addItem, 999);
+		items.add(addItem);
+		addItem = new ItemStack(Items.GOLD_INGOT);
+		addItem = StarPropertyCreator.setMemory(addItem, 999);
+		items.add(addItem);
+		addItem = new ItemStack(Items.DIAMOND);
+		addItem = StarPropertyCreator.setMemory(addItem, 999);
+		items.add(addItem);
+		addItem = new ItemStack(Blocks.PLANKS, 1, 0);
+		addItem = StarPropertyCreator.setMemory(addItem, 999);
+		items.add(addItem);
+		
 	}
 	
 }

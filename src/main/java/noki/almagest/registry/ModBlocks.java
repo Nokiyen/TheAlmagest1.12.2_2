@@ -6,6 +6,7 @@ import noki.almagest.block.BlockConstellation;
 import noki.almagest.block.BlockStar;
 import noki.almagest.block.BlockStarCompass;
 import noki.almagest.block.BlockTansu;
+import noki.almagest.block.BlockTent;
 
 
 /**********
@@ -34,7 +35,10 @@ public class ModBlocks {
 	
 	public static Block TANSU;
 	public static final String TANSU_name = "tansu";
-
+	
+	public static Block TENT;
+	public static final String TENT_name = "tent";
+	
 	
 	//******************************//
 	// define member methods.
@@ -46,6 +50,7 @@ public class ModBlocks {
 		BOOKREST = RegistryHelper.registerBlock(new BlockBookrest(), BOOKREST_name);
 		STAR_COMPASS = RegistryHelper.registerBlock(new BlockStarCompass(), STAR_COMPASS_name);
 //		TANSU = RegistryHelper.registerBlock(new BlockTansu(), TANSU_name);
+		TENT = RegistryHelper.registerBlock(new BlockTent(), TENT_name);
 		
 	}
 

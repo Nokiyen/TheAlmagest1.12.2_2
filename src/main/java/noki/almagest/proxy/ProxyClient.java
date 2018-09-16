@@ -40,6 +40,7 @@ import noki.almagest.registry.ModBlocks;
 import noki.almagest.registry.ModItems;
 import noki.almagest.tile.TileConstellation;
 import noki.almagest.tile.TileStarCompass;
+import noki.almagest.tile.TileTent;
 
 
 
@@ -67,6 +68,7 @@ public class ProxyClient implements ProxyCommon {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileConstellation.class, new RenderTileConstellation());
 		GameRegistry.registerTileEntity(TileStarCompass.class, new ResourceLocation("almagest", "star_compass"));
 		ClientRegistry.bindTileEntitySpecialRenderer(TileStarCompass.class, new RenderTileStarCompass());
+		GameRegistry.registerTileEntity(TileTent.class, new ResourceLocation("almagest", "tile_tent"));
 /*		MinecraftForgeClient.registerItemRenderer(
 				Item.getItemFromBlock(AlmagestData.blockConstellation), new RenderItemBlockConstellation());*/
 		

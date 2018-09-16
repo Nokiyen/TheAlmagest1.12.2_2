@@ -121,5 +121,12 @@ public class AlmagestDataStory implements IAlmagestData {
 		this.storyFlags.put(flagId, flag);
 		
 	}
+	
+	@Override
+	public void reset() {
+		
+		this.storyFlags.clear();
+		
+	}
 
 }

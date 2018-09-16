@@ -348,6 +348,11 @@ public class AlmagestDataFlag implements IAlmagestData {
 	@Override
 	public void readFromNBT(NBTTagCompound nbt) {
 		
+		for(String each: nbt.getKeySet()) {
+			AlmagestCore.log("{}.", each);
+		}
+		AlmagestCore.log("finish to display, flag keys.");
+		
 		for(DataCategory each: DataCategory.values()) {
 			NBTTagCompound categoryNbt = nbt.getCompoundTag(each.toString());
 			
@@ -383,6 +388,17 @@ public class AlmagestDataFlag implements IAlmagestData {
 	public void setSavedData(WorldSavedData data) {
 		
 		this.almagestData = data;
+		
+	}
+	
+	@Override
+	public void reset() {
+		
+		for(DataCategory eachCategory: DataCategory.values()) {
+			for(GameData eachData: this.gameDataMap.get(eachCategory).values()) {
+				eachData.reset();
+			}
+		}
 		
 	}
 	

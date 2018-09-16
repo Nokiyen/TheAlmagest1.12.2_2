@@ -61,5 +61,13 @@ public class GameDataConstellation extends GameData {
 		return nbt;
 		
 	}
+	
+	@Override
+	public void reset() {
+		
+		this.presented = false;
+		super.reset();
+		
+	}
 
 }

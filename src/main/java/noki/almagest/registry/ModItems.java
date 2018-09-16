@@ -12,6 +12,7 @@ import noki.almagest.item.ItemOil;
 import noki.almagest.item.ItemOrigamiCrane;
 import noki.almagest.item.ItemPhoenixFeather;
 import noki.almagest.item.ItemPlanisphere;
+import noki.almagest.item.ItemPlow;
 import noki.almagest.item.ItemPolish;
 import noki.almagest.item.ItemPureWater;
 import noki.almagest.item.ItemRainbowFeather;
@@ -61,6 +62,9 @@ public class ModItems {
 	public static Item POLISH;
 	public static final String POLISH_name = "polish";
 	
+	public static Item PLOW;
+	public static final String PLOW_name = "plow";
+	
 	//temporally disabled below.
 	public static Item HONEY;
 	public static final String HONEY_name = "honey";
@@ -102,6 +106,7 @@ public class ModItems {
 		OIL = RegistryHelper.registerItem(new ItemOil(), OIL_name);
 		PURE_WATER = RegistryHelper.registerItem(new ItemPureWater(), PURE_WATER_name);
 		POLISH = RegistryHelper.registerItem(new ItemPolish(), POLISH_name);
+		PLOW = RegistryHelper.registerItem(new ItemPlow(), PLOW_name);
 //		HONEY = RegistryHelper.registerItem(new ItemHoney(), HONEY_name);
 //		TSUCHINOKO_SKIN = RegistryHelper.registerItem(new ItemTsuchinokoSkin(), TSUCHINOKO_SKIN_name);
 //		FLYING_FISH = RegistryHelper.registerItem(new ItemFlyingFish(), FLYING_FISH_name);

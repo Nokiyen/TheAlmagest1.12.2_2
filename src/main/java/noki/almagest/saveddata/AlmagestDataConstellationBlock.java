@@ -152,5 +152,12 @@ public class AlmagestDataConstellationBlock implements IAlmagestData {
 		this.almagestData = data;
 		
 	}
+	
+	@Override
+	public void reset() {
+		
+		this.blockMap.clear();
+		
+	}
 
 }

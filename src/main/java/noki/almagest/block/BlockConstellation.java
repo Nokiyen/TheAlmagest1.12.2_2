@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
@@ -18,6 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
@@ -26,7 +28,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import noki.almagest.AlmagestCore;
-import noki.almagest.attribute.BlockContainerWithAttribute;
+import noki.almagest.attribute.BlockWithAttribute;
 import noki.almagest.attribute.EStarAttribute;
 import noki.almagest.helper.HelperConstellation;
 import noki.almagest.helper.HelperConstellation.Constellation;
@@ -47,7 +49,7 @@ import noki.almagest.tile.TileConstellation;
  * @description 88の星図を表すブロックです。種類はNBTで管理。
  * @see ItemBlockConstellation, TileConstellation, RenderTileConstellation.
  */
-public class BlockConstellation extends BlockContainerWithAttribute implements IWithItemBlock, IWithSubTypes {
+public class BlockConstellation extends BlockWithAttribute implements IWithItemBlock, IWithSubTypes, ITileEntityProvider {
 
 	//******************************//
 	// define member variables.
@@ -183,6 +185,24 @@ public class BlockConstellation extends BlockContainerWithAttribute implements I
 		}
 		
 		return true;
+		
+	}
+	
+	@Override
+	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+		
+		if(world.getTileEntity(pos) == null || !(world.getTileEntity(pos) instanceof TileConstellation)) {
+			return ItemStack.EMPTY;
+		}
+		TileConstellation tile = (TileConstellation)world.getTileEntity(pos);
+		int constNumber = tile.getConstNumber();
+		int[] missingStars = tile.getMissingStars();
+		if(missingStars.length == 0) {
+			return HelperConstellation.getConstStack(constNumber, 1);
+		}
+		else {
+			return HelperConstellation.getConstStack(constNumber, missingStars, 1);
+		}
 		
 	}
 	

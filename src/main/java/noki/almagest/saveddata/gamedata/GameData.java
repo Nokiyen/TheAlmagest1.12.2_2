@@ -45,5 +45,11 @@ public class GameData {
 		return nbt;
 		
 	}
+	
+	public void reset() {
+		
+		this.obtained = false;
+		
+	}
 
 }

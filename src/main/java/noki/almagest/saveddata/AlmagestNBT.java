@@ -2,6 +2,7 @@ package noki.almagest.saveddata;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.storage.WorldSavedData;
+import noki.almagest.AlmagestCore;
 
 
 /**********
@@ -20,6 +21,7 @@ public class AlmagestNBT extends WorldSavedData {
 	private AlmagestDataBlock blockData;
 	private AlmagestDataStory storyData;
 	private AlmagestDataConstellationBlock constData;
+	private AlmagestDataTent tentData;
 	
 	private NBTTagCompound nbtForReading;
 	
@@ -28,6 +30,7 @@ public class AlmagestNBT extends WorldSavedData {
 	private static final String key_blockData = "blockdata";
 	private static final String key_storyData = "storydata";
 	private static final String key_constData = "constdata";
+	private static final String key_tentData = "tentdata";
 	
 	
 	//******************************//
@@ -67,6 +70,9 @@ public class AlmagestNBT extends WorldSavedData {
 				case 4:
 					this.constData = (AlmagestDataConstellationBlock)data[i];
 					break;
+				case 5:
+					this.tentData = (AlmagestDataTent)data[i];
+					break;
 			}
 		}
 		
@@ -80,6 +86,7 @@ public class AlmagestNBT extends WorldSavedData {
 			this.blockData.readFromNBT(this.nbtForReading.getCompoundTag(key_blockData));
 			this.storyData.readFromNBT(this.nbtForReading.getCompoundTag(key_storyData));
 			this.constData.readFromNBT(this.nbtForReading.getCompoundTag(key_constData));
+			this.tentData.readFromNBT(this.nbtForReading.getCompoundTag(key_tentData));
 		}
 		
 	}
@@ -87,11 +94,14 @@ public class AlmagestNBT extends WorldSavedData {
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		
+		AlmagestCore.log("AlmagestNBT.writeToNBT().");
+		
 		nbt.setTag(key_flagData, this.flagData.createNBT());
 		nbt.setTag(key_chunkData, this.chunkData.createNBT());
 		nbt.setTag(key_blockData, this.blockData.createNBT());
 		nbt.setTag(key_storyData, this.storyData.createNBT());
 		nbt.setTag(key_constData, this.constData.createNBT());
+		nbt.setTag(key_tentData, this.tentData.createNBT());
 		
 		return nbt;
 		

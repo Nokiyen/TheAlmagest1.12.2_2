@@ -1,5 +1,6 @@
 package noki.almagest.recipe;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import noki.almagest.attribute.EStarAttribute;
@@ -31,6 +32,12 @@ public class RecipeHelper {
 		RecipeRegistry.setAdditionalRecipe(
 				new StarRecipe(new ItemStack(Items.DIAMOND, 2))
 					.setStack(new ItemStack(Items.DIAMOND, 1)).setStack(new ItemStack(ModItems.POLISH)).setStack(new ItemStack(ModItems.COCKTAIL_RAINBOW)));
+		
+		for(int i=0; i<=5; i++) {
+			RecipeRegistry.setAdditionalRecipe(
+					new StarRecipe(new ItemStack(Blocks.PLANKS, 2, i))
+						.setStack(new ItemStack(Blocks.PLANKS, 1, i)).setStack(new ItemStack(ModItems.POLISH)));
+		}
 		
 	}
 	

@@ -484,6 +484,7 @@ public class GuiAlmagest extends GuiScreen {
 							this.currentLink.getCategory(), AlmagestCore.proxy.getPlayer().isCreative());
 					if(nextData != null) {
 						this.currentLink.setToThird(nextData);
+						this.thirdLink.setToThird(nextData);
 						this.setThirdExplanation();
 					}
 				}
@@ -497,6 +498,7 @@ public class GuiAlmagest extends GuiScreen {
 							this.currentLink.getCategory(), AlmagestCore.proxy.getPlayer().isCreative());
 					if(prevData != null) {
 						this.currentLink.setToThird(prevData);
+						this.thirdLink.setToThird(prevData);
 						this.setThirdExplanation();
 					}
 				}

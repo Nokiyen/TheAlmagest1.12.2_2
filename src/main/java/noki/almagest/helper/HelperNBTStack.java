@@ -138,6 +138,13 @@ public class HelperNBTStack {
 		
 	}
 	
+	public HelperNBTStack removeTag(String key) {
+		
+		this.childNBT.removeTag(key);
+		return this;
+		
+	}
+	
 	public boolean hasKey(String key) {
 		
 		return this.childNBT.hasKey(key);

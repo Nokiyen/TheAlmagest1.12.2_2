@@ -22,5 +22,6 @@ public interface IAlmagestData {
 	abstract void readFromNBT(NBTTagCompound nbt);
 	abstract NBTTagCompound createNBT();
 	abstract void setSavedData(WorldSavedData data);
+	abstract void reset();
 
 }

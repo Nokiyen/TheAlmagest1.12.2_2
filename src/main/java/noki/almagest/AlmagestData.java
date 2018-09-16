@@ -18,9 +18,11 @@ import noki.almagest.entity.EntityMira;
 import noki.almagest.event.EventConstellation;
 import noki.almagest.event.EventFishing;
 import noki.almagest.event.EventObtained;
+import noki.almagest.event.EventPlanisphere;
 import noki.almagest.event.EventProperty;
 import noki.almagest.event.EventRender;
 import noki.almagest.event.EventSleep;
+import noki.almagest.event.EventTent;
 import noki.almagest.event.EventToolTip;
 import noki.almagest.event.EventVersionCheck;
 import noki.almagest.event.EventWeather;
@@ -32,8 +34,10 @@ import noki.almagest.registry.JsonRegistry;
 import noki.almagest.registry.ModBlocks;
 import noki.almagest.registry.ModItems;
 import noki.almagest.registry.RecipeRegistry;
-import noki.almagest.world.PlaniBiome;
-import noki.almagest.world.PlaniWorldProvider;
+import noki.almagest.world.planisphere.PlaniBiome;
+import noki.almagest.world.planisphere.PlaniWorldProvider;
+import noki.almagest.world.tent.TentBiome;
+import noki.almagest.world.tent.TentWorldProvider;
 
 
 /**********
@@ -60,10 +64,15 @@ public class AlmagestData {
 	//--------------------
 	// Dimension.
 	//--------------------
-	public static int dimensionID;
-	public static DimensionType dimensionType;
-	public static BiomeDictionary.Type biomeType;
+	public static int dimensionID_planisphere;
+	public static DimensionType dimensionType_planisphere;
+	public static BiomeDictionary.Type biomeType_planisphere;
+
+	public static int dimensionID_tent;
+	public static DimensionType dimensionType_tent;
+	public static BiomeDictionary.Type biomeType_tent;
 	
+
 	//--------------------
 	// GUI.
 	//--------------------
@@ -87,17 +96,28 @@ public class AlmagestData {
 		JsonRegistry.register();
 		
 		// world.
-		dimensionID = 88;
-		dimensionType = DimensionType.register("Planisphere", "_planisphere", dimensionID, PlaniWorldProvider.class, false);
-		biomeType = BiomeDictionary.Type.getType("STAR");
+		dimensionID_planisphere = 88;
+		dimensionType_planisphere = DimensionType.register("Planisphere", "_planisphere", dimensionID_planisphere, PlaniWorldProvider.class, false);
+		biomeType_planisphere = BiomeDictionary.Type.getType("STAR");
 		ForgeRegistries.BIOMES.register(
 				new PlaniBiome(
 						new BiomeProperties("Planisphere").setTemperature(0.8F).setRainfall(0.0F).setRainDisabled()
 				).setRegistryName(new ResourceLocation(ModInfo.ID.toLowerCase(), "planisphere"))
 			);
-		BiomeDictionary.addTypes(ForgeRegistries.BIOMES.getValue(new ResourceLocation(ModInfo.ID.toLowerCase(), "planisphere")), biomeType);
-		DimensionManager.registerDimension(dimensionID, dimensionType);
-
+		BiomeDictionary.addTypes(ForgeRegistries.BIOMES.getValue(new ResourceLocation(ModInfo.ID.toLowerCase(), "planisphere")), biomeType_planisphere);
+		DimensionManager.registerDimension(dimensionID_planisphere, dimensionType_planisphere);
+		
+		dimensionID_tent = 89;
+		dimensionType_tent = DimensionType.register("Tent", "_tent", dimensionID_tent, TentWorldProvider.class, false);
+		biomeType_tent = BiomeDictionary.Type.getType("TENT");
+		ForgeRegistries.BIOMES.register(
+				new TentBiome(
+						new BiomeProperties("Tent").setTemperature(0.8F).setRainfall(0.0F).setRainDisabled()
+				).setRegistryName(new ResourceLocation(ModInfo.ID.toLowerCase(), "tent"))
+			);
+		BiomeDictionary.addTypes(ForgeRegistries.BIOMES.getValue(new ResourceLocation(ModInfo.ID.toLowerCase(), "tent")), biomeType_tent);
+		DimensionManager.registerDimension(dimensionID_tent, dimensionType_tent);
+		
 	}
 	
 	public static void register() {
@@ -123,6 +143,8 @@ public class AlmagestData {
 		MinecraftForge.EVENT_BUS.register(new EventWeather());
 		MinecraftForge.EVENT_BUS.register(new EventSleep());
 		MinecraftForge.EVENT_BUS.register(new EventObtained());
+		MinecraftForge.EVENT_BUS.register(new EventPlanisphere());
+		MinecraftForge.EVENT_BUS.register(new EventTent());
 		MinecraftForge.EVENT_BUS.register(new EventVersionCheck());
 		if(FMLCommonHandler.instance().getSide() == Side.CLIENT) {
 			MinecraftForge.EVENT_BUS.register(new EventRender());

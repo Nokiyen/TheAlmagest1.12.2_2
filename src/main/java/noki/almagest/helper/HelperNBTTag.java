@@ -56,6 +56,12 @@ public class HelperNBTTag {
 		
 	}
 	
+	public NBTTagCompound getTag(String key) {
+		
+		return this.childNBT.getCompoundTag(key);
+		
+	}
+	
 	public HelperNBTTag setBoolean(String key, boolean value) {
 		
 		this.childNBT.setBoolean(key, value);
@@ -79,6 +85,13 @@ public class HelperNBTTag {
 	public HelperNBTTag setIntArray(String key, int[] value) {
 		
 		this.childNBT.setIntArray(key, value);
+		return this;
+		
+	}
+	
+	public HelperNBTTag setTag(String key, NBTTagCompound tag) {
+		
+		this.childNBT.setTag(key, tag);
 		return this;
 		
 	}

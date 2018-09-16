@@ -69,7 +69,7 @@ public class ItemPlanisphere extends ItemWithAttribute implements IWithRecipe, I
 		EntityPlayerMP entityPlayerMP = (EntityPlayerMP)player;
 		HelperNBTStack helper = new HelperNBTStack(player.getHeldItem(hand));
 		// teleport from Atlas
-		if(world.provider.getDimension() == AlmagestData.dimensionID) {
+		if(world.provider.getDimension() == AlmagestData.dimensionID_planisphere) {
 			// in case that the last position is memorized.
 			if(helper.hasChild()) {
 				int dimensionID = helper.getInteger(NBT_dimensionID);
@@ -90,7 +90,7 @@ public class ItemPlanisphere extends ItemWithAttribute implements IWithRecipe, I
 			helper.setInteger(NBT_posY, (int)entityPlayerMP.posY);
 			helper.setInteger(NBT_posZ, (int)entityPlayerMP.posZ);
 			
-			HelperTeleport.teleportPlayer(AlmagestData.dimensionID, entityPlayerMP);
+			HelperTeleport.teleportPlayer(AlmagestData.dimensionID_planisphere, entityPlayerMP);
 //			player.travelToDimension(AlmagestData.dimensionID);
 		}
 		
