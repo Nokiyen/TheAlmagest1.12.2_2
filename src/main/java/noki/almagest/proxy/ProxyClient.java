@@ -29,6 +29,7 @@ import noki.almagest.client.render.entity.RenderFactoryMira;
 import noki.almagest.client.render.entity.TsuchinokoRenderFactory;
 import noki.almagest.client.render.model.BakedModelConstellation;
 import noki.almagest.client.render.model.BakedModelConstellationAll;
+import noki.almagest.client.render.tile.RenderTileAriadne;
 import noki.almagest.client.render.tile.RenderTileConstellation;
 import noki.almagest.client.render.tile.RenderTileStarCompass;
 import noki.almagest.entity.EntityMira;
@@ -38,6 +39,7 @@ import noki.almagest.packet.PacketHandler;
 import noki.almagest.packet.PacketSyncStory;
 import noki.almagest.registry.ModBlocks;
 import noki.almagest.registry.ModItems;
+import noki.almagest.tile.TileAriadne;
 import noki.almagest.tile.TileConstellation;
 import noki.almagest.tile.TileStarCompass;
 import noki.almagest.tile.TileTent;
@@ -69,6 +71,8 @@ public class ProxyClient implements ProxyCommon {
 		GameRegistry.registerTileEntity(TileStarCompass.class, new ResourceLocation("almagest", "star_compass"));
 		ClientRegistry.bindTileEntitySpecialRenderer(TileStarCompass.class, new RenderTileStarCompass());
 		GameRegistry.registerTileEntity(TileTent.class, new ResourceLocation("almagest", "tile_tent"));
+		ClientRegistry.bindTileEntitySpecialRenderer(TileAriadne.class, new RenderTileAriadne());
+		GameRegistry.registerTileEntity(TileAriadne.class, new ResourceLocation("almagest", "tile_ariadne"));
 /*		MinecraftForgeClient.registerItemRenderer(
 				Item.getItemFromBlock(AlmagestData.blockConstellation), new RenderItemBlockConstellation());*/
 		

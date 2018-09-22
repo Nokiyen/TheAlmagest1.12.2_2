@@ -1,7 +1,5 @@
 package noki.almagest;
 
-import noki.almagest.ability.StarAbilityHealth;
-import noki.almagest.event.EventFishing;
 import noki.almagest.helper.HelperConstellation;
 import noki.almagest.packet.PacketHandler;
 import noki.almagest.proxy.ProxyCommon;
@@ -19,8 +17,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerAboutToStartEvent;
-import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
-import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
 
 /**********
@@ -85,8 +81,6 @@ public class AlmagestCore {
 //		proxy.registerEntities();
 		proxy.registerRenderers();
 		
-		MinecraftForge.EVENT_BUS.register(new StarAbilityHealth());
-				
 	}
 	
 	@EventHandler

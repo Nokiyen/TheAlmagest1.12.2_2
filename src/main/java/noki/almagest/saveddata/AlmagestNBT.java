@@ -22,6 +22,7 @@ public class AlmagestNBT extends WorldSavedData {
 	private AlmagestDataStory storyData;
 	private AlmagestDataConstellationBlock constData;
 	private AlmagestDataTent tentData;
+	private AlmagestDataAriadne ariadneData;
 	
 	private NBTTagCompound nbtForReading;
 	
@@ -31,6 +32,7 @@ public class AlmagestNBT extends WorldSavedData {
 	private static final String key_storyData = "storydata";
 	private static final String key_constData = "constdata";
 	private static final String key_tentData = "tentdata";
+	private static final String key_ariadneData = "ariadnedata";
 	
 	
 	//******************************//
@@ -73,6 +75,9 @@ public class AlmagestNBT extends WorldSavedData {
 				case 5:
 					this.tentData = (AlmagestDataTent)data[i];
 					break;
+				case 6:
+					this.ariadneData = (AlmagestDataAriadne)data[i];
+					break;
 			}
 		}
 		
@@ -87,6 +92,7 @@ public class AlmagestNBT extends WorldSavedData {
 			this.storyData.readFromNBT(this.nbtForReading.getCompoundTag(key_storyData));
 			this.constData.readFromNBT(this.nbtForReading.getCompoundTag(key_constData));
 			this.tentData.readFromNBT(this.nbtForReading.getCompoundTag(key_tentData));
+			this.ariadneData.readFromNBT(this.nbtForReading.getCompoundTag(key_ariadneData));
 		}
 		
 	}
@@ -102,6 +108,7 @@ public class AlmagestNBT extends WorldSavedData {
 		nbt.setTag(key_storyData, this.storyData.createNBT());
 		nbt.setTag(key_constData, this.constData.createNBT());
 		nbt.setTag(key_tentData, this.tentData.createNBT());
+		nbt.setTag(key_ariadneData, this.ariadneData.createNBT());
 		
 		return nbt;
 		

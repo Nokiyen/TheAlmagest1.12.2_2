@@ -1,6 +1,7 @@
 package noki.almagest.registry;
 
 import net.minecraft.block.Block;
+import noki.almagest.block.BlockAriadne;
 import noki.almagest.block.BlockBookrest;
 import noki.almagest.block.BlockConstellation;
 import noki.almagest.block.BlockStar;
@@ -39,6 +40,9 @@ public class ModBlocks {
 	public static Block TENT;
 	public static final String TENT_name = "tent";
 	
+	public static Block ARIADNE;
+	public static final String ARIADNE_name = "ariadne";
+	
 	
 	//******************************//
 	// define member methods.
@@ -51,6 +55,7 @@ public class ModBlocks {
 		STAR_COMPASS = RegistryHelper.registerBlock(new BlockStarCompass(), STAR_COMPASS_name);
 //		TANSU = RegistryHelper.registerBlock(new BlockTansu(), TANSU_name);
 		TENT = RegistryHelper.registerBlock(new BlockTent(), TENT_name);
+		ARIADNE = RegistryHelper.registerBlock(new BlockAriadne(), ARIADNE_name);
 		
 	}
 

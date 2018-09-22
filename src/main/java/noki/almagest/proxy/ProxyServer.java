@@ -5,6 +5,7 @@ import noki.almagest.entity.EntityTsuchinoko;
 import noki.almagest.packet.PacketHandler;
 import noki.almagest.packet.PacketSyncData;
 import noki.almagest.packet.PacketSyncStory;
+import noki.almagest.tile.TileAriadne;
 import noki.almagest.tile.TileConstellation;
 import noki.almagest.tile.TileStarCompass;
 import noki.almagest.tile.TileTent;
@@ -41,6 +42,7 @@ public class ProxyServer implements ProxyCommon {
 		GameRegistry.registerTileEntity(TileConstellation.class, new ResourceLocation("almagest", "tile_constellation"));
 		GameRegistry.registerTileEntity(TileStarCompass.class, new ResourceLocation("almagest", "tile_star_compass"));
 		GameRegistry.registerTileEntity(TileTent.class, new ResourceLocation("almagest", "tile_tent"));
+		GameRegistry.registerTileEntity(TileAriadne.class, new ResourceLocation("almagest", "tile_ariadne"));
 		
 	}
 	

@@ -10,21 +10,29 @@ import noki.almagest.ModInfo;
 /**********
  * @class SavedDataManager
  *
- * @description
- * @description_en
+ * @description このmodがNBTとして保存しているセーブデータを読み込むクラスです。
+ * 		AlmagestCoreにstaticでインスタンス生成。
+ * 		onWorldLoad()でNBT読み込み。
+ * 		AlmagestCore.serverAboutToStart()でセーブデータ再読み込みのためのリセット。異なるセーブデータのワールドに入るときに保持していたデータをリセットする。
+ * @description_en class to read NBT save data of this mod.
+ * 		At AlmagestCore: instantiation into static field.
+ * 		At this.onWorldLoad(): read from NBT via WorldEvent.Load event.
+ * 		At AlmagestCore.serverAboutToStart(): reset all data before entering another save data world and re-read its save data.
  */
 public class SavedDataManager {
 	
 	//******************************//
 	// define member variables.
 	//******************************//
+	private AlmagestNBT nbt;
+	
 	private AlmagestDataFlag flagData = new AlmagestDataFlag();
 	private AlmagestDataChunk chunkData = new AlmagestDataChunk();
 	private AlmagestDataBlock blockData = new AlmagestDataBlock();
 	private AlmagestDataStory storyData = new AlmagestDataStory();
 	private AlmagestDataConstellationBlock constData = new AlmagestDataConstellationBlock();
 	private AlmagestDataTent tentData = new AlmagestDataTent();
-	private AlmagestNBT nbt;
+	private AlmagestDataAriadne ariadneData = new AlmagestDataAriadne();
 	
 	private static final String DATA_NAME = ModInfo.NAME.toLowerCase()+"_saved_data";
 	
@@ -33,18 +41,6 @@ public class SavedDataManager {
 	// define member methods.
 	//******************************//
 	public SavedDataManager() {
-		
-	}
-	
-	public void resetNbt() {
-		
-		this.nbt = null;
-		this.flagData.reset();
-		this.chunkData.reset();
-		this.blockData.reset();
-		this.storyData.reset();
-		this.constData.reset();
-		this.tentData.reset();
 		
 	}
 	
@@ -70,7 +66,7 @@ public class SavedDataManager {
 		
 		this.nbt = instance;
 		
-		this.nbt.setAlmagestData(this.flagData, this.chunkData, this.blockData, this.storyData, this.constData, this.tentData);
+		this.nbt.setAlmagestData(this.flagData, this.chunkData, this.blockData, this.storyData, this.constData, this.tentData, this.ariadneData);
 		
 		this.flagData.setSavedData(this.nbt);
 		this.chunkData.setSavedData(this.nbt);
@@ -78,39 +74,28 @@ public class SavedDataManager {
 		this.storyData.setSavedData(this.nbt);
 		this.constData.setSavedData(this.nbt);
 		this.tentData.setSavedData(this.nbt);
+		this.ariadneData.setSavedData(this.nbt);
 		
 		this.nbt.retryReadFromNBT();
 		
 	}
 	
-/*	public void loadStorage(FMLServerAboutToStartEvent event) {
+	public void resetNbt() {
 		
-		AlmagestCore.log("try to load storage.");
+		this.nbt = null;
+		this.flagData.reset();
+		this.chunkData.reset();
+		this.blockData.reset();
+		this.storyData.reset();
+		this.constData.reset();
+		this.tentData.reset();
+		this.ariadneData.reset();
 		
-		AlmagestCore.log("{}.", event.getServer().getFolderName());
-		MapStorage storage = new MapStorage(
-				event.getServer().getActiveAnvilConverter().getSaveLoader(event.getServer().getFolderName(), true));
-		AlmagestNBT instance = (AlmagestNBT)storage.getOrLoadData(AlmagestNBT.class, DATA_NAME);
-		
-		if(instance == null) {
-			instance = new AlmagestNBT(DATA_NAME);
-			storage.setData(DATA_NAME, instance);
-		}
-		
-		this.nbt = instance;
-		
-		this.nbt.setAlmagestData(this.flagData, this.chunkData, this.blockData, this.storyData, this.constData);
-		
-		this.flagData.setSavedData(this.nbt);
-		this.chunkData.setSavedData(this.nbt);
-		this.blockData.setSavedData(this.nbt);
-		this.storyData.setSavedData(this.nbt);
-		this.constData.setSavedData(this.nbt);
-		
-		this.nbt.retryReadFromNBT();
-		
-	}*/
+	}
 	
+	//----------
+	//Getter Method.
+	//----------
 	public AlmagestDataFlag getFlagData() {
 		
 		return this.flagData;
@@ -146,5 +131,11 @@ public class SavedDataManager {
 		return this.tentData;
 		
 	}
-
+	
+	public AlmagestDataAriadne getAriadneData() {
+		
+		return this.ariadneData;
+		
+	}
+	
 }

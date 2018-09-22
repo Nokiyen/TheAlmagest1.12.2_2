@@ -148,6 +148,10 @@ tile.star_compass.name=ほしの羅針盤
 tile.tent.name=てんと
 almagest.tile.tent.tooltip.ver1=%d × %d
 almagest.tile.tent.tooltip.ver2=%d × %d, %s
+tile.ariadne.0.name=アリアドネの糸
+tile.ariadne.1.name=アリアドネの糸(糸だけ)
+tile.ariadne.2.name=アリアドネの糸(芯だけ)
+almagest.tile.ariadne.tooltip=%d, %d/%d/%d
 
 
 #----------------------
@@ -193,6 +197,8 @@ item.cocktail_rainbow.name=虹のカクテル
 item.oil.name=なにかのあぶら
 item.pure_water.name=きれいなみず
 item.polish.name=研磨剤
+item.plow.name=うしかいの鋤
+item.berenice.name=ベレニケの髪
 
 #temopral
 item.honey.name=Honey
