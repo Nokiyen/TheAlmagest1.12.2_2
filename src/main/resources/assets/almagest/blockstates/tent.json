@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "almagest:tent" },
+        "facing=south": { "model": "almagest:tent", "y": 180 },
+        "facing=west":  { "model": "almagest:tent", "y": 270 },
+        "facing=east":  { "model": "almagest:tent", "y": 90 }
+    }
+}

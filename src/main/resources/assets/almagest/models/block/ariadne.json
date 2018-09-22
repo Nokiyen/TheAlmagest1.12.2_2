@@ -1,0 +1,19 @@
+{
+    "parent": "block/cube",
+    "display": {
+        "firstperson_righthand": {
+            "rotation": [ 0, 135, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.40, 0.40, 0.40 ]
+        }
+    },
+    "textures": {
+        "particle": "almagest:blocks/ariadne_bottom",
+        "down": "almagest:blocks/ariadne_bottom",
+        "up": "almagest:blocks/transparent",
+        "north": "almagest:blocks/ariadne_side",
+        "east": "almagest:blocks/ariadne_side",
+        "south": "almagest:blocks/ariadne_side",
+        "west": "almagest:blocks/ariadne_side"
+    }
+}
