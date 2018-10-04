@@ -3,20 +3,31 @@ package noki.almagest;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 
+import java.io.File;
+
+import org.lwjgl.input.Keyboard;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.Biome.BiomeProperties;
 import noki.almagest.attribute.AttributeHelper;
+import noki.almagest.entity.EntityCallistoArrow;
 import noki.almagest.entity.EntityMira;
 import noki.almagest.event.EventConstellation;
 import noki.almagest.event.EventFishing;
+import noki.almagest.event.EventKeyInput;
 import noki.almagest.event.EventObtained;
 import noki.almagest.event.EventPlanisphere;
 import noki.almagest.event.EventProperty;
@@ -64,15 +75,24 @@ public class AlmagestData {
 	//--------------------
 	// Dimension.
 	//--------------------
-	public static int dimensionID_planisphere;
 	public static DimensionType dimensionType_planisphere;
 	public static BiomeDictionary.Type biomeType_planisphere;
 
-	public static int dimensionID_tent;
 	public static DimensionType dimensionType_tent;
 	public static BiomeDictionary.Type biomeType_tent;
 	
-
+	//--------------------
+	// Cofiguration.
+	//--------------------
+	public static File configFile;
+	public static Configuration config;
+	public static int dimensionID_planisphere;
+	public static int dimensionID_tent;
+	public static int almagestKeyNum;
+	public static boolean tooltipFlag;
+	
+	public static KeyBinding almagestKey;
+	
 	//--------------------
 	// GUI.
 	//--------------------
@@ -96,7 +116,7 @@ public class AlmagestData {
 		JsonRegistry.register();
 		
 		// world.
-		dimensionID_planisphere = 88;
+//		dimensionID_planisphere = 88;
 		dimensionType_planisphere = DimensionType.register("Planisphere", "_planisphere", dimensionID_planisphere, PlaniWorldProvider.class, false);
 		biomeType_planisphere = BiomeDictionary.Type.getType("STAR");
 		ForgeRegistries.BIOMES.register(
@@ -107,7 +127,7 @@ public class AlmagestData {
 		BiomeDictionary.addTypes(ForgeRegistries.BIOMES.getValue(new ResourceLocation(ModInfo.ID.toLowerCase(), "planisphere")), biomeType_planisphere);
 		DimensionManager.registerDimension(dimensionID_planisphere, dimensionType_planisphere);
 		
-		dimensionID_tent = 89;
+//		dimensionID_tent = 89;
 		dimensionType_tent = DimensionType.register("Tent", "_tent", dimensionID_tent, TentWorldProvider.class, false);
 		biomeType_tent = BiomeDictionary.Type.getType("TENT");
 		ForgeRegistries.BIOMES.register(
@@ -117,6 +137,21 @@ public class AlmagestData {
 			);
 		BiomeDictionary.addTypes(ForgeRegistries.BIOMES.getValue(new ResourceLocation(ModInfo.ID.toLowerCase(), "tent")), biomeType_tent);
 		DimensionManager.registerDimension(dimensionID_tent, dimensionType_tent);
+		
+	}
+	
+	public static void loadConigulation(File file) {
+		
+		configFile = file;
+		config = new Configuration(configFile);
+		config.load();
+		
+		dimensionID_planisphere = config.getInt("dimension_id_planisphere", "Dimension", 88, 2, 9999, "");
+		dimensionID_tent = config.getInt("dimension_id_tent", "Dimension", 89, 2, 9999, "");
+		almagestKeyNum = config.getInt("almagest_key_num", "Settings", Keyboard.KEY_O, 1, 300, "");
+		tooltipFlag = config.getBoolean("tooltip_flag", "Settings", false, "");
+		
+		config.save();
 		
 	}
 	
@@ -149,6 +184,7 @@ public class AlmagestData {
 		if(FMLCommonHandler.instance().getSide() == Side.CLIENT) {
 			MinecraftForge.EVENT_BUS.register(new EventRender());
 			MinecraftForge.EVENT_BUS.register(new EventToolTip());
+			MinecraftForge.EVENT_BUS.register(new EventKeyInput());
 		}
 		
 		//entity.
@@ -156,6 +192,9 @@ public class AlmagestData {
 		EntityMira.setResource(location);
 		EntityRegistry.registerModEntity(location, EntityMira.class, "Mira", 0, AlmagestCore.instance, 250, 1, false, 0xAAAAAA, 0xCCCCCC);
 		AlmagestCore.savedDataManager.getFlagData().registerMob(new EntityMira(null), location);
+		
+		location = new ResourceLocation(ModInfo.ID.toLowerCase(), "almagest.entity.callisto");
+		EntityRegistry.registerModEntity(location, EntityCallistoArrow.class, "callisto", 1, AlmagestCore.instance, 250, 1, false);
 /*		EntityRegistry.registerModEntity(new ResourceLocation(ModInfo.ID.toLowerCase(), "almagest.entity.tsuchinoko"),
 				EntityTsuchinoko.class, "Tsuchinoko", 1, AlmagestCore.instance, 250, 1, false, 0xDDDDDD, 0xEEEEEE);*/
 //		EntityRegistry.addSpawn(EntityMira.class, 20, 1, 4, EnumCreatureType.CREATURE, Biomes.PLAINS);

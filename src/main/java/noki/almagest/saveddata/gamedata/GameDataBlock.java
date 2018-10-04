@@ -31,9 +31,15 @@ public class GameDataBlock extends GameData {
 		
 	}
 	
-	public boolean reciepObtained() {
+	public boolean recipeObtained() {
 		
 		return this.recipeObtained;
+		
+	}
+	
+	public void setRecipeObtained(boolean flag) {
+		
+		this.recipeObtained = flag;
 		
 	}
 	

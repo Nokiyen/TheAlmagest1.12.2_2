@@ -15,6 +15,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -77,6 +78,11 @@ public class ProxyServer implements ProxyCommon {
 	public EntityPlayer getPlayer() {
 		
 		return null;
+		
+	}
+	
+	@Override
+	public void sendMessage(ITextComponent text) {
 		
 	}
 	

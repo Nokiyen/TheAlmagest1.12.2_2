@@ -635,6 +635,8 @@ public class GuiAlmagest extends GuiScreen {
 	
 	private void drawForBlock() {
 		
+		boolean recipeOnly = !this.currentLink.getData().isObtained() && ((GameDataBlock)this.currentLink.getData()).recipeObtained();
+		
 		//left page.
 		
 		//display name.
@@ -651,7 +653,14 @@ public class GuiAlmagest extends GuiScreen {
 		for(EStarAttribute each: EStarAttribute.values()) {
 			int level = AttributeHelper.getAttrributeLevel(((GameDataBlock)this.currentLink.getData()).getStack(), each);
 			if(level != 0) {
-				this.fontRenderer.drawString(this.getTranslated(each.getName())+" : "+level, this.left+21, this.top+143+component*16, defaultColor);
+				if(recipeOnly) {
+					this.fontRenderer.drawString(
+							this.getTranslated("almagest.gui.almagest.missing"), this.left+21, this.top+143+component*16, defaultColor);
+				}
+				else {
+					this.fontRenderer.drawString(
+							this.getTranslated(each.getName())+" : "+level, this.left+21, this.top+143+component*16, defaultColor);
+				}
 				component++;
 			}
 		}
@@ -677,42 +686,49 @@ public class GuiAlmagest extends GuiScreen {
 				withRecipe = (IWithRecipe)((GameDataItem)this.currentLink.getData()).getItem();
 			}
 			IRecipe recipe = withRecipe.getRecipe(((GameDataBlock)this.currentLink.getData()).getStack());
-			if(recipe instanceof StarRecipe && ((StarRecipe)recipe).isSpecial() == false) {
-				StarRecipe starRecipe = (StarRecipe)recipe;
-				
-				this.fontRenderer.drawString(
-						this.getTranslated("almagest.gui.almagest.recipe", true)+" ("+starRecipe.getMaxStack()+")",
-						this.left+110, this.top+125, defaultColor);
-
-				int recipeCount = 0;
-				for(Map.Entry<EStarAttribute, Integer> each: starRecipe.getAttribute().entrySet()) {
-					this.fontRenderer.drawString(this.getTranslated(each.getKey().getName())+" : "+each.getValue(),
-							this.left+21+93, this.top+143+recipeCount*16, defaultColor);
-					recipeCount++;
+			if(recipe != null) {
+				if(recipe instanceof StarRecipe && ((StarRecipe)recipe).isSpecial() == false) {
+					StarRecipe starRecipe = (StarRecipe)recipe;
+					
+					this.fontRenderer.drawString(
+							this.getTranslated("almagest.gui.almagest.recipe", true)+" ("+starRecipe.getMaxStack()+")",
+							this.left+110, this.top+125, defaultColor);
+	
+					int recipeCount = 0;
+					for(Map.Entry<EStarAttribute, Integer> each: starRecipe.getAttribute().entrySet()) {
+						this.fontRenderer.drawString(this.getTranslated(each.getKey().getName())+" : "+each.getValue(),
+								this.left+21+93, this.top+143+recipeCount*16, defaultColor);
+						recipeCount++;
+					}
+					for(ItemStack each: starRecipe.getStack()) {
+						this.fontRenderer.drawString(this.getTranslated(each.getDisplayName()),
+								this.left+21+93, this.top+143+recipeCount*16, defaultColor);
+						recipeCount++;
+					}
 				}
-				for(ItemStack each: starRecipe.getStack()) {
-					this.fontRenderer.drawString(this.getTranslated(each.getDisplayName()),
-							this.left+21+93, this.top+143+recipeCount*16, defaultColor);
-					recipeCount++;
+				else {
+					if(recipe instanceof StarRecipe) {
+						this.fontRenderer.drawString(
+								this.getTranslated("almagest.gui.almagest.recipe", true)+" ("+((StarRecipe)recipe).getMaxStack()+")",
+								this.left+110, this.top+125, defaultColor);
+					}
+					else {
+						this.fontRenderer.drawString(
+								this.getTranslated("almagest.gui.almagest.recipe", true)+" ("+recipe.getIngredients().size()+")",
+								this.left+110, this.top+125, defaultColor);
+					}
+					
+					for(int i=0; i<=4; i++) {
+						this.fontRenderer.drawString(
+							this.getTranslated("almagest.gui.almagest."+this.currentLink.getData().getName().toString()+".recipe."+i),
+							this.left+21+93, this.top+143+i*16, defaultColor);
+					}
 				}
 			}
 			else {
-				if(recipe instanceof StarRecipe) {
-					this.fontRenderer.drawString(
-							this.getTranslated("almagest.gui.almagest.recipe", true)+" ("+((StarRecipe)recipe).getMaxStack()+")",
-							this.left+110, this.top+125, defaultColor);
-				}
-				else {
-					this.fontRenderer.drawString(
-							this.getTranslated("almagest.gui.almagest.recipe", true)+" ("+recipe.getIngredients().size()+")",
-							this.left+110, this.top+125, defaultColor);
-				}
-				
-				for(int i=0; i<=4; i++) {
-					this.fontRenderer.drawString(
-						this.getTranslated("almagest.gui.almagest."+this.currentLink.getData().getName().toString()+".recipe."+i),
-						this.left+21+93, this.top+143+i*16, defaultColor);
-				}
+				this.fontRenderer.drawString(this.getTranslated("almagest.gui.almagest.recipe", true), this.left+110, this.top+125, defaultColor);
+				this.fontRenderer.drawString(
+						this.getTranslated("almagest.gui.almagest.recipe.nocraft"), this.left+21+93, this.top+143, 0XFF38b48b);
 			}
 		}
 		else {
@@ -734,22 +750,40 @@ public class GuiAlmagest extends GuiScreen {
 /*			for(int i=0; i<=6; i++) {
 			this.fontRenderer.drawString("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", this.width/2+7, thirdStart+14+i*10, defaultColor);
 		}*/
-		for(int i=0; i<this.expEffect.length; i++) {
-			this.fontRenderer.drawString(this.expEffect[i], this.width/2+7, thirdStart+14+i*10, defaultColor);
+		if(recipeOnly) {
+			this.fontRenderer.drawString(
+					this.getTranslated("almagest.gui.almagest.missing"), this.width/2+7, thirdStart+14+0*10, defaultColor);
+		}
+		else {
+			for(int i=0; i<this.expEffect.length; i++) {
+				this.fontRenderer.drawString(this.expEffect[i], this.width/2+7, thirdStart+14+i*10, defaultColor);
+			}
 		}
 		thirdStart = (this.height-pageHeight)/2+104;
 		this.fontRenderer.drawString(new TextComponentTranslation("almagest.gui.almagest.magnitude").setStyle(new Style().setBold(true)).getFormattedText(),
 				this.width/2+7, thirdStart, defaultColor);
 		drawRect(this.width/2+6, thirdStart+9, this.width/2+pageWidth-13, thirdStart+11, 0xffd3c3a2);
-		for(int i=0; i<this.expMagnitude.length; i++) {
-			this.fontRenderer.drawString(this.expMagnitude[i], this.width/2+7, thirdStart+14+i*10, defaultColor);
+		if(recipeOnly) {
+			this.fontRenderer.drawString(
+					this.getTranslated("almagest.gui.almagest.missing"), this.width/2+7, thirdStart+14+0*10, defaultColor);
+		}
+		else {
+			for(int i=0; i<this.expMagnitude.length; i++) {
+				this.fontRenderer.drawString(this.expMagnitude[i], this.width/2+7, thirdStart+14+i*10, defaultColor);
+			}
 		}
 		thirdStart = (this.height-pageHeight)/2+190;
 		this.fontRenderer.drawString(new TextComponentTranslation("almagest.gui.almagest.mira").setStyle(new Style().setBold(true)).getFormattedText(),
 				this.width/2+7, thirdStart, defaultColor);
 		drawRect(this.width/2+6, thirdStart+9, this.width/2+pageWidth-13, thirdStart+11, 0xffd3c3a2);
-		for(int i=0; i<this.expMira.length; i++) {
-			this.fontRenderer.drawString(this.expMira[i], this.width/2+7, thirdStart+14+i*10, defaultColor);
+		if(recipeOnly) {
+			this.fontRenderer.drawString(
+					this.getTranslated("almagest.gui.almagest.missing"), this.width/2+7, thirdStart+14+0*10, defaultColor);
+		}
+		else {
+			for(int i=0; i<this.expMira.length; i++) {
+				this.fontRenderer.drawString(this.expMira[i], this.width/2+7, thirdStart+14+i*10, defaultColor);
+			}
 		}
 		
 		//item rendering.
@@ -1679,6 +1713,10 @@ public class GuiAlmagest extends GuiScreen {
 						buttonText = I18n.format(this.data.getDisplay())
 								+ new TextComponentTranslation("almagest.gui.tooltip.presented").getFormattedText();
 					}
+					else if(this.data instanceof GameDataBlock && !this.data.isObtained() && ((GameDataBlock)this.data).recipeObtained()) {
+						buttonText = I18n.format(this.data.getDisplay())
+								+ new TextComponentTranslation("almagest.gui.almagest.recipe_obtained").getFormattedText();
+					}
 					else {
 						buttonText = I18n.format(this.data.getDisplay());
 					}
@@ -1689,11 +1727,18 @@ public class GuiAlmagest extends GuiScreen {
 		
 		public AlmagestButton setData(GameData data) {
 			this.data = data;
-			if((this.data == null || this.data.isObtained() == false) && AlmagestCore.proxy.getPlayer().isCreative() == false) {
+			if(AlmagestCore.proxy.getPlayer().isCreative()) {
+				this.isUsable = true;
+			}
+			else if(this.data == null) {
 				this.isUsable = false;
 			}
-			else {
+			else if(this.data.isObtained()
+					|| (this.data instanceof GameDataBlock && !this.data.isObtained() && ((GameDataBlock)this.data).recipeObtained())) {
 				this.isUsable = true;
+			}
+			else {
+				this.isUsable = false;
 			}
 			return this;
 		}

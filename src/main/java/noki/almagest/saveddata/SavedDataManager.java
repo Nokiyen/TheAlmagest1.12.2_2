@@ -33,6 +33,7 @@ public class SavedDataManager {
 	private AlmagestDataConstellationBlock constData = new AlmagestDataConstellationBlock();
 	private AlmagestDataTent tentData = new AlmagestDataTent();
 	private AlmagestDataAriadne ariadneData = new AlmagestDataAriadne();
+	private AlmagestDataCrete creteData = new AlmagestDataCrete();
 	
 	private static final String DATA_NAME = ModInfo.NAME.toLowerCase()+"_saved_data";
 	
@@ -66,7 +67,8 @@ public class SavedDataManager {
 		
 		this.nbt = instance;
 		
-		this.nbt.setAlmagestData(this.flagData, this.chunkData, this.blockData, this.storyData, this.constData, this.tentData, this.ariadneData);
+		this.nbt.setAlmagestData(this.flagData, this.chunkData, this.blockData, this.storyData,
+				this.constData, this.tentData, this.ariadneData, this.creteData);
 		
 		this.flagData.setSavedData(this.nbt);
 		this.chunkData.setSavedData(this.nbt);
@@ -75,6 +77,7 @@ public class SavedDataManager {
 		this.constData.setSavedData(this.nbt);
 		this.tentData.setSavedData(this.nbt);
 		this.ariadneData.setSavedData(this.nbt);
+		this.creteData.setSavedData(this.nbt);
 		
 		this.nbt.retryReadFromNBT();
 		
@@ -90,6 +93,7 @@ public class SavedDataManager {
 		this.constData.reset();
 		this.tentData.reset();
 		this.ariadneData.reset();
+		this.creteData.reset();
 		
 	}
 	
@@ -137,5 +141,11 @@ public class SavedDataManager {
 		return this.ariadneData;
 		
 	}
-	
+
+	public AlmagestDataCrete getCreteData() {
+		
+		return this.creteData;
+		
+	}
+
 }

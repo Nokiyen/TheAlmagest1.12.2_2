@@ -43,13 +43,17 @@ public class ItemPolish extends ItemWithAttribute implements IWithRecipe, IWithE
 		
 		return this.makeRecipeList(
 				new StarRecipe(new ItemStack(this,4))
-					.setAttribute(EStarAttribute.METAL, 20).setStack(new ItemStack(ModItems.COCKTAIL,1,0)).setSpecial(true),
+					.setAttribute(EStarAttribute.METAL, 20).setStack(new ItemStack(ModItems.COCKTAIL,1,0))
+					.setHint(new ItemStack(ModItems.COCKTAIL,1,0)).setSpecial(true),
 				new StarRecipe(new ItemStack(this,4))
-					.setAttribute(EStarAttribute.METAL, 20).setStack(new ItemStack(ModItems.COCKTAIL,1,1)).setSpecial(true),
+					.setAttribute(EStarAttribute.METAL, 20).setStack(new ItemStack(ModItems.COCKTAIL,1,1))
+					.setHint(new ItemStack(ModItems.COCKTAIL,1,1)).setSpecial(true),
 				new StarRecipe(new ItemStack(this,4))
-					.setAttribute(EStarAttribute.METAL, 20).setStack(new ItemStack(ModItems.COCKTAIL,1,2)).setSpecial(true),
+					.setAttribute(EStarAttribute.METAL, 20).setStack(new ItemStack(ModItems.COCKTAIL,1,2))
+					.setHint(new ItemStack(ModItems.COCKTAIL,1,2)).setSpecial(true),
 				new StarRecipe(new ItemStack(this,4))
-					.setAttribute(EStarAttribute.METAL, 20).setStack(new ItemStack(ModItems.COCKTAIL_RAINBOW,1)).setSpecial(true)
+					.setAttribute(EStarAttribute.METAL, 20).setStack(new ItemStack(ModItems.COCKTAIL_RAINBOW,1))
+					.setHint(new ItemStack(ModItems.COCKTAIL_RAINBOW)).setSpecial(true)
 		);
 		
 	}

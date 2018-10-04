@@ -43,7 +43,7 @@ public class AlmagestCore {
 	)
 	public static ProxyCommon proxy;
 	
-	public static boolean DEBUG = true;
+	public static boolean DEBUG = false;
 	public static Logger logger;
 	
 	public static SavedDataManager savedDataManager = new SavedDataManager();
@@ -59,6 +59,8 @@ public class AlmagestCore {
 	public void preInit(FMLPreInitializationEvent event) {
 		
 		logger = event.getModLog();
+		
+		AlmagestData.loadConigulation(event.getSuggestedConfigurationFile());
 		
 		// for mod's specific data.
 		HelperConstellation.registerStarData(event);

@@ -170,6 +170,12 @@ public class AlmagestDataFlag implements IAlmagestData {
 		
 	}
 	
+	public GameDataRecipe getRecipe(IRecipe recipe) {
+		
+		return (GameDataRecipe)this.gameDataMap.get(DataCategory.MEMO).get(recipe.getRegistryName().toString());
+		
+	}
+	
 	public GameData getNextData(GameData data, DataCategory category, boolean isCreative) {
 		
 		HashMap<String, GameData> categorySet = this.gameDataMap.get(category);
@@ -256,6 +262,15 @@ public class AlmagestDataFlag implements IAlmagestData {
 		
 		gameData.setObtained(true);
 		this.almagestData.markDirty();
+		
+	}
+	
+	public void setRecipeObtained(GameData gameData) {
+		
+		if(gameData instanceof GameDataBlock) {
+			((GameDataBlock)gameData).setRecipeObtained(true);
+			this.almagestData.markDirty();
+		}
 		
 	}
 	

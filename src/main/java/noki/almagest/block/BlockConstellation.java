@@ -39,6 +39,7 @@ import noki.almagest.recipe.StarRecipe;
 import noki.almagest.registry.IWithItemBlock;
 import noki.almagest.registry.IWithRecipe;
 import noki.almagest.registry.IWithSubTypes;
+import noki.almagest.registry.ModBlocks;
 import noki.almagest.registry.ModItems;
 import noki.almagest.tile.TileConstellation;
 
@@ -49,7 +50,7 @@ import noki.almagest.tile.TileConstellation;
  * @description 88の星図を表すブロックです。種類はNBTで管理。
  * @see ItemBlockConstellation, TileConstellation, RenderTileConstellation.
  */
-public class BlockConstellation extends BlockWithAttribute implements IWithItemBlock, IWithSubTypes, ITileEntityProvider {
+public class BlockConstellation extends BlockWithAttribute implements IWithItemBlock, IWithSubTypes, ITileEntityProvider, IWithRecipe {
 
 	//******************************//
 	// define member variables.
@@ -256,37 +257,44 @@ public class BlockConstellation extends BlockWithAttribute implements IWithItemB
 		
 	}
 	
-/*	@Override
+	public IRecipe getRecipe(ItemStack stack) {
+		
+		List<IRecipe> recipes = this.getRecipe();
+		for(IRecipe eachRecipe: recipes) {
+			if(HelperConstellation.getConstNumber(stack) == HelperConstellation.getConstNumber(eachRecipe.getRecipeOutput())) {
+				return eachRecipe;
+			}
+		}
+		return null;
+		
+	}
+	
+	@Override
 	public List<IRecipe> getRecipe() {
 		
 		return this.makeRecipeList(
-				//ふうちょう座
-				new StarRecipe(ItemBlockConstellation.getConstStack(3, 1))
-					.setAttribute(EStarAttribute.STAR, 20).setStack(new ItemStack(ModItems.HONEY)),
-				//インディアン座
-				new StarRecipe(ItemBlockConstellation.getConstStack(44, 1))
-					.setAttribute(EStarAttribute.STAR, 20).setStack(new ItemStack(Items.EMERALD)),
-				//はえ座
-				new StarRecipe(ItemBlockConstellation.getConstStack(56, 1))
-					.setAttribute(EStarAttribute.STAR, 20).setStack(new ItemStack(Items.ROTTEN_FLESH)),
-				//かじき座
-				new StarRecipe(ItemBlockConstellation.getConstStack(33, 1))
-					.setAttribute(EStarAttribute.STAR, 20).setStack(new ItemStack(Items.GOLD_INGOT)),
-				//みずへび座
-				new StarRecipe(ItemBlockConstellation.getConstStack(43, 1))
-					.setAttribute(EStarAttribute.STAR, 20).setAttribute(EStarAttribute.LIQUID, 10).setStack(new ItemStack(ModItems.TSUCHINOKO_SKIN)),
-				//へび座
-				new StarRecipe(ItemBlockConstellation.getConstStack(74, 1))
-					.setAttribute(EStarAttribute.STAR, 20).setStack(new ItemStack(ModItems.TSUCHINOKO_SKIN)),
-				//とびうお座
-				new StarRecipe(ItemBlockConstellation.getConstStack(87, 1))
-					.setAttribute(EStarAttribute.STAR, 20).setStack(new ItemStack(ModItems.FLYING_FISH)),
-				//つる座
-				new StarRecipe(ItemBlockConstellation.getConstStack(39, 1))
-					.setAttribute(EStarAttribute.STAR, 20).setStack(new ItemStack(ModItems.ORIGAMI_CRANE))
+			//Ursa Major Family.
+			//うしかい座
+			new StarRecipe(ItemBlockConstellation.getConstStack(9, 1))
+				.setAttribute(EStarAttribute.STAR, 20).setStack(new ItemStack(ModItems.PLOW)).setHint(new ItemStack(ModItems.PLOW)),
+			//かみのけ座
+			new StarRecipe(ItemBlockConstellation.getConstStack(24, 1))
+				.setAttribute(EStarAttribute.STAR, 20).setStack(new ItemStack(ModItems.BERENICE)).setHint(new ItemStack(ModItems.BERENICE)),
+			//かんむり座
+			new StarRecipe(ItemBlockConstellation.getConstStack(26, 1))
+				.setAttribute(EStarAttribute.STAR, 20).setStack(new ItemStack(ModBlocks.ARIADNE)).setHint(new ItemStack(ModBlocks.ARIADNE)),
+			//りゅう座
+			new StarRecipe(ItemBlockConstellation.getConstStack(34, 1))
+				.setAttribute(EStarAttribute.STAR, 20).setStack(new ItemStack(Items.GOLDEN_APPLE)).setHint(new ItemStack(Items.APPLE)),
+			//おおぐま座
+			new StarRecipe(ItemBlockConstellation.getConstStack(83, 1))
+				.setAttribute(EStarAttribute.STAR, 20).setStack(new ItemStack(ModItems.CALLISTO)).setHint(new ItemStack(ModItems.CALLISTO)),
+			//こぐま座
+			new StarRecipe(ItemBlockConstellation.getConstStack(84, 1))
+				.setAttribute(EStarAttribute.STAR, 20).setStack(new ItemStack(ModBlocks.CRETE)).setHint(new ItemStack(ModBlocks.CRETE))
 		);
 		
-	}*/
+	}
 	
 	@Override
 	public ItemBlock getItemBlock() {

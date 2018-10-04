@@ -285,6 +285,7 @@ public class ItemPlow extends ItemWithAttribute implements IWithRecipe {
 		return this.makeRecipeList(
 				new StarRecipe(new ItemStack(this))
 					.setStack(new ItemStack(Blocks.IRON_BLOCK)).setStack(new ItemStack(Items.STICK)).setAttribute(EStarAttribute.ANIMAL, 20)
+					.setHint(new ItemStack(Items.LEATHER))
 		);
 		
 	}

@@ -14,6 +14,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
@@ -25,6 +26,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import noki.almagest.AlmagestCore;
 import noki.almagest.AlmagestData;
 import noki.almagest.client.render.RenderResource;
+import noki.almagest.client.render.entity.RenderFactoryCallisto;
 import noki.almagest.client.render.entity.RenderFactoryMira;
 import noki.almagest.client.render.entity.TsuchinokoRenderFactory;
 import noki.almagest.client.render.model.BakedModelConstellation;
@@ -32,6 +34,7 @@ import noki.almagest.client.render.model.BakedModelConstellationAll;
 import noki.almagest.client.render.tile.RenderTileAriadne;
 import noki.almagest.client.render.tile.RenderTileConstellation;
 import noki.almagest.client.render.tile.RenderTileStarCompass;
+import noki.almagest.entity.EntityCallistoArrow;
 import noki.almagest.entity.EntityMira;
 import noki.almagest.entity.EntityTsuchinoko;
 import noki.almagest.helper.HelperConstellation.Constellation;
@@ -83,6 +86,7 @@ public class ProxyClient implements ProxyCommon {
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityMira.class, new RenderFactoryMira());
 		RenderingRegistry.registerEntityRenderingHandler(EntityTsuchinoko.class, new TsuchinokoRenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(EntityCallistoArrow.class, new RenderFactoryCallisto());
 		
 	}
 	
@@ -100,6 +104,7 @@ public class ProxyClient implements ProxyCommon {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemConstellation, meshDefinition);
 		
 	}
+	
 	@Override
 	public void registerPre() {
 		
@@ -172,6 +177,13 @@ public class ProxyClient implements ProxyCommon {
 	public EntityPlayer getPlayer() {
 		
 		return Minecraft.getMinecraft().player;
+		
+	}
+	
+	@Override
+	public void sendMessage(ITextComponent text) {
+		
+		Minecraft.getMinecraft().player.sendMessage(text);
 		
 	}
 	

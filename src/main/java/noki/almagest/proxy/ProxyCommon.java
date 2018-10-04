@@ -2,6 +2,7 @@ package noki.almagest.proxy;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.text.ITextComponent;
 
 
 /**********
@@ -27,6 +28,7 @@ public interface ProxyCommon {
 	abstract boolean hasPlanisphere();
 	abstract void log(String message, Object... data);
 	abstract EntityPlayer getPlayer();
+	abstract void sendMessage(ITextComponent text);
 	// no need. please delete!!!
 	abstract void syncData(NBTTagCompound nbt);
 	abstract void registerFixers();

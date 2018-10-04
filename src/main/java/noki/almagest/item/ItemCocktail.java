@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.NonNullList;
@@ -99,9 +100,12 @@ public class ItemCocktail extends ItemWithAttribute implements IWithRecipe, IWit
 	public List<IRecipe> getRecipe() {
 		
 		return this.makeRecipeList(
-				new StarRecipe(new ItemStack(this,4,0)).setAttribute(EStarAttribute.MINERAL, 20).setAttribute(EStarAttribute.LIQUID, 20),
-				new StarRecipe(new ItemStack(this,4,1)).setAttribute(EStarAttribute.PLANT, 20).setAttribute(EStarAttribute.LIQUID, 20),
+				new StarRecipe(new ItemStack(this,4,0)).setAttribute(EStarAttribute.MINERAL, 20).setAttribute(EStarAttribute.LIQUID, 20)
+				.setHint(new ItemStack(Items.WATER_BUCKET)),
+				new StarRecipe(new ItemStack(this,4,1)).setAttribute(EStarAttribute.PLANT, 20).setAttribute(EStarAttribute.LIQUID, 20)
+				.setHint(new ItemStack(Items.WATER_BUCKET)),
 				new StarRecipe(new ItemStack(this,4,2)).setAttribute(EStarAttribute.LIQUID, 40).setMaxStack(3)
+				.setHint(new ItemStack(Items.WATER_BUCKET))
 		);
 		
 	}

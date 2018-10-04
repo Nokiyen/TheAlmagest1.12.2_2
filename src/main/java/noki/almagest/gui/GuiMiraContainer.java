@@ -15,7 +15,7 @@ public class GuiMiraContainer extends GuiContainerSequence {
 	protected void keyTyped(char typedChar, int keyCode) throws IOException {
 		
 		if(keyCode == 1 || this.mc.gameSettings.keyBindInventory.isActiveAndMatches(keyCode)) {
-			if(this.container.currentId() == 5) {
+			if(!this.container.currentSequence().closeable()) {
 				return;
 			}
 		}

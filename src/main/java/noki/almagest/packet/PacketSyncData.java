@@ -45,7 +45,7 @@ public class PacketSyncData implements IMessage {
 	@Override
 	public void toBytes(ByteBuf buf) {
 		
-		ByteBufUtils.writeTag(this.data, this.nbt);
+		ByteBufUtils.writeTag(buf, this.nbt);
 		
 	}
 

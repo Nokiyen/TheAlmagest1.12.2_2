@@ -1,5 +1,6 @@
 package noki.almagest.block;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Nullable;
@@ -10,6 +11,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -144,6 +146,40 @@ public class BlockStarCompass extends BlockWithAttribute implements IWithRecipe,
 		}
 		return 0;
 
+	}
+	
+	@Override
+	public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer player, boolean willHarvest) {
+		
+		if(willHarvest == true)  {
+			return true;
+		}
+		return super.removedByPlayer(state, world, pos, player, willHarvest);
+		
+	}
+	
+	@Override
+	public void harvestBlock(World world, EntityPlayer player, BlockPos pos, IBlockState state,
+		@Nullable TileEntity te, @Nullable ItemStack stack) {
+		
+		super.harvestBlock(world, player, pos, state, te, stack);
+		world.setBlockToAir(pos);
+		
+	}
+	
+	@Override
+	public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+		
+		List<ItemStack> stacks = new ArrayList<ItemStack>();
+		
+		TileEntity tile = world.getTileEntity(pos);
+		if(tile != null && tile instanceof TileStarCompass) {
+			TileStarCompass compass = (TileStarCompass)tile;
+			stacks.add(ItemBlockStarCompass.getStackWithNbt(compass.getStackMetadata(), compass.getStackTick()));
+		}
+		
+		return stacks;
+		
 	}
 	
 	@SubscribeEvent

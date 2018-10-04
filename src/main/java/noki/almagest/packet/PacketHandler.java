@@ -20,6 +20,8 @@ public class PacketHandler {
 		instance.registerMessage(PacketSavedConstBlockHandler.class, PacketSavedConstBlock.class, 7, Side.SERVER);
 		instance.registerMessage(PacketSavedConstBlockHandlerResponse.class, PacketSavedConstBlockResponse.class, 8, Side.CLIENT);
 		instance.registerMessage(PacketStarCompassSyncHandler.class, PacketStarCompassSync.class, 9, Side.CLIENT);
+		instance.registerMessage(PacketSyncCompassHandler.class, PacketSyncCompass.class, 10, Side.CLIENT);
+		instance.registerMessage(PacketSyncCallistoHandler.class, PacketSyncCallisto.class, 11, Side.CLIENT);
 		
 	}
 

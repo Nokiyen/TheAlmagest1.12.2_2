@@ -3,6 +3,7 @@ package noki.almagest.registry;
 import net.minecraft.item.Item;
 import noki.almagest.item.ItemAlmagest;
 import noki.almagest.item.ItemBerenice;
+import noki.almagest.item.ItemCallisto;
 import noki.almagest.item.ItemCocktail;
 import noki.almagest.item.ItemCocktailRainbow;
 import noki.almagest.item.ItemFlyingFish;
@@ -68,6 +69,9 @@ public class ModItems {
 	
 	public static Item BERENICE;
 	public static final String BERENICE_name = "berenice";
+
+	public static Item CALLISTO;
+	public static final String CALLISTO_name = "callisto";
 	
 	//temporally disabled below.
 	public static Item HONEY;
@@ -112,6 +116,7 @@ public class ModItems {
 		POLISH = RegistryHelper.registerItem(new ItemPolish(), POLISH_name);
 		PLOW = RegistryHelper.registerItem(new ItemPlow(), PLOW_name);
 		BERENICE = RegistryHelper.registerItem(new ItemBerenice(), BERENICE_name);
+		CALLISTO = RegistryHelper.registerItem(new ItemCallisto(), CALLISTO_name);
 //		HONEY = RegistryHelper.registerItem(new ItemHoney(), HONEY_name);
 //		TSUCHINOKO_SKIN = RegistryHelper.registerItem(new ItemTsuchinokoSkin(), TSUCHINOKO_SKIN_name);
 //		FLYING_FISH = RegistryHelper.registerItem(new ItemFlyingFish(), FLYING_FISH_name);

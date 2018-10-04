@@ -18,6 +18,7 @@ public class SequenceTalk implements ISequence {
 	private int step;
 	private int currentStep;
 	private boolean end;
+	private boolean closeable = false;
 	
 	
 	//******************************//
@@ -63,6 +64,7 @@ public class SequenceTalk implements ISequence {
 	public ISequence setEnd() {
 		
 		this.end = true;
+		this.closeable = true;
 		return this;
 		
 	}
@@ -81,6 +83,20 @@ public class SequenceTalk implements ISequence {
 	
 	@Override
 	public void onNext(ContainerSequence container) {
+		
+	}
+	
+	@Override
+	public boolean closeable() {
+		
+		return this.closeable;
+		
+	}
+	
+	public ISequence setCloseable(boolean flag) {
+		
+		this.closeable = flag;
+		return this;
 		
 	}
 

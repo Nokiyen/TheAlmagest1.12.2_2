@@ -14,11 +14,11 @@ import noki.almagest.event.post.MemoryEvent;
  */
 public class StarAbilityMemory extends StarAbility {
 	
-	private static float[] scale = {0.1F, 0.2F, 0.3F};
+	private static float[] scale = {0.1F, 0.2F, 0.3F, 0.5F};
 	
 	public StarAbilityMemory() {
 		
-		this.setMaxLevel(3);
+		this.setMaxLevel(4);
 		this.setEffectable(Effectable.Weapon, Effectable.Armor, Effectable.Amulet, Effectable.Tool,
 				Effectable.Attack, Effectable.Heal, Effectable.Support, Effectable.Block);
 		

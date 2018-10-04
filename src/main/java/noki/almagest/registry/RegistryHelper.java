@@ -59,6 +59,10 @@ public class RegistryHelper {
 			MinecraftForge.EVENT_BUS.register(block);
 		}
 		
+		if(itemBlock instanceof IWithEvent) {
+			MinecraftForge.EVENT_BUS.register(itemBlock);
+		}
+		
 		if(json == true) {
 			JsonRegistry.setBlock(block, name);
 		}

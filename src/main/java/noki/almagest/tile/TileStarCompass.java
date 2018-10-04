@@ -22,10 +22,15 @@ public class TileStarCompass extends TileEntity {
 	private BlockPos targetPos;
 	private Constellation targetConst;
 	
+	private int stackMetadata;
+	private int stackTick;
+	
 	private static final String NBT_posX = "posx";
 	private static final String NBT_posY = "posy";
 	private static final String NBT_posZ = "posz";
 	private static final String NBT_const = "const";
+	private static final String NBT_metadata = "stack_metadata";
+	private static final String NBT_tick = "stack_tick";
 	
 	
 	//******************************//
@@ -43,9 +48,28 @@ public class TileStarCompass extends TileEntity {
 		
 	}
 	
+	public void setStackData(int metadata, int tick) {
+		
+		this.stackMetadata = metadata;
+		this.stackTick = tick;
+		
+	}
+	
 	public BlockPos getTargetPos() {
 		
 		return this.targetPos;
+		
+	}
+	
+	public int getStackMetadata() {
+		
+		return this.stackMetadata;
+		
+	}
+	
+	public int getStackTick() {
+		
+		return this.stackTick;
 		
 	}
 	
@@ -60,6 +84,8 @@ public class TileStarCompass extends TileEntity {
 		if(helper.hasKey(NBT_const)) {
 			this.targetConst = Constellation.getConstFromNumber(helper.getInteger(NBT_const));
 		}
+		this.stackMetadata = helper.getInteger(NBT_metadata);
+		this.stackTick = helper.getInteger(NBT_tick);
 		
 	}
 	
@@ -75,6 +101,8 @@ public class TileStarCompass extends TileEntity {
 		if(this.targetConst != null) {
 			helper.setInteger(NBT_const, this.targetConst.getId());
 		}
+		helper.setInteger(NBT_metadata, this.stackMetadata);
+		helper.setInteger(NBT_tick, this.stackTick);
 		
 		return super.writeToNBT(nbt);
 	}

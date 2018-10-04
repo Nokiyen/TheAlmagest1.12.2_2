@@ -13,6 +13,7 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import noki.almagest.AlmagestCore;
+import noki.almagest.AlmagestData;
 import noki.almagest.ability.StarAbilityCreator;
 import noki.almagest.ability.StarPropertyCreator;
 import noki.almagest.ability.StarPropertyCreator.ItemStarLine;
@@ -70,8 +71,13 @@ public class EventToolTip {
 		Map<Integer, ArrayList<Integer>> abilities = StarAbilityCreator.getAbility2(stack);
 		
 		//if key's not pressed but the stack has some data, show hint.
-		if(!GuiScreen.isCtrlKeyDown()) {
+		if(!AlmagestData.tooltipFlag && !GuiScreen.isCtrlKeyDown()) {
 			tooltip.add(new TextComponentTranslation("almagest.gui.tootip.keyoff").setStyle(
+					new Style().setColor(TextFormatting.AQUA).setItalic(true)).getFormattedText());
+			return;
+		}
+		else if(AlmagestData.tooltipFlag && GuiScreen.isCtrlKeyDown()) {
+			tooltip.add(new TextComponentTranslation("almagest.gui.tootip.keyoff2").setStyle(
 					new Style().setColor(TextFormatting.AQUA).setItalic(true)).getFormattedText());
 			return;
 		}

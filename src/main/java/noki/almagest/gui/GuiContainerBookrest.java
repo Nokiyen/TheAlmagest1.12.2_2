@@ -15,13 +15,11 @@ import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
-import noki.almagest.AlmagestCore;
 import noki.almagest.ModInfo;
 import noki.almagest.ability.StarAbilityCreator;
 import noki.almagest.gui.ContainerBookrest.AbilityState;
 import noki.almagest.packet.PacketHandler;
 import noki.almagest.packet.PacketUpdateBookrest;
-import scala.reflect.internal.Trees.If;
 
 
 /**********
@@ -39,6 +37,7 @@ public class GuiContainerBookrest extends GuiContainer {
 	private int currentTopAbility;
 	private int currentScrollTop;
 	private boolean isPressing;
+	@SuppressWarnings("unused")
 	private int pressedY;
 	private int pressedYDiff;
 	
@@ -253,7 +252,7 @@ public class GuiContainerBookrest extends GuiContainer {
 						currentSelected++;
 					}
 				}
-				if((currentSelected<3 && !container.getAbilities().get(i+this.currentTopAbility).selected()) || 
+				if((currentSelected < container.getAbilitySelectLimit() && !container.getAbilities().get(i+this.currentTopAbility).selected()) || 
 						container.getAbilities().get(i+this.currentTopAbility).selected()) {
 					container.switchAbilitySelected(i+this.currentTopAbility);
 					PacketHandler.instance.sendToServer(new PacketUpdateBookrest(i+this.currentTopAbility));

@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.IInventory;
@@ -20,6 +21,7 @@ import noki.almagest.AlmagestData;
 import noki.almagest.ability.StarPropertyCreator;
 import noki.almagest.attribute.EStarAttribute;
 import noki.almagest.attribute.ItemWithAttribute;
+import noki.almagest.helper.HelperConstellation.Constellation;
 import noki.almagest.recipe.StarRecipe;
 import noki.almagest.registry.IWithEvent;
 import noki.almagest.registry.IWithRecipe;
@@ -55,6 +57,7 @@ public class ItemBerenice extends ItemWithAttribute implements IWithRecipe, IWit
 		return this.makeRecipeList(
 				new StarRecipe(new ItemStack(this))
 				.setAttribute(EStarAttribute.DECORATIVE, 30).setAttribute(EStarAttribute.JEWEL, 60).setAttribute(EStarAttribute.ANIMAL, 20)
+				.setHint(new ItemStack(Items.EMERALD)).setHint(ItemBlockConstellation.getConstStack(24, 1))
 		);
 		
 	}

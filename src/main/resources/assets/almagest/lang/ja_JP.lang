@@ -19,6 +19,17 @@ almagest.version.notify=[The Almagest] 新しいバージョン "%s" がご利�
 
 
 #----------------------
+# configuration.
+#----------------------
+almagest.config.label.dimension=ディメンション
+almagest.config.label.settings=設定
+almagest.config.exp.planisphere_id=ディメンションである星座盤世界のIDです。他のmodと競合する場合に変更してください。
+almagest.config.exp.tent_id=ディメンションであるテントのIDです。他のmodと競合する場合に変更してください。
+almagest.config.exp.almagest_key_num=インベントリにある『アルマゲスト』を開く際のkey番号です。
+almagest.config.exp.tooltip_flag="true"にすると、ツールチップに、このmodが追加する情報をデフォルトで表示します(ctrlを押さなくても表示されます)。
+
+
+#----------------------
 # block (constellation).
 #----------------------
 tile.constellation_block.01.name=アンドロメダ
@@ -152,6 +163,8 @@ tile.ariadne.0.name=アリアドネの糸
 tile.ariadne.1.name=アリアドネの糸(糸だけ)
 tile.ariadne.2.name=アリアドネの糸(芯だけ)
 almagest.tile.ariadne.tooltip=%d, %d/%d/%d
+tile.crete.name=クレタの洞窟
+almagest.tile.crete.tooltip=%d × %d
 
 
 #----------------------
@@ -199,6 +212,7 @@ item.pure_water.name=きれいなみず
 item.polish.name=研磨剤
 item.plow.name=うしかいの鋤
 item.berenice.name=ベレニケの髪
+item.callisto.name=熊となったカリスト
 
 #temopral
 item.honey.name=Honey
@@ -239,6 +253,8 @@ almagest.gui.almagest.list.ability_label=ほしのちから
 almagest.gui.almagest.list.no_ability=なし
 
 almagest.gui.almagest.recipe.nocraft=クラフトできません
+almagest.gui.almagest.recipe_obtained= ？
+almagest.gui.almagest.missing=？？？？？
 
 
 #----------------------
@@ -265,6 +281,19 @@ almagest.gui.almagest.almagest:tile.star_compass.mira=北極星の代わりに�
 almagest.gui.almagest.almagest:tile.tent.effect=重要なブロックです。ワールドに設置して右クリックすると、どういうわけかちょっとしたスペースの広さになっています(ディメンションに飛びます)。ここには自由に物を設置できます。テント内に設置してある『テント』ブロックを右クリックすると元の世界に戻れます。
 almagest.gui.almagest.almagest:tile.tent.magnitude=等級４ : 広さが５×５になる<br>等級３：壁を着せ替えできる。一部のブロックとテントを材料にクラフトする<br>等級２ : 広さが７×７になる<br>等級１ : 広さが９×９になる
 almagest.gui.almagest.almagest:tile.tent.mira=テントって、入ってみると意外に広いんですね。
+#---Crete
+almagest.gui.almagest.almagest:tile.crete.effect=アドラステイアとイーデーが、幼きゼウスを育てたクレタ島の洞窟を表したアイテムです。<br>設置したチャンクを中心に、５×５の範囲で、敵対的なモブがスポーンしなくなります。
+almagest.gui.almagest.almagest:tile.crete.magnitude=等級３ : ９×９の範囲になる<br>等級１ : １３×１３の範囲になる
+almagest.gui.almagest.almagest:tile.crete.mira=ゼウスはヤギのお乳を飲んで育ったそうですよ。むきむきになれそうですね。
+#---Ariadne
+almagest.gui.almagest.almagest:tile.ariadne.0.recipe.0=エンダーパール
+almagest.gui.almagest.almagest:tile.ariadne.0.recipe.1=魔物 : ３０
+almagest.gui.almagest.almagest:tile.ariadne.0.recipe.2=カクテル
+almagest.gui.almagest.almagest:tile.ariadne.0.recipe.3=
+almagest.gui.almagest.almagest:tile.ariadne.0.recipe.4=
+almagest.gui.almagest.almagest:tile.ariadne.0.effect=テセウスをクレタ島の迷宮より導いたアリアドネの糸を表したアイテムです。<br>右クリックすると、ワールドにブロックが設置され、手に「糸」だけが残ります。同じディメンション内ならば、残った糸を右クリックすることで、ブロックを設置した場所にワープできます。<br>ブロックは、糸を手に戻って右クリックで即座に回収でき、破壊してドロップした「芯」と、「糸」をクラフトすると元のアイテムに戻ります。
+almagest.gui.almagest.almagest:tile.ariadne.0.magnitude=等級２ : オーバーワールドへならば、違うディメンションからも戻れます。
+almagest.gui.almagest.almagest:tile.ariadne.0.mira=迷宮から脱出できるということは、とんでもない長さの糸だったに違いないです。
 
 #---Planisphere
 almagest.gui.almagest.almagest:item.planisphere.effect=手にもって右クリックで、『星座盤』世界へ移動します。『星座盤』世界で右クリックすると、元の場所へ戻ります。
@@ -321,6 +350,23 @@ almagest.gui.almagest.almagest:item.polish.recipe.4=
 almagest.gui.almagest.almagest:item.polish.effect=金属などを磨くために使うものです。種々のクラフトに使うことができます。
 almagest.gui.almagest.almagest:item.polish.magnitude=等級４ : 「鉱石 ２０」付与
 almagest.gui.almagest.almagest:item.polish.mira=ちょっと使えばぴっかぴかです。ただ、磨くだけでどんどん時間が過ぎていきます。
+#---Plow
+almagest.gui.almagest.almagest:item.plow.effect=牛にひかせる鋤（すき）を初めて作ったという逸話を表したアイテムです。<br>横に１×３列の範囲を一気に農地にでき、また作物を収穫できます。
+almagest.gui.almagest.almagest:item.plow.magnitude=等級４ : １×５の範囲になる<br>等級３ : 雑草なども一気に刈り取れる<br>等級１ : １×７の範囲になる
+almagest.gui.almagest.almagest:item.plow.mira=牛さんの股に挟んで使ったらしいです。牛さんが苦しそう。
+#---Berenice
+almagest.gui.almagest.almagest:item.berenice.effect=戦地からの帰還を祈り、髪を切ったベレニケを表したアイテムです。<br>インベントリに入っていると、1回だけ死亡を無効化し、残りＨＰ１０％の状態になります。アイテムは消滅します。
+almagest.gui.almagest.almagest:item.berenice.magnitude=等級３ : ＨＰが半分まで回復します<br>等級２ : ＨＰが全回復します<br>等級１ : 更に、一定時間ステータスが強化されます
+almagest.gui.almagest.almagest:item.berenice.mira=ベレニケさん自身は、馬に乗った戦いが得意だったらしいです。
+#---Callisto
+almagest.gui.almagest.almagest:item.callisto.recipe.0=いずれかの魚
+almagest.gui.almagest.almagest:item.callisto.recipe.1=矢
+almagest.gui.almagest.almagest:item.callisto.recipe.2=虹のカクテル
+almagest.gui.almagest.almagest:item.callisto.recipe.3=
+almagest.gui.almagest.almagest:item.callisto.recipe.4=
+almagest.gui.almagest.almagest:item.callisto.effect=ゼウスとの子をなしたがために、熊にされてしまったカリストを表したアイテムです。<br>この矢が当たったモブは、ＨＰが１０％以下だった場合、その場でシロクマになってしまいます。モブのＨＰや攻撃対象はそのままです。
+almagest.gui.almagest.almagest:item.callisto.magnitude=等級３ : ＨＰ５０％以下でもシロクマになる<br>等級１ : ＨＰに関わらずシロクマになるが、強化されたうえでプレイヤーを襲ってくる
+almagest.gui.almagest.almagest:item.callisto.mira=何熊になったんでしょう。ツキノワグマ？
 
 almagest.gui.almagest.almagest:item.flying_fish.effect=
 almagest.gui.almagest.almagest:item.flying_fish.magnitude=なし
@@ -978,7 +1024,8 @@ almagest.ability.18.3.name=組成結構上昇
 almagest.ability.18.4.name=組成かなり上昇
 almagest.ability.19.1.name=記憶が増える
 almagest.ability.19.2.name=記憶が湧き出る
-almagest.ability.19.3.name=記憶が溢れる
+almagest.ability.19.3.name=記憶が満ちる
+almagest.ability.19.4.name=記憶が溢れる
 almagest.ability.20.1.name=良い当たり
 almagest.ability.20.2.name=なかなかの当たり
 almagest.ability.20.3.name=的確な当たり
@@ -1051,7 +1098,8 @@ almagest.ability.18.3.exp=アイテムの各組成を+30します。
 almagest.ability.18.4.exp=アイテムの各組成を+40します。
 almagest.ability.19.1.exp=アイテムの星のきおくを+10％します。
 almagest.ability.19.2.exp=アイテムの星のきおくを+20％します。
-almagest.ability.19.3.exp=アイテムの星のきおくを+30％します。
+almagest.ability.19.3.exp=アイテムの星のきおくを+30%します。
+almagest.ability.19.4.exp=アイテムの星のきおくを+50%します。
 almagest.ability.20.1.exp=通常の攻撃が、20％の確率でクリティカルするようになります。
 almagest.ability.20.2.exp=通常の攻撃が、30％の確率でクリティカルするようになります。
 almagest.ability.20.3.exp=通常の攻撃が、50％の確率でクリティカルするようになります。
@@ -1105,6 +1153,7 @@ almagest.property.memory.name=ほしのきおく
 # gui (tooltip).
 #----------------------
 almagest.gui.tootip.keyoff=+CTRL
+almagest.gui.tootip.keyoff2=-CTRL
 almagest.gui.tooltip.spacer=---------------
 almagest.gui.tooltip.attribute=%s : %s
 almagest.gui.tooltip.memory=ほしのきおく : %s (%s)
@@ -1116,6 +1165,13 @@ almagest.gui.tooltip.presented= ○
 # gui (bookrest).
 #----------------------
 container.bookrest=Bookrest
+
+
+#----------------------
+# GameData Obtained.
+#----------------------
+almagest.gamedata.obtained.recipe=新しいレシピ『%s』を記録しました！
+almagest.gamedata.obtained.constellation=新しい星座『%s』を手に入れました！
 
 
 #----------------------
@@ -1158,6 +1214,7 @@ almagest.gui.mira.talk004.1.choice.2=図鑑をもらう
 almagest.gui.mira.talk004.1.choice.3=お話する
 almagest.gui.mira.talk004.2.message=好きなだけ持って行ってください！
 almagest.gui.mira.talk004.3.message=どんな星座をくださるのですか？
+almagest.gui.mira.talk004.3_.message.1=ごめんなさい、また今度にしてもらえますか……？
 almagest.gui.mira.talk004.4.message.1=えーと、星座ではない……、ですよね？
 almagest.gui.mira.talk004.8.message.1=この星座はすでにいただいていますね。
 almagest.gui.mira.talk004.5.message.1=わあ、ありがとうございます！

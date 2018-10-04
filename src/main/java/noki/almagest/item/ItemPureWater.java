@@ -2,6 +2,7 @@ package noki.almagest.item;
 
 import java.util.List;
 
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -15,7 +16,7 @@ import noki.almagest.registry.IWithRecipe;
 
 
 /**********
- * @class ItemOrigamiCrane
+ * @class ItemPureWater
  *
  * @description 
  */
@@ -42,6 +43,7 @@ public class ItemPureWater extends ItemWithAttribute implements IWithRecipe, IWi
 		
 		return this.makeRecipeList(
 				new StarRecipe(new ItemStack(this,4)).setAttribute(EStarAttribute.FUEL, 20).setAttribute(EStarAttribute.LIQUID, 40)
+				.setHint(new ItemStack(Items.WATER_BUCKET))
 		);
 		
 	}

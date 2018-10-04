@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import noki.almagest.block.BlockAriadne;
 import noki.almagest.block.BlockBookrest;
 import noki.almagest.block.BlockConstellation;
+import noki.almagest.block.BlockCrete;
 import noki.almagest.block.BlockStar;
 import noki.almagest.block.BlockStarCompass;
 import noki.almagest.block.BlockTansu;
@@ -43,6 +44,9 @@ public class ModBlocks {
 	public static Block ARIADNE;
 	public static final String ARIADNE_name = "ariadne";
 	
+	public static Block CRETE;
+	public static final String CRETE_name = "crete";
+	
 	
 	//******************************//
 	// define member methods.
@@ -56,6 +60,7 @@ public class ModBlocks {
 //		TANSU = RegistryHelper.registerBlock(new BlockTansu(), TANSU_name);
 		TENT = RegistryHelper.registerBlock(new BlockTent(), TENT_name);
 		ARIADNE = RegistryHelper.registerBlock(new BlockAriadne(), ARIADNE_name);
+		CRETE = RegistryHelper.registerBlock(new BlockCrete(), CRETE_name);
 		
 	}
 

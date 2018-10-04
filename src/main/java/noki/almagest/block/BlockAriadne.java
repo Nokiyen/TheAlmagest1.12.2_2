@@ -22,9 +22,11 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import noki.almagest.AlmagestCore;
 import noki.almagest.attribute.BlockWithAttribute;
 import noki.almagest.attribute.EStarAttribute;
 import noki.almagest.item.ItemBlockAriadne;
+import noki.almagest.item.ItemBlockConstellation;
 import noki.almagest.recipe.StarRecipe;
 import noki.almagest.registry.IWithItemBlock;
 import noki.almagest.registry.IWithRecipe;
@@ -112,6 +114,13 @@ public class BlockAriadne extends BlockWithAttribute implements IWithRecipe, IWi
 	}
 	
 	@Override
+	public void breakBlock(World world, BlockPos pos, IBlockState state) {
+		
+		AlmagestCore.savedDataManager.getAriadneData().removeBlock(world, pos);
+		
+	}
+	
+	@Override
 	public ItemBlock getItemBlock() {
 		
 		return new ItemBlockAriadne(this);
@@ -123,19 +132,23 @@ public class BlockAriadne extends BlockWithAttribute implements IWithRecipe, IWi
 		
 		return this.makeRecipeList(
 				new StarRecipe(new ItemStack(this)).setAttribute(EStarAttribute.MONSTER, 30)
-					.setStack(new ItemStack(Items.ENDER_PEARL)).setStack(new ItemStack(ModItems.COCKTAIL, 1, 0)),
+					.setStack(new ItemStack(Items.ENDER_PEARL)).setStack(new ItemStack(ModItems.COCKTAIL, 1, 0))
+					.setHint(new ItemStack(Items.STRING)).setHint(ItemBlockConstellation.getConstStack(26, 1)).setSpecial(true),
 				new StarRecipe(new ItemStack(this)).setAttribute(EStarAttribute.MONSTER, 30)
-					.setStack(new ItemStack(Items.ENDER_PEARL)).setStack(new ItemStack(ModItems.COCKTAIL, 1, 1)),
+					.setStack(new ItemStack(Items.ENDER_PEARL)).setStack(new ItemStack(ModItems.COCKTAIL, 1, 1))
+					.setHint(new ItemStack(Items.STRING)).setHint(ItemBlockConstellation.getConstStack(26, 1)).setSpecial(true),
 				new StarRecipe(new ItemStack(this)).setAttribute(EStarAttribute.MONSTER, 30)
-					.setStack(new ItemStack(Items.ENDER_PEARL)).setStack(new ItemStack(ModItems.COCKTAIL, 1, 2)),
+					.setStack(new ItemStack(Items.ENDER_PEARL)).setStack(new ItemStack(ModItems.COCKTAIL, 1, 2))
+					.setHint(new ItemStack(Items.STRING)).setHint(ItemBlockConstellation.getConstStack(26, 1)).setSpecial(true),
 				new StarRecipe(new ItemStack(this)).setAttribute(EStarAttribute.MONSTER, 30)
-					.setStack(new ItemStack(Items.ENDER_PEARL)).setStack(new ItemStack(ModItems.COCKTAIL_RAINBOW)),
+					.setStack(new ItemStack(Items.ENDER_PEARL)).setStack(new ItemStack(ModItems.COCKTAIL_RAINBOW))
+					.setHint(new ItemStack(Items.STRING)).setHint(ItemBlockConstellation.getConstStack(26, 1)).setSpecial(true),
 				new StarRecipe(new ItemStack(this))
-					.setStack(new ItemStack(this, 1, 1)).setStack(new ItemStack(this, 1, 2))
+					.setStack(new ItemStack(this, 1, 1)).setStack(new ItemStack(this, 1, 2)).setSpecial(true)
 		);
 		
 	}
-
+	
 	@Override
 	public int getSubtypeCount() {
 		

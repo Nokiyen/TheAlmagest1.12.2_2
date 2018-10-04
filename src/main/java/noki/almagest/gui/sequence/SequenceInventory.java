@@ -19,6 +19,7 @@ public class SequenceInventory implements ISequence {
 	private String name;
 	private boolean give;
 	private boolean end;
+	private boolean closeable = false;
 	
 	
 	//******************************//
@@ -55,6 +56,7 @@ public class SequenceInventory implements ISequence {
 	public ISequence setEnd() {
 		
 		this.end = true;
+		this.closeable = true;
 		return this;
 		
 	}
@@ -95,6 +97,20 @@ public class SequenceInventory implements ISequence {
 	
 	@Override
 	public void onNext(ContainerSequence container) {
+		
+	}
+	
+	@Override
+	public boolean closeable() {
+		
+		return this.closeable;
+		
+	}
+	
+	public ISequence setCloseable(boolean flag) {
+		
+		this.closeable = flag;
+		return this;
 		
 	}
 	

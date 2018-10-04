@@ -33,7 +33,7 @@ public class StarAbilityExplosion extends StarAbility {
 			return;
 		}
 		
-		entity.world.createExplosion(null, entity.posX, entity.posY, entity.posZ, 5F, true);
+		entity.world.createExplosion(null, entity.posX, entity.posY, entity.posZ, 5F, false);
 		
 	}
 

@@ -33,7 +33,13 @@ public class AlmagestDataAriadne implements IAlmagestData {
 	//******************************//
 	public boolean isBlockPlacedAt(World world, BlockPos pos) {
 		
-		ArrayList<BlockPos> eachBlockList = this.blockMap.get(world.provider.getDimension());
+		return this.isBlockPlacedAt(world.provider.getDimension(), pos);
+		
+	}
+	
+	public boolean isBlockPlacedAt(int dimensionId, BlockPos pos) {
+		
+		ArrayList<BlockPos> eachBlockList = this.blockMap.get(dimensionId);
 		if(eachBlockList == null) {
 			return false;
 		}

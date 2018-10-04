@@ -47,6 +47,8 @@ public class ItemCocktailRainbow extends ItemWithAttribute implements IWithRecip
 				new StarRecipe(new ItemStack(this,4))
 					.setStack(new ItemStack(Items.REDSTONE,6)).setStack(new ItemStack(Items.DYE,6,4))
 					.setStack(new ItemStack(ModItems.PURE_WATER)).setAttribute(EStarAttribute.STAR, 40)
+					.setHint(new ItemStack(Items.REDSTONE))
+					.setHint(new ItemStack(Items.DYE,1,4))
 		);
 		
 	}

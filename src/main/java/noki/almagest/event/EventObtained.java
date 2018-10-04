@@ -22,9 +22,11 @@ import noki.almagest.ability.StarAbilityCreator;
 import noki.almagest.attribute.IWithAttribute;
 import noki.almagest.entity.IEntityAlmagest;
 import noki.almagest.helper.HelperConstellation;
+import noki.almagest.helper.HelperObtainedMessage;
 import noki.almagest.helper.HelperConstellation.Constellation;
 import noki.almagest.item.ItemMemo;
 import noki.almagest.registry.ModItems;
+import noki.almagest.registry.RecipeRegistry;
 import noki.almagest.saveddata.DataCategory;
 import noki.almagest.saveddata.gamedata.GameData;
 import noki.almagest.saveddata.gamedata.GameDataAbility2;
@@ -54,7 +56,7 @@ public class EventObtained {
 	@SubscribeEvent
 	public void onPickupItem(EntityItemPickupEvent event) {
 		
-/*		if(event.getEntityPlayer() == null) {
+		if(event.getEntityPlayer() == null) {
 			return;
 		}
 		
@@ -64,13 +66,16 @@ public class EventObtained {
 		
 		//ability.
 		checkAbility(event.getItem().getItem());
+		//recipe.
+		RecipeRegistry.checkRecipeHint(event.getItem().getItem());
 		
 		//other items.
 		GameData gameData = getData(event.getItem().getItem());
 		if(gameData == null || gameData.isObtained()) {
 			return;
 		}
-		AlmagestCore.savedDataManager.getFlagData().setObtained(gameData);*/
+		AlmagestCore.savedDataManager.getFlagData().setObtained(gameData);
+		HelperObtainedMessage.sendConstellationMessage(gameData);
 		
 	}
 	
@@ -97,6 +102,8 @@ public class EventObtained {
 			
 			//ability.
 			checkAbility(stack);
+			//recipe.
+			RecipeRegistry.checkRecipeHint(stack);
 			
 			//other items.
 			GameData gameData = EventObtained.getData(stack);
@@ -108,6 +115,7 @@ public class EventObtained {
 				ItemStack targetStack = this.player.inventory.getStackInSlot(i);
 				if(targetStack != null && targetStack.getItem() == stack.getItem() && targetStack.getMetadata() == stack.getMetadata()) {
 					AlmagestCore.savedDataManager.getFlagData().setObtained(gameData);
+					HelperObtainedMessage.sendConstellationMessage(gameData);
 					break;
 				}
 			}
@@ -218,7 +226,6 @@ public class EventObtained {
 	@SubscribeEvent
 	public void onEntityInteract(EntityInteractSpecific event) {
 		
-		AlmagestCore.log("on interact.");
 		if(event.getTarget() == null || !(event.getTarget() instanceof EntityLivingBase)) {
 			return;
 		}

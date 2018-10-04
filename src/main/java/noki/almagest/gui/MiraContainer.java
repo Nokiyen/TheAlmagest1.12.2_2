@@ -56,27 +56,6 @@ public class MiraContainer extends ContainerSequence {
 				this.setSequence(1, new SequenceTalk("almagest.gui.mira.talk001.1", 1).setEnd());
 				this.markFlag(1);
 				this.markFlag(1000);
-				
-				//temporally reveal
-				AlmagestDataFlag flag = AlmagestCore.savedDataManager.getFlagData();
-				flag.setObtained(DataCategory.BLOCK, new ItemStack(ModBlocks.BOOKREST).getUnlocalizedName());
-				flag.setObtained(DataCategory.BLOCK, new ItemStack(ModBlocks.STAR_COMPASS).getUnlocalizedName());
-				flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.ALMAGEST).getUnlocalizedName());
-				flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.COCKTAIL,1,0).getUnlocalizedName());
-				flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.COCKTAIL,1,1).getUnlocalizedName());
-				flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.COCKTAIL,1,2).getUnlocalizedName());
-				flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.COCKTAIL_RAINBOW).getUnlocalizedName());
-				flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.OIL).getUnlocalizedName());
-				flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.PLANISPHERE).getUnlocalizedName());
-				flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.POLISH).getUnlocalizedName());
-				flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.PURE_WATER).getUnlocalizedName());
-				flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.STARDUST).getUnlocalizedName());
-				flag.setObtained(DataCategory.RECIPE, "almagest:recipe.additional.000");
-				flag.setObtained(DataCategory.RECIPE, "almagest:recipe.additional.001");
-				flag.setObtained(DataCategory.RECIPE, "almagest:recipe.additional.002");
-				for(EHelpData each: EHelpData.values()) {
-					flag.setObtained(DataCategory.HELP, each.getDisplay());
-				}
 				break;
 			case 1:
 				this.setSequence(1, new SequenceTalk("almagest.gui.mira.talk002.1", 1).setEnd());
@@ -89,7 +68,32 @@ public class MiraContainer extends ContainerSequence {
 				this.setSequence(4, new SequenceTalk("almagest.gui.mira.talk003.4", 4));
 				this.setSequence(5, new SequenceChoice("almagest.gui.mira.talk003.5", 2));
 				this.setSequence(6, new SequenceChoice("almagest.gui.mira.talk003.6", 2));
-				this.setSequence(7, new SequenceTalk("almagest.gui.mira.talk003.7", 2).setEnd());
+				this.setSequence(7, new SequenceTalk("almagest.gui.mira.talk003.7", 2) {
+					@Override
+					public void onEnd(ContainerSequence container) {
+						//temporally reveal
+						AlmagestDataFlag flag = AlmagestCore.savedDataManager.getFlagData();
+						flag.setObtained(DataCategory.BLOCK, new ItemStack(ModBlocks.BOOKREST).getUnlocalizedName());
+						flag.setObtained(DataCategory.BLOCK, new ItemStack(ModBlocks.STAR_COMPASS).getUnlocalizedName());
+						flag.setObtained(DataCategory.BLOCK, new ItemStack(ModBlocks.TENT).getUnlocalizedName());
+						flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.ALMAGEST).getUnlocalizedName());
+//						flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.COCKTAIL,1,0).getUnlocalizedName());
+//						flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.COCKTAIL,1,1).getUnlocalizedName());
+//						flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.COCKTAIL,1,2).getUnlocalizedName());
+//						flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.COCKTAIL_RAINBOW).getUnlocalizedName());
+//						flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.OIL).getUnlocalizedName());
+//						flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.PLANISPHERE).getUnlocalizedName());
+//						flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.POLISH).getUnlocalizedName());
+//						flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.PURE_WATER).getUnlocalizedName());
+//						flag.setObtained(DataCategory.ITEM, new ItemStack(ModItems.STARDUST).getUnlocalizedName());
+//						flag.setObtained(DataCategory.RECIPE, "almagest:recipe.additional.000");
+//						flag.setObtained(DataCategory.RECIPE, "almagest:recipe.additional.001");
+//						flag.setObtained(DataCategory.RECIPE, "almagest:recipe.additional.002");
+						for(EHelpData each: EHelpData.values()) {
+							flag.setObtained(DataCategory.HELP, each.getDisplay());
+						}						
+					}
+				}.setEnd());
 				
 				this.connect(1, 2);
 				this.connect(2, 1, 4);
@@ -106,7 +110,7 @@ public class MiraContainer extends ContainerSequence {
 				break;
 			default:
 				//choice from three.
-				this.setSequence(1, new SequenceChoice("almagest.gui.mira.talk004.1", 3));
+				this.setSequence(1, new SequenceChoice("almagest.gui.mira.talk004.1", 3).setCloseable(true));
 				
 				//give almagest.
 				this.setSequence(2, new SequenceInventory("almagest.gui.mira.talk004.2", false) {
@@ -126,46 +130,51 @@ public class MiraContainer extends ContainerSequence {
 				}.setEnd());
 				
 				//receive constellations.
-				this.setSequence(3, new SequenceInventory("almagest.gui.mira.talk004.3", true) {
-					
-					private Constellation presentedConst;
-					
-					@Override
-					public int checkInventory(Slot slot) {
-						ItemStack stack = slot.getStack();
-						if(!stack.isEmpty() && stack.getItem().equals(Item.getItemFromBlock(ModBlocks.CONSTELLATION_BLOCK))) {
-							AlmagestDataFlag dataFlag = AlmagestCore.savedDataManager.getFlagData();
-							int constNumber = ItemBlockConstellation.getConstNumber(stack);
-							if(constNumber != 0) {
-								Constellation constellation = Constellation.getConstFromNumber(constNumber);
-								if(!dataFlag.isCostellationPresented(constellation)) {
-									if(!MiraContainer.this.world.isRemote) {
-										dataFlag.setConstellationPresented(constellation);
+				if(AlmagestCore.savedDataManager.getFlagData().countObtainedConstellation() == 87) {
+					this.setSequence(3, new SequenceTalk("almagest.gui.mira.talk004.3_", 1).setEnd());
+				}
+				else {
+					this.setSequence(3, new SequenceInventory("almagest.gui.mira.talk004.3", true) {
+						
+						private Constellation presentedConst;
+						
+						@Override
+						public int checkInventory(Slot slot) {
+							ItemStack stack = slot.getStack();
+							if(!stack.isEmpty() && stack.getItem().equals(Item.getItemFromBlock(ModBlocks.CONSTELLATION_BLOCK))) {
+								AlmagestDataFlag dataFlag = AlmagestCore.savedDataManager.getFlagData();
+								int constNumber = ItemBlockConstellation.getConstNumber(stack);
+								if(constNumber != 0) {
+									Constellation constellation = Constellation.getConstFromNumber(constNumber);
+									if(!dataFlag.isCostellationPresented(constellation)) {
+										if(!MiraContainer.this.world.isRemote) {
+											dataFlag.setConstellationPresented(constellation);
+										}
+										this.presentedConst = constellation;
+										return 1;
 									}
-									this.presentedConst = constellation;
-									return 1;
-								}
-								else {
-									return 2;
+									else {
+										return 2;
+									}
 								}
 							}
+							return 0;
 						}
-						return 0;
-					}
-					
-					@Override
-					public void onNext(ContainerSequence container) {
-						if(this.presentedConst != null) {
-							((MiraContainer)container).setPresentedConst(this.presentedConst);
+						
+						@Override
+						public void onNext(ContainerSequence container) {
+							if(this.presentedConst != null) {
+								((MiraContainer)container).setPresentedConst(this.presentedConst);
+							}
 						}
-					}
-					
-					@Override
-					public boolean isReturnStack() {
-						return true;
-					}
-					
-				});
+						
+						@Override
+						public boolean isReturnStack() {
+							return true;
+						}
+						
+					}.setCloseable(true));
+				}
 				
 				//not constellations.
 				this.setSequence(4, new SequenceTalk("almagest.gui.mira.talk004.4", 1).setEnd());

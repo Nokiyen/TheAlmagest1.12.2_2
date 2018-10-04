@@ -8,5 +8,6 @@ public interface ISequence {
 	abstract ISequence setEnd();
 	abstract void onEnd(ContainerSequence container);
 	abstract void onNext(ContainerSequence container);
+	abstract boolean closeable();
 
 }

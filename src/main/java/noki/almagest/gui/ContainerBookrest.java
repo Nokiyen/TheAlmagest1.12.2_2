@@ -7,11 +7,9 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.ClickType;
 import net.minecraft.inventory.ContainerWorkbench;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
@@ -25,7 +23,6 @@ import net.minecraft.world.World;
 import noki.almagest.AlmagestCore;
 import noki.almagest.ability.StarAbilityCreator;
 import noki.almagest.ability.StarPropertyCreator;
-import noki.almagest.ability.StarAbilityCreator.StarAbility;
 import noki.almagest.ability.StarPropertyCreator.ItemStarLine;
 
 
@@ -542,9 +539,9 @@ public class ContainerBookrest  extends ContainerWorkbench {
 			//initialization.
 			int target = -1;
 			Collections.sort(this.abilities, comparator);
-			for(AbilityState each: this.abilities) {
-//				AlmagestCore.log("sorted: {}/{}/{}", each.getAbilityId(), each.getLevel(), each.getCount());
-			}
+/*			for(AbilityState each: this.abilities) {
+				AlmagestCore.log("sorted: {}/{}/{}", each.getAbilityId(), each.getLevel(), each.getCount());
+			}*/
 			
 			//find combinations.
 			//if found, keep the index into the variable, "target".
@@ -624,7 +621,9 @@ public class ContainerBookrest  extends ContainerWorkbench {
 					craftCount++;
 				}
 			}
-			result = StarPropertyCreator.setMemory(result, MathHelper.floor((double)this.totalMemory/(double)craftCount));
+			int averageMemory = MathHelper.floor((double)this.totalMemory/(double)craftCount);
+			int enpowerd = MathHelper.floor(averageMemory * (1D + this.getExcessConnectedLine()*0.1D));
+			result = StarPropertyCreator.setMemory(result, enpowerd);
 			
 			
 			//add lines.
@@ -648,7 +647,7 @@ public class ContainerBookrest  extends ContainerWorkbench {
 			}
 			
 			//the total number of lines is defined by the average.
-			int averageLineCount = MathHelper.floor((double)totalLineCount/(double)stackCount);
+			int averageLineCount = (int)Math.round((double)totalLineCount/(double)stackCount);
 			//the type of line itself is defined by the largest number in each line's count.
 			//first, sort.
 			List<Map.Entry<ItemStarLine, Integer>> entries = new ArrayList<Map.Entry<ItemStarLine, Integer>>(eachLineCount.entrySet());
@@ -660,7 +659,8 @@ public class ContainerBookrest  extends ContainerWorkbench {
 			});
 			//second, divide entries.
 			ArrayList<ArrayList<ItemStarLine>> listGroup = new ArrayList<ArrayList<ItemStarLine>>();
-			ArrayList<ItemStarLine> currentGroup = new ArrayList<ItemStarLine>();
+			ArrayList<ItemStarLine> currentGroup = new ArrayList<ItemStarLine>(); 
+			
 			int largestCount = entries.get(0).getValue();
 			for(Map.Entry<ItemStarLine, Integer> each: entries) {
 				if(each.getValue() == largestCount) {
@@ -711,7 +711,7 @@ public class ContainerBookrest  extends ContainerWorkbench {
 		
 	}
 	
-	private void setAbilitySelected(int abilityId, int abilityLevel, boolean flag) {
+/*	private void setAbilitySelected(int abilityId, int abilityLevel, boolean flag) {
 		
 		for(AbilityState each: this.abilities) {
 			if(each.isSame(abilityId, abilityLevel)) {
@@ -720,7 +720,7 @@ public class ContainerBookrest  extends ContainerWorkbench {
 			break;
 		}
 		
-	}
+	}*/
 	
 	public void switchAbilitySelected(int listId) {
 		
@@ -728,6 +728,30 @@ public class ContainerBookrest  extends ContainerWorkbench {
 			this.abilities.get(listId).switchSelect();
 			this.updateOutput();
 		}
+		
+	}
+	
+	public int getAbilitySelectLimit() {
+		
+		int connected = 0;
+		for(int each: this.lineState) {
+			if(each == 2) {
+				connected++;
+			}
+		}
+		return MathHelper.clamp(connected+1, 1, 3);
+		
+	}
+	
+	public int getExcessConnectedLine() {
+		
+		int connected = 0;
+		for(int each: this.lineState) {
+			if(each == 2) {
+				connected++;
+			}
+		}
+		return MathHelper.clamp(connected-2, 0, 10);
 		
 	}
 	

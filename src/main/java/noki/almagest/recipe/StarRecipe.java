@@ -32,6 +32,7 @@ public class StarRecipe implements IRecipe {
 	private List<ItemStack> necessaryItem = new ArrayList<ItemStack>();
 	private boolean special;
 	private int maxStackNum;
+	private ArrayList<ItemStack> recipeHints = new ArrayList<ItemStack>();
 	
 	
 	//******************************//
@@ -104,6 +105,7 @@ public class StarRecipe implements IRecipe {
 			stackFlag.put(each, false);
 		}
 		
+		@SuppressWarnings("unused")
 		int minAttribute = 0;
 		Map<EStarAttribute, Integer> attributeSum = new HashMap<EStarAttribute, Integer>();
 		for(Map.Entry<EStarAttribute, Integer> entry: this.necessaryAttributes.entrySet()) {
@@ -111,6 +113,7 @@ public class StarRecipe implements IRecipe {
 			minAttribute += entry.getValue();
 		}
 		
+		@SuppressWarnings("unused")
 		int totalAttribute = 0;
 		for(int i=0; i<inv.getSizeInventory(); i++) {
 			ItemStack selectedStack = inv.getStackInSlot(i);
@@ -224,6 +227,34 @@ public class StarRecipe implements IRecipe {
 	public StarRecipe setMaxStack(int max) {
 		
 		this.maxStackNum = max;
+		return this;
+		
+	}
+	
+	@Override
+	public boolean isDynamic() {
+		
+		return true;
+		
+	}
+	
+	public boolean hasHint() {
+		
+		return true;
+		
+	}
+	
+	public ArrayList<ItemStack> getHintItems() {
+		
+		return this.recipeHints;
+		
+	}
+	
+	public StarRecipe setHint(ItemStack stack) {
+		
+		if(!this.recipeHints.contains(stack)) {
+			this.recipeHints.add(stack);
+		}
 		return this;
 		
 	}

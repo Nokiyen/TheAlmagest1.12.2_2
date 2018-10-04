@@ -10,7 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.command.CommandBase;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -23,6 +23,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -30,11 +31,17 @@ import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import noki.almagest.AlmagestCore;
+import noki.almagest.AlmagestData;
+import noki.almagest.ability.StarPropertyCreator;
 import noki.almagest.block.BlockAriadne;
 import noki.almagest.helper.HelperNBTStack;
+import noki.almagest.helper.HelperTeleport;
+import noki.almagest.registry.IWithEvent;
 
 
 /**********
@@ -42,7 +49,7 @@ import noki.almagest.helper.HelperNBTStack;
  *
  * @description
  */
-public class ItemBlockAriadne extends ItemBlock {
+public class ItemBlockAriadne extends ItemBlock implements IWithEvent {
 	
 	//******************************//
 	// define member variables.
@@ -67,18 +74,69 @@ public class ItemBlockAriadne extends ItemBlock {
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
 		
-		HelperNBTStack nbtStack = new HelperNBTStack(player.getHeldItem(hand));
-		if(nbtStack.hasKey(NBT_dimensionId) && player.world.provider.getDimension() == nbtStack.getInteger(NBT_dimensionId)) {
-			teleportEntityToCoordinates(player,
-					nbtStack.getInteger(NBT_xPos)+0.5D, nbtStack.getInteger(NBT_yPos)+0.5D, nbtStack.getInteger(NBT_zPos)+0.5D);
-			return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, player.getHeldItem(hand));
+		ItemStack stack = player.getHeldItem(hand);
+		HelperNBTStack nbtStack = new HelperNBTStack(stack);
+		boolean hasDimension = nbtStack.hasKey(NBT_dimensionId);
+		
+		if(!hasDimension) {
+			return new ActionResult<ItemStack>(EnumActionResult.PASS, player.getHeldItem(hand));
 		}
-		return new ActionResult<ItemStack>(EnumActionResult.PASS, player.getHeldItem(hand));
+		
+		int destinationId = nbtStack.getInteger(NBT_dimensionId);
+		double posX = (double)nbtStack.getInteger(NBT_xPos);
+		double posY = (double)nbtStack.getInteger(NBT_yPos);
+		double posZ = (double)nbtStack.getInteger(NBT_zPos);
+		
+		if(!AlmagestCore.savedDataManager.getAriadneData().isBlockPlacedAt(destinationId, new BlockPos(posX, posY, posZ))) {
+			return new ActionResult<ItemStack>(EnumActionResult.PASS, player.getHeldItem(hand));
+		}
+		
+		if(player.world.provider.getDimension() == destinationId) {
+			teleportEntityToCoordinates(player, posX+0.5D, posY+0.5D, posZ+0.5D);
+			return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
+		}
+		
+		if(!world.isRemote && StarPropertyCreator.isMagnitude(stack, 2) && destinationId == 0) {
+			//teleport;
+			HelperTeleport.teleportPlayer(0, posX+0.5D, posY+0.5D, posZ+0.5D, (EntityPlayerMP)player);
+			return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
+		}
+		
+		return new ActionResult<ItemStack>(EnumActionResult.PASS, stack);
 		
 	}
 	
 	@Override
 	public EnumActionResult onItemUse(EntityPlayer player,
+			World world, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+		
+		return this.placeAriadne(player, world, pos, hand, facing, hitX, hitY, hitZ);
+		
+	}
+	
+	@SubscribeEvent
+	public void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+		
+		if(!event.getEntityPlayer().isCreative()) {
+			return;
+		}
+		
+		ItemStack stack = event.getEntityPlayer().getHeldItem(event.getHand());
+		if(stack.isEmpty() || !(stack.getItem() instanceof ItemBlockAriadne)) {
+			return;
+		}
+		
+		EnumActionResult result = this.placeAriadne(event.getEntityPlayer(), event.getWorld(), event.getPos(), event.getHand(),
+				event.getFace(), (float)event.getHitVec().x, (float)event.getHitVec().y, (float)event.getHitVec().z);
+		
+		if(result == EnumActionResult.SUCCESS) {
+			event.setCanceled(true);
+			event.setCancellationResult(EnumActionResult.SUCCESS);
+		}
+		
+	}
+	
+	private EnumActionResult placeAriadne(EntityPlayer player,
 			World world, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		
 		IBlockState state = world.getBlockState(pos);
@@ -125,12 +183,14 @@ public class ItemBlockAriadne extends ItemBlock {
 						soundtype.getPlaceSound(), SoundCategory.BLOCKS, (soundtype.getVolume() + 1.0F) / 2.0F, soundtype.getPitch() * 0.8F);
 //				stack.shrink(1);
 				stack.setItemDamage(1);
+				AlmagestCore.log("set NBT.");
 				HelperNBTStack nbtStack = new HelperNBTStack(stack);
 				nbtStack.setInteger(NBT_xPos, pos.getX());
 				nbtStack.setInteger(NBT_yPos, pos.getY());
 				nbtStack.setInteger(NBT_zPos, pos.getZ());
 				nbtStack.setInteger(NBT_dimensionId, world.provider.getDimension());
 				AlmagestCore.savedDataManager.getAriadneData().addBlock(world, pos);
+				
 				return EnumActionResult.SUCCESS;
 			}
 		}
@@ -184,6 +244,17 @@ public class ItemBlockAriadne extends ItemBlock {
 		if(!(entity instanceof EntityLivingBase) || !((EntityLivingBase)entity).isElytraFlying()) {
 			entity.motionY = 0.0D;
 			entity.onGround = true;
+		}
+		
+	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
+		
+		if(tab == AlmagestData.tab) {
+			list.add(StarPropertyCreator.setMemory(new ItemStack(this), 0));
+			list.add(StarPropertyCreator.setMemory(new ItemStack(this), 121));
 		}
 		
 	}
